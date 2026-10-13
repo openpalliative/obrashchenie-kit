@@ -1,0 +1,177 @@
+groups:
+  applicant:
+    - id: applicant_name
+      label: Ваши фамилия, имя, отчество
+      hint: Как в паспорте
+      type: text
+      required: "true"
+      personal: "true"
+      autocomplete: name
+      max_len: "120"
+    - id: applicant_address
+      label: Ваш почтовый адрес для ответа
+      hint: С индексом. По этому адресу пришлют ответ
+      type: textarea
+      required: "true"
+      personal: "true"
+      autocomplete: street-address
+      max_len: "200"
+    - id: applicant_phone
+      label: Телефон
+      hint: Чтобы с вами могли связаться, если что-то неясно
+      type: text
+      required: "false"
+      personal: "true"
+      autocomplete: tel
+      max_len: "40"
+    - id: applicant_email
+      label: Электронная почта
+      hint: Нужна, если хотите получить ответ на почту
+      type: text
+      required: "false"
+      required_if: answer_way=email
+      personal: "true"
+      autocomplete: email
+      max_len: "120"
+  representation:
+    - id: patient_name
+      label: Фамилия, имя, отчество человека, за которого вы обращаетесь
+      hint: Как в его паспорте или свидетельстве о рождении
+      type: text
+      required: "true"
+      personal: "true"
+      max_len: "120"
+      roles: [proxy, guardian, parent]
+    - id: proxy_date
+      label: Дата доверенности
+      hint: Есть на первой странице доверенности
+      type: date
+      required: "true"
+      personal: "true"
+      roles: [proxy]
+    - id: proxy_issuer
+      label: Кто удостоверил доверенность
+      hint: Например, нотариус и его фамилия или организация, где удостоверили
+      type: text
+      required: "true"
+      personal: "true"
+      max_len: "160"
+      roles: [proxy]
+    - id: guardian_act
+      label: Решение органа опеки о назначении опекуна
+      hint: Дата и номер решения
+      type: text
+      required: "true"
+      personal: "true"
+      max_len: "160"
+      roles: [guardian]
+    - id: child_birth_cert
+      label: Свидетельство о рождении ребёнка
+      hint: Серия и номер
+      type: text
+      required: "true"
+      personal: "true"
+      max_len: "60"
+      roles: [parent]
+  addressee:
+    - id: addressee_name
+      label: Кому
+      hint: Должность и название организации. Например, главному врачу городской поликлиники. Название есть на вывеске и на сайте
+      type: textarea
+      required: "true"
+      personal: "false"
+      max_len: "240"
+    - id: addressee_address
+      label: Адрес организации
+      hint: Нужен, если отправляете почтой. Есть на сайте организации
+      type: textarea
+      required: "false"
+      personal: "false"
+      max_len: "200"
+  answer:
+    - id: answer_way
+      label: Как получить ответ
+      hint: Выберите один способ
+      type: select
+      required: "true"
+      personal: "false"
+      options:
+        - value: post
+          label: Почтой по моему адресу
+        - value: email
+          label: На мою электронную почту
+        - value: in_person
+          label: Заберу лично
+  sign:
+    - id: signed_at
+      label: Дата на документе
+      hint: Обычно это день, когда вы подписываете и подаёте документ
+      type: date
+      required: "true"
+      personal: "false"
+      default: today
+  attach:
+    - id: attachments
+      label: Что вы прикладываете
+      hint: По одному документу на строку
+      type: textarea
+      required: "false"
+      personal: "false"
+      max_len: "600"
+blocks:
+  head:
+    - id: to
+      place: head
+      text: "{{addressee_name}}"
+    - id: to-address
+      place: head
+      when: addressee_address
+      text: "{{addressee_address}}"
+    - id: from
+      place: head
+      text: "заявитель: {{applicant_name}}"
+    - id: from-address
+      place: head
+      text: "адрес для ответа: {{applicant_address}}"
+    - id: from-phone
+      place: head
+      when: applicant_phone
+      text: "телефон: {{applicant_phone}}"
+    - id: from-email
+      place: head
+      when: applicant_email
+      text: "электронная почта: {{applicant_email}}"
+  foot:
+    - id: attachments
+      place: foot
+      kind: list
+      when: attachments
+      text: "Приложения:"
+      list_field: attachments
+    - id: signed
+      place: foot
+      text: "{{date:signed_at}}"
+    - id: signature
+      place: foot
+      kind: signature
+      text: "Подпись ____________ {{applicant_name}}"
+  role:
+    - id: role-proxy
+      roles: [proxy]
+      text: "Обращаюсь в интересах пациента ({{patient_name}}) по доверенности от {{date:proxy_date}}, удостоверенной: {{proxy_issuer}}."
+    - id: role-guardian
+      roles: [guardian]
+      text: Обращаюсь как опекун пациента ({{patient_name}}) на основании решения органа опеки и попечительства {{guardian_act}}.
+    - id: role-parent
+      roles: [parent]
+      text: Обращаюсь как родитель несовершеннолетнего ребёнка ({{patient_name}}), свидетельство о рождении {{child_birth_cert}}.
+  answer:
+    - id: answer-post
+      when: answer_way=post
+      text: Ответ прошу направить почтой по адресу для ответа, указанному выше.
+    - id: answer-email
+      when: answer_way=email
+      text: Ответ прошу направить на электронную почту {{applicant_email}}.
+    - id: answer-in-person
+      when: answer_way=in_person
+      text: Ответ заберу лично, прошу сообщить мне, когда он будет готов.

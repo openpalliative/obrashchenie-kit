@@ -1,0 +1,51 @@
+{
+ "repo": "pal-directory",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "opsite_version": "0.1.0",
+ "datasets": [
+  {
+   "name": "regions",
+   "path": "regions.json",
+   "schema": "regions.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "ec06758c8d791145d94d35a0654113254955b797b7f37ad512b8e2633187da44",
+   "bytes": 2446,
+   "items": 4
+  },
+  {
+   "name": "addressees",
+   "path": "addressees.json",
+   "schema": "addressees.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "88ba30416cfcc8d5b341ffab8a7a43ddb47787c6c7bef8c2977ac5868cd0971b",
+   "bytes": 5432,
+   "items": 11
+  },
+  {
+   "name": "region-lines",
+   "path": "region-lines.json",
+   "schema": "region-lines.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "303cec313875d65cb323036472952413bc273e3e190930cfdeeda7cd18ecd23e",
+   "bytes": 4626,
+   "items": 4
+  },
+  {
+   "name": "federal-lines",
+   "path": "federal-lines.json",
+   "schema": "federal-lines.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "b29a3f9fde02346f2c0910a1091bd221bf7fc57d569812989b95ca8c820ef73e",
+   "bytes": 1731,
+   "items": 1
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/reply-types.schema.json",
+ "title": "Что пришло в ответ",
+ "description": "4 основных типа ответа и 9 уточнений, condition ведёт в ladder",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "reply-types"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "parent",
+     "order",
+     "label",
+     "hint",
+     "condition",
+     "meaning",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "x-message-ru": "код латиницей через подчёркивание"
+     },
+     "parent": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "order": {
+      "type": "integer"
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "hint": {
+      "type": "string"
+     },
+     "condition": {
+      "enum": [
+       "oral_refusal",
+       "vk_not_held",
+       "vk_refused",
+       "no_answer",
+       "no_answer_waiting",
+       "deadline_passed",
+       "answer_refusal_with_basis",
+       "answer_refusal_no_basis",
+       "answer_not_on_merits",
+       "forwarded_to_respondent",
+       "forwarded_other",
+       "extended",
+       "docs_requested",
+       "discharge_planned",
+       "reply_unclear",
+       "resolved"
+      ]
+     },
+     "meaning": {
+      "type": "string",
+      "minLength": 1
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

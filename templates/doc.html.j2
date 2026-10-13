@@ -1,0 +1,151 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% block title %}{{ d.name }}{% endblock %}
+{% block description %}{{ d.gives }}{% endblock %}
+{% block body_class %} ok-docpage{% endblock %}
+{% block head %}{{ ok.css(["doc"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-doc" data-doc="{{ d.id }}">
+  {{ op.crumbs([("openpalliative", hub("")), (site.title, url("")), (d.name, "")]) }}
+  <h1>{{ d.name }}</h1>
+  <div class="ok-steps" data-steps data-js hidden>{{ op.steps(1, ["Заполнить", "Проверить", "Распечатать или отправить"]) }}</div>
+  <p class="op-lead">{{ d.gives }}</p>
+  <div class="ok-doc__case" data-case-line hidden></div>
+
+  <div data-js hidden>
+
+    <form class="ok-step" data-step="1" novalidate>
+      <h2 class="ok-step__title">Заполнить</h2>
+      {% if d.get("when_needed") %}<p class="ok-muted">Когда нужен: {{ d.when_needed[0] | lower }}{{ d.when_needed[1:] }}</p>{% endif %}
+      {% if d.get("fields_basis") and "#p-" in d.fields_basis %}{% set fb = d.fields_basis.split("#p-") %}<p class="ok-muted">Что должно быть в запросе, сказано в пункте {{ fb[1] }} документа: {{ norm(fb[0]) }}</p>{% endif %}
+      {% if d.roles | length > 1 %}
+      <fieldset class="op-choice" data-roles>
+        <legend class="op-field__label">Кто подаёт</legend>
+        {% for r in d.roles %}
+        <label class="op-choice__item"><input type="radio" name="role" value="{{ r }}"{% if loop.first %} checked{% endif %}><span>{{ site.role_labels[r] }}</span></label>
+        {% endfor %}
+      </fieldset>
+      {% endif %}
+      <div class="ok-fields">
+        {% for g in site.field_groups(d.fields) %}
+        <div class="ok-fgroup"{% if g.roles %} data-roles="{{ g.roles }}"{% endif %}>
+          <h3 class="ok-fgroup__title">{{ g.title }}</h3>
+          {% for f in g.fields %}{{ ok.doc_field(f) }}{% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+      <label class="ok-check"><input type="checkbox" data-remember><span>Запомнить мои данные на этом устройстве. Без этой галочки фамилия, адрес и телефон пропадут, когда вы закроете вкладку</span></label>
+      <div class="ok-errsum" data-errsum hidden tabindex="-1"></div>
+      <div class="op-actions">
+        <button class="op-btn op-btn--primary op-btn--large" type="submit">{{ icon("arrow-right") }}<span>Дальше: проверить</span></button>
+      </div>
+    </form>
+
+    <section class="ok-step" data-step="2" hidden aria-labelledby="ok-check-title">
+      <h2 class="ok-step__title" id="ok-check-title" tabindex="-1">Проверить</h2>
+      <p>Так документ будет выглядеть на бумаге. Прочитайте его целиком. Если что-то не так, вернитесь и исправьте</p>
+      <div class="ok-notes" data-notes></div>
+      <div class="ok-paper" data-preview></div>
+      <div class="op-actions ok-nav">
+        <button class="op-btn op-btn--secondary" type="button" data-go="1">{{ icon("arrow-left") }}<span>Назад: исправить</span></button>
+        <button class="op-btn op-btn--primary op-btn--large" type="button" data-go="3">{{ icon("circle-check") }}<span>Всё верно</span></button>
+      </div>
+    </section>
+
+    <section class="ok-step" data-step="3" hidden aria-labelledby="ok-send-title">
+      <h2 class="ok-step__title" id="ok-send-title" tabindex="-1">Распечатать или отправить</h2>
+      <div class="ok-ready" data-ready></div>
+      <div class="op-actions">
+        <button class="op-btn op-btn--primary op-btn--large" type="button" data-print="2">{{ icon("printer") }}<span>Распечатать 2 экземпляра</span></button>
+        <button class="op-btn op-btn--secondary" type="button" data-print="1">{{ icon("download") }}<span>Сохранить документ в PDF</span></button>
+        <button class="op-btn op-btn--secondary" type="button" data-print="memo">{{ icon("list-checks") }}<span>Распечатать памятку «Как подать»</span></button>
+        <button class="op-btn op-btn--secondary" type="button" data-ics>{{ icon("calendar-clock") }}<span>Добавить напоминание в календарь</span></button>
+      </div>
+      <p class="ok-muted">Один экземпляр отдаёте, на втором просите отметку о приёме: дату, входящий номер и подпись. Второй храните, это ваше доказательство. Чтобы получить PDF для отправки по почте или на Госуслугах, нажмите «Сохранить документ в PDF» и в окне печати выберите «Сохранить как PDF»</p>
+
+      {% if d.get("esia_summary") %}
+      <details class="ok-esia">
+        <summary>{{ icon("copy") }}<span>Текст для формы на Госуслугах</span></summary>
+        <p>В форме обращения на Госуслугах коротко опишите просьбу, а сам документ приложите файлом PDF. Его можно получить кнопкой «Сохранить документ в PDF» выше</p>
+        <label class="op-field__label" for="ok-esia-text">Короткий текст</label>
+        <textarea class="op-input op-input--area" id="ok-esia-text" rows="5" readonly data-esia aria-describedby="ok-esia-count"></textarea>
+        <p class="ok-esia__count" id="ok-esia-count" data-esia-count aria-live="polite"></p>
+        <div class="op-actions">
+          <button class="op-btn op-btn--secondary" type="button" data-copy-esia>{{ icon("copy") }}<span>Скопировать текст</span></button>
+        </div>
+      </details>
+      {% endif %}
+
+      <div class="ok-filed" data-filed hidden>
+        <h3>Подали документ?</h3>
+        <p>Отметьте это в деле. Мы посчитаем, до какого числа должен прийти ответ. Дату можно исправить в журнале дела</p>
+        {% if doc_channels %}
+        <fieldset class="op-choice">
+          <legend class="op-field__label">Как вы подали</legend>
+          {% for c in doc_channels %}
+          <label class="op-choice__item"><input type="radio" name="filed_channel" value="{{ c.id }}"{% if loop.first %} checked{% endif %}><span>{{ c.label }}</span></label>
+          {% endfor %}
+        </fieldset>
+        {% endif %}
+        <button class="op-btn op-btn--primary" type="button" data-mark-filed>{{ icon("circle-check") }}<span>Отметить в деле: подали сегодня</span></button>
+      </div>
+      <div class="ok-filed" data-nocase hidden>
+        <h3>Хотите следить за сроком?</h3>
+        <p>Заведите дело: в нём будут дата подачи, срок ответа и следующий шаг</p>
+        {{ op.btn("Начать дело", href=url("case/") ~ "#new=1", kind="secondary", icon_name="folder-open") }}
+      </div>
+      <p class="ok-save-hint" data-save-hint hidden>{{ icon("download") }}<span>Браузер может удалить данные сайта. Сохраните файл дела на телефон или компьютер в разделе <a href="{{ url('case/') }}">«Моё дело»</a></span></p>
+      <div class="op-actions">
+        <button class="op-btn op-btn--secondary" type="button" data-go="2">{{ icon("arrow-left") }}<span>Назад к документу</span></button>
+      </div>
+    </section>
+  </div>
+
+  <div data-nojs>
+    {% if d.get("when_needed") %}<p>Когда нужен: {{ d.when_needed[0] | lower }}{{ d.when_needed[1:] }}</p>{% endif %}
+    {{ op.status("info", "Чтобы заполнить документ на экране, нужен JavaScript. Ниже пустой бланк: его можно распечатать через меню браузера и заполнить ручкой") }}
+  </div>
+
+  <section class="ok-how" aria-labelledby="how-title">
+    <h2 id="how-title">Как подать</h2>
+    <p class="ok-muted">Выберите способ, и мы покажем шаги</p>
+    <ul class="ok-channels">
+      {% for c in doc_channels %}
+      <li>
+        <details class="ok-channel" data-channel="{{ c.id }}">
+        <summary class="ok-channels__name">{{ icon("chevron-down") }}<span>{{ c.label }}</span></summary>
+        {% if c.get("steps") %}<ol>{% for st in c.steps %}<li>{{ st }}</li>{% endfor %}</ol>{% endif %}
+        {% if c.get("limit_note") %}<p>{{ c.limit_note }} {% if not c.verified %}{{ unverified_inline() }}{% endif %}</p>{% endif %}
+        {% if c.get("url") %}<p>{{ ok.ext(c.url, "Где подать") }}</p>{% endif %}
+        </details>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="ok-sheets-wrap" aria-labelledby="blank-title">
+    <h2 id="blank-title" data-nojs>Пустой бланк</h2>
+    <div class="ok-sheets" data-sheets>
+      {{ ok.sheet(d, site.blank, 1) }}
+    </div>
+    <div class="ok-memo op-sheet" data-memo>
+      <h2>Как подать: {{ d.name | lower }}</h2>
+      <ol>
+        <li>Подпишите оба экземпляра и поставьте дату</li>
+        <li>Отнесите в приёмную или канцелярию. Попросите поставить на вашем экземпляре дату, входящий номер и подпись. Если отметку ставить отказываются, отправьте почтой заказным письмом с уведомлением о вручении и описью вложения</li>
+        <li>Сохраните ваш экземпляр, квитанцию и уведомление. Это доказательство, что вы обращались</li>
+        <li>Отметьте подачу в деле на сайте: мы посчитаем, до какого числа ждать ответ</li>
+      </ol>
+      <p data-memo-due></p>
+      {{ op.sheet_footer(site.kit.documents.data_date, site.plus_days(site.kit.documents.data_date, 365), "openpalliative.github.io/obrashchenie-kit/docs/" ~ d.id ~ "/", "legal") }}
+    </div>
+  </section>
+  {{ ok.back() }}
+</div>
+<template id="ok-sheet-tpl">{{ ok.sheet(d, site.blank, 1) }}</template>
+{{ ok.icon_templates(["arrow-right", "check"]) }}
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/doc-page.js') }}"></script>
+<script type="module" src="{{ url('assets/js/back.js') }}"></script>
+{% endblock %}

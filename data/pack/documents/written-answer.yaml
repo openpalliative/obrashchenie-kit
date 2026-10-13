@@ -1,0 +1,73 @@
+id: written-answer
+tier: T0
+order: "1"
+title: Заявление
+name: Попросить письменный ответ вместо устного отказа
+gives: Отказ на словах превращается в просьбу на бумаге. На неё должны ответить письменно, а с даты подачи начинается срок ответа
+when_needed: Вам отказали на словах, по телефону или при визите, не созывают врачебную комиссию, или ответ пришёл не по существу
+addressee_kinds: [mo_head, minzdrav_region]
+roles: [self, proxy, guardian, parent]
+fields:
+  - group: addressee
+  - group: applicant
+  - group: representation
+  - id: request
+    label: О чём вы просите
+    hint: Своими словами, коротко. Например, созвать врачебную комиссию, выдать медицинское изделие для дома, прислать врача на дом. Диагноз можно не писать
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "800"
+  - id: refused_at
+    label: Когда вам отказали
+    hint: Если отказывали несколько раз, укажите последний
+    type: date
+    required: "true"
+    personal: "false"
+  - id: refused_where
+    label: Где и кто отказал
+    hint: Например, в регистратуре, лечащий врач, по телефону. Должность и фамилию, если их назвали
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "300"
+  - id: refusal_words
+    label: Что вам ответили
+    hint: Как можно ближе к словам
+    type: textarea
+    required: "false"
+    personal: "false"
+    max_len: "500"
+  - group: answer
+  - group: attach
+  - group: sign
+blocks:
+  - use: head
+  - use: role
+  - id: request
+    text: "Прошу: {{request}}."
+  - id: facts
+    text: "{{date:refused_at}} мне отказали в этой просьбе устно, письменного ответа я не получил(а). Где и кто отказал: {{refused_where}}."
+  - id: refusal-words
+    when: refusal_words
+    text: "Мне сказали: {{refusal_words}}."
+  - id: ask-written
+    text: Прошу рассмотреть мою просьбу и дать письменный ответ по существу. Если в просьбе будет отказано, прошу указать в ответе, кто принял решение и на каком основании.
+  - use: answer
+  - use: foot
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person, paper-mail, ezp, esia-pos]
+esia_summary: "Прошу дать письменный ответ по существу на мою просьбу: {{request}}. {{date:refused_at}} мне отказали устно. Заявление во вложении."
+attachments_hint:
+  - копия доверенности, если обращаетесь по доверенности
+  - копия решения органа опеки, если вы опекун
+  - копия свидетельства о рождении ребёнка, если вы родитель
+review_notes:
+  - Проверить юристу в РФ, достаточно ли этой формулировки, чтобы обращение зарегистрировали как письменное
+  - Проверить юристу в РФ, какой срок ответа и порядок рассмотрения действуют, если клиника частная
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

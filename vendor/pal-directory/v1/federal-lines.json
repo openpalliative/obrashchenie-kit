@@ -1,0 +1,48 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "federal-lines",
+ "repo": "pal-directory",
+ "schema_version": "1.1.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-13T06:32:03Z",
+ "data_date": "2026-10-13",
+ "stale_after_days": 90,
+ "license": "rzn-source-terms",
+ "source": [
+  {
+   "id": "rzn-page",
+   "title": "Росздравнадзор, страница «Горячие линии», блок «Контакты»",
+   "url": "https://roszdravnadzor.gov.ru/pages/main/call/to/tel",
+   "retrieved_at": "2026-10-13",
+   "license": "на условиях источника, с указанием источника: Росздравнадзор"
+  },
+  {
+   "id": "pravo-federal-search",
+   "title": "Поиск на портале официального опубликования 12.10.2026: Других федеральных номеров с официальным источником не найдено",
+   "url": "http://publication.pravo.gov.ru/api/Documents",
+   "retrieved_at": "2026-10-12"
+  }
+ ],
+ "content_sha256": "aa449ff9d35ab752a5df22bfcaf73ba4cf351e579199137cba6d3dc309cbfeb8",
+ "counts": {
+  "items": 1,
+  "unverified": 1,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "rzn-hotline",
+   "number": "+7 800 550 99 03",
+   "tel": "+78005509903",
+   "label": "Горячая линия Росздравнадзора по соблюдению прав граждан в сфере охраны здоровья",
+   "is_24x7": false,
+   "hours_text": "",
+   "quote_verbatim": "«Горячая линия» Росздравнадзора по соблюдению прав граждан в сфере охраны здоровья - +7 800 550 99 03",
+   "source_url": "https://roszdravnadzor.gov.ru/pages/main/call/to/tel",
+   "retrieved_at": "2026-10-11",
+   "source_ref": "rzn-page",
+   "verified": false,
+   "verified_at": null
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+channels:
+  - id: paper-in-person
+    label: Отнести лично
+    kind: paper
+    limit_chars: ""
+    limit_files: ""
+    limit_mb: ""
+    limit_pages: ""
+    url: ""
+    steps: [Отдайте в канцелярию]
+    source_ref: ok-pack
+    verified: "false"
+    verified_at: ""

@@ -1,0 +1,102 @@
+{% import "op/macros.html.j2" as op with context %}
+{% macro date3(id, legend, hint=none, quick=true, max="today", required=true) -%}
+{{ op.date_field(id, legend, hint, quick, none, max, required) }}
+{%- endmacro %}
+
+{% macro scenario_rows(scenarios, hash=none) -%}
+<ul class="op-rows ok-scen">
+  {% for s in scenarios %}
+  <li>{{ op.row(s.title, (hash ~ s.id) if hash else url('scenarios/' ~ s.id ~ '/'), s.icon or "file-text", s.hint) }}</li>
+  {% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro sheet(d, blank_fn, copy=1) -%}
+<article class="ok-sheet op-doc" data-sheet>
+  <div class="ok-sheet__head" data-slot="head">
+    {% for b in d.blocks if b.get("place") == "head" and not b.get("roles") and not b.get("when") %}<p>{{ blank_fn(b.text, d) }}</p>{% endfor %}
+  </div>
+  <h2 class="ok-sheet__title" data-slot="title">{{ d.title }}</h2>
+  <div class="ok-sheet__body" data-slot="body">
+    {% for b in d.blocks if b.get("place", "body") == "body" and not b.get("roles") and not b.get("when") %}
+    {% if b.get("norm_state") in (none, "ok", "none", "fallback") and b.get("text") %}<p>{{ blank_fn(b.text, d) }}</p>{% endif %}
+    {% endfor %}
+  </div>
+  <div class="ok-sheet__foot" data-slot="foot">
+    {% for b in d.blocks if b.get("place") == "foot" and not b.get("roles") and not b.get("when") %}<p class="ok-sheet__{{ b.get('kind', 'text') }}">{{ blank_fn(b.text, d) }}</p>{% endfor %}
+  </div>
+  <div class="ok-sheet__receipt" data-slot="receipt"{% if copy != 2 %} hidden{% endif %}>
+    <p class="ok-sheet__receipt-title">Отметка о приёме</p>
+    <p>Принято «___» ____________ 20___ г. Входящий номер ____________</p>
+    <p>Должность, фамилия и подпись принявшего ______________________________</p>
+  </div>
+  <p class="ok-sheet__copy" data-slot="copy">{% if copy == 2 %}Экземпляр заявителя{% else %}Экземпляр для адресата{% endif %}</p>
+  <p class="ok-sheet__draft">Черновик. Текст не проверен юристом</p>
+</article>
+{%- endmacro %}
+
+{% macro rule_line(rule_id) -%}
+{% set r = site.rules.get(rule_id) %}
+{% if r %}
+{% set u = {"calendar_days": ("календарный день", "календарных дня", "календарных дней"), "working_days": ("рабочий день", "рабочих дня", "рабочих дней")} %}
+<li class="ok-rule">
+  <p class="ok-rule__label">{{ r.situation }}</p>
+  <p class="ok-rule__text">{{ r.result_label }}: {% if r.unit == "within_24h" %}в течение суток{% else %}{{ r.value | plural(*u[r.unit]) }}{% endif %}{% if r.get("pre") %} и ещё {{ r.pre.value | plural("день", "дня", "дней") }} {{ r.pre.label }}{% endif %}. Отсчёт: {{ r.from_event_label | lower }}</p>
+  <p class="ok-rule__meta">
+    {% for n in r.get("norm_ids", []) %}{{ norm(n) }} {% endfor %}
+    {% if not r.verified and site.rule_norms_ok.get(r.id) %}{{ unv() }}{% endif %}
+    <a href="{{ xurl('pal-norms', 'deadlines/' ~ r.id ~ '/') }}">Как считается этот срок</a>
+  </p>
+  {% if r.get("ambiguous") and r.get("ambiguity_note") %}<p class="ok-rule__note">{{ r.ambiguity_note }}</p>{% endif %}
+  {% for n in (site.pack.get("rule_notes") or []) if n.rule_id == r.id %}<p class="ok-rule__note">{{ n.text }}</p>{% endfor %}
+</li>
+{% endif %}
+{%- endmacro %}
+
+{% macro unv() -%}
+<span class="op-status op-status--unverified op-status--inline"><i class="op-icon ok-mi" aria-hidden="true"></i><span>Не проверено</span></span>
+{%- endmacro %}
+
+{% macro ext(href, label) -%}
+{% set host = href.split("/")[2] if "://" in href else href %}
+<a href="{{ href }}" rel="noopener noreferrer">{{ label }}{{ icon("external-link", "ok-ext") }}<span class="ok-ext__host">откроется сайт {{ host }}</span></a>
+{%- endmacro %}
+
+
+{% macro back(strip=false) -%}
+<p class="ok-back" data-back data-base="{{ hub('s/') }}"{% if strip %} data-strip{% endif %} hidden><a href="{{ hub('') }}">{{ icon("arrow-left") }}<span></span></a></p>
+{%- endmacro %}
+
+{% macro icon_templates(names) -%}
+{% for n in names %}<template id="ok-icon-{{ n }}">{{ icon(n) }}</template>{% endfor %}
+{%- endmacro %}
+
+{% macro doc_field(f) -%}
+{% set fid = "f-" ~ f.id %}
+<div class="ok-field-wrap" data-field="{{ f.id }}" data-type="{{ f.type }}"{% if f.get("roles") %} data-roles="{{ f.roles | join(' ') }}"{% endif %}{% if f.get("required") %} data-required{% endif %}{% if f.get("required_if") %} data-required-if="{{ f.required_if }}"{% endif %}{% if f.get("personal") %} data-personal{% endif %}{% if f.get("default") %} data-default="{{ f.default }}"{% endif %}>
+{% if f.type == "date" %}
+{{ date3(fid, f.label, f.get("hint"), true, none if f.id == "signed_at" else "today", f.get("required") or false) }}
+{% else %}
+<div class="op-field">
+  <label class="op-field__label" for="{{ fid }}">{{ f.label }}{% if not f.get("required") %} <span class="op-field__optional">(можно не заполнять)</span>{% endif %}</label>
+  {% if f.get("hint") %}<p class="op-field__hint" id="{{ fid }}-hint">{{ f.hint }}</p>{% endif %}
+  {% if f.type == "select" %}
+  <select class="op-input" id="{{ fid }}" name="{{ f.id }}"{% if f.get("hint") %} aria-describedby="{{ fid }}-hint"{% endif %}>
+    <option value="">Выберите</option>
+    {% for o in f.get("options", []) %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}
+  </select>
+  {% elif f.type == "textarea" %}
+  <textarea class="op-input op-input--area" id="{{ fid }}" name="{{ f.id }}" rows="3"{% if f.get("max_len") %} maxlength="{{ f.max_len }}"{% endif %}{% if f.get("autocomplete") %} autocomplete="{{ f.autocomplete }}"{% endif %}{% if f.get("hint") %} aria-describedby="{{ fid }}-hint"{% endif %}></textarea>
+  {% else %}
+  <input class="op-input" id="{{ fid }}" name="{{ f.id }}" type="{{ 'tel' if f.get('autocomplete') == 'tel' else 'email' if f.get('autocomplete') == 'email' else 'text' }}"{% if f.get("max_len") %} maxlength="{{ f.max_len }}"{% endif %}{% if f.get("autocomplete") %} autocomplete="{{ f.autocomplete }}"{% endif %}{% if f.get("hint") %} aria-describedby="{{ fid }}-hint"{% endif %}>
+  {% endif %}
+  <p class="op-field__error" id="{{ fid }}-error" hidden>{{ icon("circle-alert") }}<span><strong>Ошибка:</strong> <span data-error></span></span></p>
+</div>
+{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro css(extra=[]) -%}
+{% for name in extra %}<link rel="stylesheet" href="{{ url('assets/css/ok-' ~ name ~ '.css') }}">
+{% endfor %}<link rel="stylesheet" href="{{ url('assets/css/ok-print.css') }}" media="print">
+{%- endmacro %}

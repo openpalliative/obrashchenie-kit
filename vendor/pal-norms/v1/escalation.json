@@ -1,0 +1,161 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "escalation",
+ "repo": "pal-norms",
+ "schema_version": "1.1.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-13T06:32:02Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 90,
+ "license": "CC-BY-4.0",
+ "source": [
+  {
+   "id": "ips-59-fz",
+   "title": "ИПС «Законодательство России», снимок web.archive.org: О порядке рассмотрения обращений граждан Российской Федерации",
+   "url": "https://web.archive.org/web/20260626091943*/pravo.gov.ru/proxy/ips/*nd=102106413*",
+   "retrieved_at": "2026-10-11",
+   "license": "не охраняется авторским правом, подп. 1 п. 6 ст. 1259 ГК РФ (официальные документы)"
+  },
+  {
+   "id": "pravo-208n-243n",
+   "title": "208н/243н: Об утверждении Положения об организации оказания паллиативной медицинской помощи, включая порядок взаимодействия медицинских организаций, организаций социального обслуживания и общественных объединений, иных некоммерческих организаций, осуществляющих свою деятельность в сфере охраны здоровья",
+   "url": "http://publication.pravo.gov.ru/document/0001202505290031",
+   "eoNumber": "0001202505290031",
+   "retrieved_at": "2026-10-11",
+   "license": "не охраняется авторским правом, подп. 1 п. 6 ст. 1259 ГК РФ (официальные документы)"
+  }
+ ],
+ "content_sha256": "fe139d64e598f1093810f2f2f4db4959a5761667845e931414105e479528c963",
+ "counts": {
+  "items": 4,
+  "unverified": 3,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "esc-no-answer",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ips-59-fz",
+   "order": 1,
+   "trigger": "no_answer_after_due",
+   "title": "Прошёл срок, а ответа нет",
+   "what": "Подайте жалобу на нарушение срока. Укажите, куда и когда вы писали и что ответа нет. Приложите копию обращения и подтверждение отправки или регистрации",
+   "addressee_kind": "prosecutor",
+   "parallel": false,
+   "norm_ids": [
+    "59-fz",
+    "80-fz"
+   ],
+   "quote_ids": [
+    "59-fz-s12-1",
+    "59-fz-s12-2",
+    "koap-5-59"
+   ],
+   "rule_ids": [
+    "59fz-answer"
+   ],
+   "ok_doc": null,
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   },
+   "interpretation": true,
+   "interpretation_note": "Цитаты подтверждают срок ответа, но не называют прокуратуру. Что жалобу на нарушение срока рассматривает прокуратура, это вывод проекта, юрист в РФ его не проверял",
+   "addressee_quote_ids": []
+  },
+  {
+   "id": "esc-redirected",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ips-59-fz",
+   "order": 2,
+   "trigger": "redirected_to_accused",
+   "title": "Жалобу переслали тем, на кого вы жаловались",
+   "what": "Закон запрещает направлять жалобу тому, чьё решение или действие обжалуется. Напишите в вышестоящий орган и приложите ответ, который получили",
+   "addressee_kind": "health_authority",
+   "parallel": false,
+   "norm_ids": [
+    "59-fz"
+   ],
+   "quote_ids": [
+    "59-fz-s8-6"
+   ],
+   "rule_ids": [],
+   "ok_doc": null,
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   },
+   "interpretation": true,
+   "interpretation_note": "Цитата запрещает пересылать жалобу тем, на кого жалуются, но не называет вышестоящий орган. Адресат выведен проектом",
+   "addressee_quote_ids": []
+  },
+  {
+   "id": "esc-not-on-merits",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ips-59-fz",
+   "order": 3,
+   "trigger": "answer_not_on_merits",
+   "title": "Ответили, но не по существу",
+   "what": "Ответ должен быть письменным и по существу поставленных вопросов. Напишите повторно и перечислите вопросы, на которые не ответили. Если речь о качестве медицинской помощи, копию можно направить в Росздравнадзор",
+   "addressee_kind": "rzn_territorial",
+   "parallel": false,
+   "norm_ids": [
+    "59-fz"
+   ],
+   "quote_ids": [
+    "59-fz-s10-1"
+   ],
+   "rule_ids": [],
+   "ok_doc": null,
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   },
+   "interpretation": true,
+   "interpretation_note": "Цитата требует ответа по существу, но не называет территориальный орган Росздравнадзора. Адресат выведен проектом",
+   "addressee_quote_ids": []
+  },
+  {
+   "id": "esc-threat-to-life",
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "pravo-208n-243n",
+   "order": 4,
+   "trigger": "threat_to_life",
+   "title": "Есть угроза жизни",
+   "what": "Не ждите ответа на письмо, звоните 103 или 112. Скорая помощь везёт человека с показаниями к паллиативной помощи в стационар. Жалобу о том, что случилось, подавайте параллельно, это можно сделать позже",
+   "addressee_kind": "health_authority",
+   "parallel": true,
+   "norm_ids": [
+    "208n-243n"
+   ],
+   "quote_ids": [
+    "208n-243n-p22"
+   ],
+   "rule_ids": [],
+   "ok_doc": null,
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   },
+   "interpretation": true,
+   "interpretation_note": "Цитата говорит о скорой помощи и стационаре. Куда подавать жалобу параллельно, выведено проектом",
+   "addressee_quote_ids": []
+  }
+ ]
+}

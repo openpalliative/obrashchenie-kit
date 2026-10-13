@@ -1,0 +1,90 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/addressees-federal.schema.json",
+ "title": "Федеральные адресаты",
+ "description": "Только ссылки, без почтовых адресов",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "addressees-federal"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "node",
+     "label",
+     "level",
+     "url",
+     "how",
+     "note",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "node": {
+      "enum": [
+       "mo_head",
+       "mo_vk",
+       "rzn_to",
+       "minzdrav_region",
+       "rzn_central",
+       "minzdrav_rf",
+       "prosecutor"
+      ]
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "level": {
+      "type": "integer"
+     },
+     "url": {
+      "type": "string",
+      "pattern": "^https://"
+     },
+     "how": {
+      "enum": [
+       "link_only",
+       "form",
+       "address_user"
+      ]
+     },
+     "note": {
+      "type": "string"
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

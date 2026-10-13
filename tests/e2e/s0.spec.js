@@ -1,0 +1,91 @@
+import { test, expect, checkA11y, noHorizontalScroll } from "../../opsite/tests/fixtures.js";
+import { open, fillDate, stubPrint, pdfCount } from "./helpers.js";
+
+test("S0: устный отказ, документ, подача, ответ переслали обжалуемому", async ({ page }) => {
+  await open(page, "scenarios/oral-refusal/");
+  await page.getByRole("link", { name: "Начать дело" }).click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Новое дело");
+  await expect(page.locator("[data-wizard-count]")).toHaveText("Шаг 2 из 4");
+  await page.locator("input[name=role][value=proxy]").check();
+  await page.getByRole("button", { name: "Дальше" }).click();
+  await page.getByRole("button", { name: "Дальше" }).click();
+  await expect(page.locator("[data-wizard-error]")).toContainText("Выберите регион");
+  await page.selectOption("#ok-region", { index: 1 });
+  await page.getByRole("button", { name: "Дальше" }).click();
+  await page.locator("[data-for='oral-refusal vk-refused discharge'] [data-quick='0']").click();
+  await page.getByRole("button", { name: /Готово/ }).click();
+  await expect(page.locator("[data-due]")).toContainText("Следующий шаг");
+  await noHorizontalScroll(page);
+  await checkA11y(page);
+
+  await page.locator("[data-primary] a").click();
+  await expect(page).toHaveURL(/docs\/written-answer\/$/);
+  await expect(page.locator(".op-steps__count")).toHaveText("Шаг 1 из 3");
+  await expect(page.locator("input[name=role][value=proxy]")).toBeChecked();
+  await page.fill("#f-addressee_name", "Главному врачу городской поликлиники");
+  await page.fill("#f-applicant_name", "Иванова Мария Петровна");
+  await page.fill("#f-applicant_address", "236000, г. Калининград, ул. Примерная, д. 1");
+  await page.fill("#f-patient_name", "Иванов Пётр Сергеевич");
+  await fillDate(page.locator("#f-proxy_date"), "2025-03-05");
+  await page.fill("#f-proxy_issuer", "нотариус Петрова А. А.");
+  await page.fill("#f-request", "созвать врачебную комиссию");
+  await page.fill("#f-refused_where", "участковый врач");
+  await page.getByRole("button", { name: /Дальше: проверить/ }).click();
+  await expect(page.locator("[data-errsum]")).toContainText("Как получить ответ");
+  await page.selectOption("#f-answer_way", "post");
+  await page.getByRole("button", { name: /Дальше: проверить/ }).click();
+  await expect(page.locator("[data-preview]")).toContainText("Прошу: созвать врачебную комиссию.");
+  await expect(page.locator("[data-preview]")).toContainText("нотариус Петрова А. А.");
+  await checkA11y(page);
+  await page.getByRole("button", { name: "Всё верно" }).click();
+  await expect(page.locator("[data-ready]")).toContainText("Документ готов");
+
+  await stubPrint(page);
+  await page.getByRole("button", { name: "Распечатать 2 экземпляра" }).click();
+  const sheets = page.locator("[data-sheets]");
+  await expect(sheets.locator(".ok-sheet")).toHaveCount(2);
+  const text = await sheets.innerText();
+  expect(text).not.toMatch(/openpalliative/i);
+  expect(text).not.toMatch(/[A-Za-z]/);
+  await expect(sheets.locator(".ok-sheet").nth(1).locator("[data-slot=receipt]")).not.toHaveAttribute("hidden");
+  await expect(sheets.locator(".ok-sheet").nth(0).locator("[data-slot=receipt]")).toHaveAttribute("hidden");
+  expect(await page.evaluate(() => document.title)).toBe("Заявление");
+  expect(pdfCount(await page.pdf({ format: "A4", preferCSSPageSize: true }))).toBe(2);
+
+  await page.getByRole("button", { name: /памятку/ }).click();
+  expect(pdfCount(await page.pdf({ format: "A4", preferCSSPageSize: true }))).toBe(1);
+  await page.evaluate(() => dispatchEvent(new Event("afterprint")));
+
+  const [ics] = await Promise.all([page.waitForEvent("download"), page.getByRole("button", { name: /напоминание в календарь/ }).click()]);
+  expect(ics.suggestedFilename()).toMatch(/\.ics$/);
+
+  await page.getByRole("button", { name: /Отметить в деле/ }).click();
+  await expect(page).toHaveURL(/case\/$/);
+  await expect(page.locator(".ok-due__date")).toBeVisible();
+  await expect(page.locator("[data-journal]")).toContainText("Подали заявление");
+
+  await page.locator("[data-answer-link]").click();
+  await page.locator("label.ok-big__item", { hasText: "Переслали" }).click();
+  await page.locator("label.op-choice__item", { hasText: "Переслали тому, на кого вы жалуетесь" }).click();
+  await expect(page.locator("[data-optlist]")).toContainText("Повторная жалоба");
+  await page.getByRole("button", { name: "Записать ответ в дело" }).click();
+  await page.locator("[data-live] a").click();
+  const opts = page.locator("[data-optlist]");
+  await expect(opts).toContainText("Повторная жалоба");
+  await expect(opts).not.toContainText("главному врачу");
+  await stubPrint(page);
+  await page.getByRole("button", { name: "Распечатать хронологию" }).click();
+  await page.emulateMedia({ media: "print" });
+  await expect(page.locator(".ok-tl")).toBeVisible();
+  await expect(page.locator(".ok-tl")).toContainText("Хронология обращения");
+  await expect(page.locator("[data-journal]")).toBeHidden();
+  await expect(page.locator(".ok-file")).toBeHidden();
+  await expect(page.locator("[data-addressees]")).toBeHidden();
+  expect(pdfCount(await page.pdf({ format: "A4", preferCSSPageSize: true }))).toBe(1);
+  await page.emulateMedia({ media: "screen" });
+  await page.evaluate(() => dispatchEvent(new Event("afterprint")));
+  await opts.locator("a", { hasText: "Собрать документ" }).first().click();
+  await expect(page).toHaveURL(/docs\/repeat-complaint\/$/);
+  const blank = await page.locator("[data-sheets]").innerText();
+  expect(blank).not.toMatch(/стать[яи]\s*8/);
+});

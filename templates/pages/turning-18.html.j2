@@ -1,0 +1,65 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% set items = site.kit.turning18["items"] %}
+{% block title %}Ребёнку скоро 18{% endblock %}
+{% block description %}Какие даты не пропустить перед 18-летием: до какой даты выписка ребёнка должна уйти во взрослую поликлинику и что семьи советуют начать заранее{% endblock %}
+{% block head %}{{ ok.css(["t18"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-t18">
+  {{ op.crumbs([("openpalliative", hub("")), (site.title, url("")), ("Ребёнку скоро 18", "")]) }}
+  <h1>Ребёнку скоро 18</h1>
+  <p class="op-lead">Посчитаем, какие даты нельзя пропустить перед 18-летием. Дата рождения нужна только для расчёта, она никуда не отправляется и не сохраняется</p>
+
+  <form class="ok-t18__form" data-js hidden novalidate>
+    {{ ok.date3("ok-birth", "Дата рождения ребёнка", none, false) }}
+    <button class="op-btn op-btn--primary op-btn--large" type="submit">{{ icon("calendar-days") }}<span>Посчитать</span></button>
+  </form>
+
+  <section class="ok-t18__result" data-result hidden aria-labelledby="ok-t18-res">
+    <h2 id="ok-t18-res" tabindex="-1">Календарь дат</h2>
+    <p class="ok-t18__for" data-for-line></p>
+    <ol class="ok-t18__list" data-list></ol>
+    <div class="op-actions">
+      <button class="op-btn op-btn--secondary" type="button" data-ics>{{ icon("calendar-clock") }}<span>Добавить в календарь</span></button>
+      {{ op.print_btn("Распечатать") }}
+    </div>
+    {{ op.sheet_footer(site.kit.turning18.data_date, site.plus_days(site.kit.turning18.data_date, 365), "openpalliative.github.io/obrashchenie-kit/turning-18/", "legal") }}
+  </section>
+
+  <section class="ok-t18__rules" aria-labelledby="ok-t18-how">
+    <h2 id="ok-t18-how">Как считаем</h2>
+    <ul class="ok-rules">
+      {% for it in items %}
+      {% set r = site.rules.get(it.get("rule_id") or "") %}
+      <li class="ok-rule">
+        <p class="ok-rule__label">{{ it.label }}</p>
+        <p class="ok-rule__text">{{ it.text }}</p>
+        <p class="ok-rule__meta">
+          {% if it.kind == "fact" %}День, когда исполнится 18
+          {% elif it.get("unit") == "months" %}За {{ it.offset }} мес. до дня 18-летия. Ориентир, не норма
+          {% elif r %}За {{ r.value }} рабочих дней до дня 18-летия по производственному календарю{% if it.margin_wd | int %}. Мы советуем попросить ещё на {{ it.margin_wd }} рабочих дней раньше{% endif %}
+          {% else %}Правило срока ещё не опубликовано в разделе «Нормы и сроки»{% endif %}
+          {% for n in it.norm_refs %} {{ norm(n.split("#")[0]) }}{% endfor %}
+          {% if not it.verified %} {{ ok.unv() }}{% endif %}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="ok-t18-more">
+    <h2 id="ok-t18-more">Что ещё может пригодиться</h2>
+    <ul class="ok-links">
+      <li><a href="{{ xurl('home-care-kit', 'ahead/') }}">Что подписать заранее</a></li>
+      <li><a href="{{ xurl('pal-devices-data', '') }}">Оборудование после 18: кто выдаёт</a></li>
+      <li><a href="{{ xurl('pal-norms', 'deadlines/') }}">Все сроки</a></li>
+    </ul>
+  </section>
+  {{ ok.back() }}
+</div>
+<template id="ok-t18-item"><li class="ok-t18__item"><p class="ok-t18__date"></p><div><p class="ok-t18__label"></p><p class="ok-t18__text"></p><p class="ok-t18__formula"></p><div class="ok-t18__status"></div></div></li></template>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/t18-page.js') }}"></script>
+<script type="module" src="{{ url('assets/js/back.js') }}"></script>
+{% endblock %}

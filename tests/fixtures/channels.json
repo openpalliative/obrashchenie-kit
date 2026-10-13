@@ -1,0 +1,135 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "channels",
+ "repo": "obrashchenie-kit",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 365,
+ "license": "CC-BY-SA-4.0",
+ "source": [
+  {
+   "id": "ok-pack",
+   "title": "Пакет T0 проекта openpalliative (демо, без проверки юристом в РФ)",
+   "url": "https://github.com/openpalliative/obrashchenie-kit",
+   "retrieved_at": "2026-10-11",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "id": "research-ezp",
+   "title": "Статья «Подать электронное обращение в госорганы можно через Почту России», портал «Про паллиатив», 19.02.2025, по исследованию проекта (вторичный источник)",
+   "url": "https://pro-palliativ.ru/library/items/podat-elektronnoe-obrashchenie-v-gosorgany-mozhno-cherez-pochtu-rossii",
+   "retrieved_at": "2026-10-11"
+  },
+  {
+   "id": "research-minzdrav-reception",
+   "title": "Форма обращения на сайте Минздрава России, описание формы по исследованию проекта от 11.10.2026 (сайт проект не открывает)",
+   "url": "https://minzdrav.gov.ru/reception/appeals/new",
+   "retrieved_at": "2026-10-11"
+  }
+ ],
+ "content_sha256": "b45203028cacaca83c541c7b8fc5e0ee220f0816bab55c1fd4e69652fdd878d1",
+ "counts": {
+  "items": 5,
+  "unverified": 5,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "paper-in-person",
+   "label": "Отнести лично",
+   "kind": "paper",
+   "limit_chars": null,
+   "limit_files": null,
+   "limit_mb": null,
+   "limit_pages": null,
+   "url": null,
+   "steps": [
+    "Распечатайте документ в двух экземплярах и подпишите оба",
+    "Отдайте один экземпляр в канцелярию или приёмную",
+    "Попросите поставить на вашем экземпляре отметку о приёме, дату и входящий номер",
+    "Сохраните ваш экземпляр с отметкой"
+   ],
+   "source_ref": "ok-pack",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "paper-mail",
+   "label": "Отправить заказным письмом",
+   "kind": "paper",
+   "limit_chars": null,
+   "limit_files": null,
+   "limit_mb": null,
+   "limit_pages": null,
+   "url": null,
+   "steps": [
+    "Распечатайте документ и подпишите",
+    "Отправьте заказным письмом с уведомлением о вручении и описью вложения",
+    "Сохраните квитанцию и опись. По номеру отправления видно, когда письмо получили"
+   ],
+   "source_ref": "ok-pack",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "ezp",
+   "label": "Электронное заказное письмо Почты России",
+   "kind": "ezp",
+   "limit_chars": null,
+   "limit_files": 5,
+   "limit_mb": 10,
+   "limit_pages": 5,
+   "limit_note": "В приложении Почты 5 фотографий или один файл PDF до 5 страниц. На сайте файл до 10 МБ, для доставки на бумаге не больше 19 страниц",
+   "url": "https://pro-palliativ.ru/library/items/podat-elektronnoe-obrashchenie-v-gosorgany-mozhno-cherez-pochtu-rossii",
+   "steps": [
+    "Распечатайте документ, подпишите и сохраните его как PDF или сфотографируйте",
+    "Войдите в приложение или на сайт Почты через Госуслуги и загрузите файл",
+    "Если адресат не получает электронные письма, Почта напечатает письмо и доставит на бумаге",
+    "Сохраните трек-номер"
+   ],
+   "source_ref": "research-ezp",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "esia-minzdrav-rf",
+   "label": "Форма на сайте Минздрава России",
+   "kind": "esia_form",
+   "limit_chars": 2000,
+   "limit_files": 1,
+   "limit_mb": 5,
+   "limit_pages": null,
+   "limit_note": "Текст до 2000 знаков и один файл до 5 МБ. Несколько файлов можно собрать в архив",
+   "url": "https://minzdrav.gov.ru/reception/appeals/new",
+   "steps": [
+    "Вставьте короткий текст в поле формы",
+    "Приложите подписанный документ одним файлом PDF",
+    "Отправьте через вход на Госуслуги"
+   ],
+   "source_ref": "research-minzdrav-reception",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "esia-pos",
+   "label": "Форма на Госуслугах или на сайте ведомства",
+   "kind": "esia_form",
+   "limit_chars": null,
+   "limit_files": null,
+   "limit_mb": null,
+   "limit_pages": null,
+   "limit_note": "Ограничения по знакам и файлам официально не опубликованы",
+   "url": null,
+   "steps": [
+    "Вставьте короткий текст в поле формы",
+    "Приложите подписанный документ файлом PDF",
+    "Сохраните номер обращения, который покажет форма"
+   ],
+   "source_ref": "ok-pack",
+   "verified": false,
+   "verified_at": null
+  }
+ ]
+}

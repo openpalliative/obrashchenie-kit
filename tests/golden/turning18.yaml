@@ -1,0 +1,49 @@
+description: >-
+  Эталоны вех «Ребёнку скоро 18». p23-extract считает правило 208n-p23-transition (90 рабочих дней назад от 18-летия,
+  pal-norms вычитает ещё 5 рабочих дней, если календарь на год не утверждён). margin_date на 5 рабочих дней раньше date
+  (margin_wd в data/pack/turning18.yaml). Ориентиры семей: дата 18-летия минус offset месяцев, тот же день месяца, а если такого дня нет, последний день месяца.
+calendar: tests/fixtures/vendor/pal-norms/v1/calendar.json
+rules: tests/fixtures/vendor/pal-norms/v1/deadline-rules.json
+cases:
+  - birth: "2009-05-09"
+    note: 18 лет в воскресенье рядом с майскими праздниками
+    expect:
+      birthday-18: {date: "2027-05-09"}
+      p23-extract: {date: "2026-12-21", margin_date: "2026-12-14", calendar_verified: true}
+      representation-orientir: {date: "2026-11-09"}
+      mse-orientir: {date: "2027-02-09"}
+  - birth: "2008-12-31"
+    note: 18 лет 31.12.2026, нерабочий день
+    expect:
+      birthday-18: {date: "2026-12-31"}
+      p23-extract: {date: "2026-08-26", margin_date: "2026-08-19", calendar_verified: true}
+      representation-orientir: {date: "2026-06-30"}
+      mse-orientir: {date: "2026-09-30"}
+  - birth: "2009-01-11"
+    note: 18 лет сразу после новогодних праздников 2027
+    expect:
+      birthday-18: {date: "2027-01-11"}
+      p23-extract: {date: "2026-08-26", margin_date: "2026-08-19", calendar_verified: true}
+      representation-orientir: {date: "2026-07-11"}
+      mse-orientir: {date: "2026-10-11"}
+  - birth: "2009-05-12"
+    note: 18 лет после майских праздников 2027
+    expect:
+      birthday-18: {date: "2027-05-12"}
+      p23-extract: {date: "2026-12-22", margin_date: "2026-12-15", calendar_verified: true}
+      representation-orientir: {date: "2026-11-12"}
+      mse-orientir: {date: "2027-02-12"}
+  - birth: "2010-03-01"
+    note: календарь на 2028 год не утверждён, дата не позже, чем при счёте только по выходным
+    expect:
+      birthday-18: {date: "2028-03-01"}
+      p23-extract: {date: "2027-10-07", margin_date: "2027-09-30", calendar_verified: false}
+      representation-orientir: {date: "2027-09-01"}
+      mse-orientir: {date: "2027-12-01"}
+  - birth: "2008-11-20"
+    note: до 18 лет меньше 90 рабочих дней, дата p23 уже прошла
+    expect:
+      birthday-18: {date: "2026-11-20"}
+      p23-extract: {date: "2026-07-16", margin_date: "2026-07-09", calendar_verified: true}
+      representation-orientir: {date: "2026-05-20"}
+      mse-orientir: {date: "2026-08-20"}

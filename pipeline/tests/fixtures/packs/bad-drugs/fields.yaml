@@ -1,0 +1,20 @@
+groups:
+  applicant:
+    - id: applicant_name
+      label: Ваши фамилия, имя, отчество
+      hint: Как в паспорте
+      type: text
+      required: "true"
+      personal: "true"
+  sign:
+    - id: signed_at
+      label: Дата на документе
+      hint: Обычно сегодня
+      type: date
+      required: "true"
+      personal: "false"
+blocks:
+  head:
+    - id: from
+      place: head
+      text: от {{applicant_name}}

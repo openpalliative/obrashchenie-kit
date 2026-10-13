@@ -1,0 +1,125 @@
+scenarios:
+  - id: oral-refusal
+    order: "1"
+    title: Отказали на словах
+    hint: В поликлинике, больнице или по телефону сказали «нет», но ничего не дали на бумаге
+    icon: message-square
+    situations: [refused, device, dying]
+    start_condition: oral_refusal
+    first_steps:
+      - Запишите, когда, где и кто отказал и что именно сказали. Сделайте это сегодня, пока помните
+      - Попросите ответ на бумаге. Для этого есть заявление на имя главного врача
+      - Подайте заявление в двух экземплярах и попросите поставить отметку о приёме на вашем экземпляре
+    docs: [written-answer, med-records, filing-sheet]
+    rule_ids: [59fz-answer]
+    if_failed:
+      - Заявление не приняли. Отправьте его заказным письмом с описью или электронным заказным письмом Почты
+      - Ответ не пришёл в срок. Можно пожаловаться на нарушение срока
+      - Ответили отказом. Посмотрите, что пришло в ответ, и выберите следующий шаг
+    see_also:
+      - repo: pal-norms
+        path: deadlines/
+        label: Как считают срок ответа
+      - repo: pal-directory
+        path: ""
+        label: Куда звонить в вашем регионе
+    verified: "false"
+    verified_at: ""
+    source_ref: ok-pack
+  - id: no-answer
+    order: "2"
+    title: Не ответили в срок
+    hint: Вы подали письменное обращение, а ответа нет
+    icon: clock
+    situations: [refused]
+    start_condition: no_answer
+    first_steps:
+      - Найдите ваш экземпляр обращения с отметкой о приёме или почтовую квитанцию. Дата на нём нужна для расчёта срока
+      - Посчитайте, до какого числа должен был прийти ответ
+      - Если срок прошёл, соберите жалобу на нарушение срока в орган выше
+    docs: [deadline-complaint, filing-sheet]
+    rule_ids: [59fz-answer, 59fz-redirect]
+    if_failed:
+      - Не можете найти дату подачи. Посмотрите номер почтового отправления или историю на Госуслугах
+      - На жалобу тоже не ответили. Можно пожаловаться ещё выше или в прокуратуру
+    see_also:
+      - repo: pal-norms
+        path: escalation/
+        label: Куда обращаться дальше
+    verified: "false"
+    verified_at: ""
+    source_ref: ok-pack
+  - id: vk-refused
+    order: "3"
+    title: Не созывают врачебную комиссию или отказали в заключении
+    hint: Врачебную комиссию не проводят, а решение комиссии не выдают на руки
+    icon: users-round
+    situations: [conclusion]
+    start_condition: vk_refused
+    first_steps:
+      - Попросите письменно созвать врачебную комиссию или объяснить отказ
+      - Если комиссия была, запросите выписку из протокола
+      - Запросите копии медицинских документов, если они понадобятся для следующего обращения
+    docs: [written-answer, vk-extract, med-records]
+    rule_ids: [180n-protocol-extract, 59fz-answer]
+    if_failed:
+      - Выписку не выдали в срок. Можно пожаловаться на нарушение срока
+      - Комиссия отказала. Посмотрите, что пришло в ответ, и выберите следующий шаг
+    see_also:
+      - repo: pal-norms
+        path: indications/
+        label: Кому оказывают паллиативную помощь, дословно из приказа
+      - repo: home-care-kit
+        path: conclusion/
+        label: Лист для разговора с врачом о заключении
+    verified: "false"
+    verified_at: ""
+    source_ref: ok-pack
+  - id: discharge
+    order: "4"
+    title: Выписывают домой
+    hint: Человека готовят к выписке, а дома нужен уход, изделия или выезд врача
+    icon: door-open
+    situations: [discharge]
+    start_condition: discharge_planned
+    first_steps:
+      - Распечатайте чек-лист выписки и пройдите его с врачом до выхода из больницы
+      - Запросите выписку и копии документов, пока человек ещё в стационаре
+      - Если в чём-то отказали, попросите ответ на бумаге
+    docs: [med-records, vk-extract, written-answer]
+    rule_ids: [789n-inpatient, 180n-protocol-extract]
+    if_failed:
+      - Выписку не дали на руки. Запрос можно отправить и после выписки
+      - Дома не приходит врач. Попросите письменный ответ в поликлинике
+    see_also:
+      - repo: home-care-kit
+        path: discharge/
+        label: Распечатать чек-лист выписки
+      - repo: pal-devices-data
+        path: ""
+        label: Кто выдаёт изделия для дома
+    verified: "false"
+    verified_at: ""
+    source_ref: ok-pack
+  - id: forwarded
+    order: "5"
+    title: Жалобу переслали тому, на кого вы жалуетесь
+    hint: Вы жаловались выше, а жалобу отправили обратно в ту же организацию
+    icon: refresh-cw
+    situations: [refused]
+    start_condition: forwarded_to_respondent
+    first_steps:
+      - Сохраните уведомление о пересылке и ваш экземпляр жалобы
+      - Соберите повторную жалобу в орган выше. В ней будет просьба не пересылать её тому, на кого вы жалуетесь
+      - Подайте её и запишите дату в журнал дела
+    docs: [repeat-complaint, filing-sheet]
+    rule_ids: [59fz-answer]
+    if_failed:
+      - Повторную жалобу тоже переслали. Можно обратиться в прокуратуру
+    see_also:
+      - repo: pal-norms
+        path: escalation/
+        label: Куда обращаться дальше
+    verified: "false"
+    verified_at: ""
+    source_ref: ok-pack

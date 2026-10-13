@@ -1,0 +1,177 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/scenarios.schema.json",
+ "title": "Сценарии",
+ "description": "Пять страниц-входов kit",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "scenarios"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "slug",
+     "order",
+     "title",
+     "hint",
+     "icon",
+     "situations",
+     "start_condition",
+     "first_steps",
+     "docs",
+     "rule_ids",
+     "if_failed",
+     "see_also",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "order": {
+      "type": "integer"
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1
+     },
+     "hint": {
+      "type": "string",
+      "minLength": 1
+     },
+     "icon": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "situations": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+       "x-message-ru": "id латиницей в нижнем регистре через дефис"
+      }
+     },
+     "start_condition": {
+      "enum": [
+       "oral_refusal",
+       "vk_not_held",
+       "vk_refused",
+       "no_answer",
+       "no_answer_waiting",
+       "deadline_passed",
+       "answer_refusal_with_basis",
+       "answer_refusal_no_basis",
+       "answer_not_on_merits",
+       "forwarded_to_respondent",
+       "forwarded_other",
+       "extended",
+       "docs_requested",
+       "discharge_planned",
+       "reply_unclear",
+       "resolved"
+      ]
+     },
+     "first_steps": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "docs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+       "x-message-ru": "id латиницей в нижнем регистре через дефис"
+      }
+     },
+     "rule_ids": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+       "x-message-ru": "id латиницей в нижнем регистре через дефис"
+      }
+     },
+     "if_failed": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "see_also": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "repo",
+        "path",
+        "label"
+       ],
+       "additionalProperties": false,
+       "properties": {
+        "repo": {
+         "enum": [
+          "pal-norms",
+          "pal-directory",
+          "pal-devices-data",
+          "home-care-kit",
+          "openpalliative.github.io"
+         ]
+        },
+        "path": {
+         "type": "string",
+         "pattern": "^([a-z0-9-]+/)*$"
+        },
+        "label": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

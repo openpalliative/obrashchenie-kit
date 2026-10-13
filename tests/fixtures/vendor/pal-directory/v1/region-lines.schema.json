@@ -1,0 +1,27 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "pal-directory region-lines, минимальная схема тестового снимка",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "region-lines"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "region_id",
+     "agency",
+     "tel",
+     "number_display",
+     "roles",
+     "origin",
+     "verified",
+     "verified_at"
+    ]
+   }
+  }
+ }
+}

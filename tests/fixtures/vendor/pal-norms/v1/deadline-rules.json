@@ -1,0 +1,268 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "deadline-rules",
+ "repo": "pal-norms",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 90,
+ "license": "CC-BY-4.0",
+ "source": [
+  {
+   "id": "fixture-pal-norms",
+   "title": "Тестовый снимок pal-norms для obrashchenie-kit. Реквизиты и переносы взяты из официальных публикаций 11.10.2026, тексты норм не сверены. Не заменяет pal-norms"
+  },
+  {
+   "id": "pravo-api",
+   "title": "Метаданные актов из API портала официального опубликования",
+   "url": "http://publication.pravo.gov.ru/api/Document",
+   "retrieved_at": "2026-10-11"
+  }
+ ],
+ "content_sha256": "28a48687570b6d5db3bdef1e81de4b7ee6a300d5e3d941164f0f8b1bc328d146",
+ "counts": {
+  "items": 6,
+  "unverified": 3,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "59fz-answer",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "fixture-pal-norms",
+   "situation": "Вы подали письменное обращение",
+   "result_label": "Ответ должен прийти не позже",
+   "from_event": "received",
+   "from_event_label": "Когда обращение получили",
+   "who": "орган или организация, куда вы написали",
+   "value": 30,
+   "unit": "calendar_days",
+   "direction": "forward",
+   "pre": {
+    "value": 3,
+    "unit": "calendar_days",
+    "label": "на регистрацию"
+   },
+   "extension": {
+    "value": 30,
+    "unit": "calendar_days",
+    "label": "могут продлить, но должны сообщить вам"
+   },
+   "shift_if_nonworking": "unknown",
+   "margin_working_days": 0,
+   "norm_ids": [
+    "59-fz"
+   ],
+   "quote_ids": [
+    "59-fz-p-12-1"
+   ],
+   "ambiguous": true,
+   "ambiguity_note": "В тексте не сказано, переносится ли срок с выходного дня",
+   "escalation_ids": [
+    "no-answer"
+   ],
+   "audience": [
+    "family",
+    "org"
+   ],
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  },
+  {
+   "id": "59fz-redirect",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "fixture-pal-norms",
+   "situation": "Обращение не по адресу",
+   "result_label": "Должны переслать по компетенции не позже",
+   "from_event": "registered",
+   "from_event_label": "Когда обращение зарегистрировали",
+   "who": "орган, куда вы написали",
+   "value": 7,
+   "unit": "calendar_days",
+   "direction": "forward",
+   "pre": null,
+   "extension": null,
+   "shift_if_nonworking": "unknown",
+   "margin_working_days": 0,
+   "norm_ids": [
+    "59-fz"
+   ],
+   "quote_ids": [
+    "59-fz-p-8-3"
+   ],
+   "ambiguous": true,
+   "ambiguity_note": "В тексте не сказано, переносится ли срок с выходного дня",
+   "escalation_ids": [],
+   "audience": [
+    "family",
+    "org"
+   ],
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  },
+  {
+   "id": "180n-protocol-extract",
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "fixture-pal-norms",
+   "situation": "Вы попросили выписку из протокола врачебной комиссии",
+   "result_label": "Выписку должны выдать не позже",
+   "from_event": "received",
+   "from_event_label": "Когда запрос поступил в медицинскую организацию",
+   "who": "медицинская организация",
+   "value": 3,
+   "unit": "working_days",
+   "direction": "forward",
+   "pre": null,
+   "extension": null,
+   "shift_if_nonworking": "no",
+   "margin_working_days": 0,
+   "norm_ids": [
+    "180n"
+   ],
+   "quote_ids": [
+    "180n-p-16"
+   ],
+   "ambiguous": false,
+   "ambiguity_note": null,
+   "escalation_ids": [],
+   "audience": [
+    "family",
+    "org"
+   ],
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  },
+  {
+   "id": "789n-copies",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "fixture-pal-norms",
+   "situation": "Вы запросили копии медицинских документов",
+   "result_label": "Документы должны выдать не позже",
+   "from_event": "received",
+   "from_event_label": "Когда запрос зарегистрировали",
+   "who": "медицинская организация",
+   "value": 30,
+   "unit": "calendar_days",
+   "direction": "forward",
+   "pre": null,
+   "extension": null,
+   "shift_if_nonworking": "unknown",
+   "margin_working_days": 0,
+   "norm_ids": [
+    "789n",
+    "59-fz"
+   ],
+   "quote_ids": [
+    "789n-p-8"
+   ],
+   "ambiguous": true,
+   "ambiguity_note": "Срок взят из закона об обращениях граждан, на который ссылается пункт 8",
+   "escalation_ids": [],
+   "audience": [
+    "family",
+    "org"
+   ],
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  },
+  {
+   "id": "789n-inpatient",
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "fixture-pal-norms",
+   "situation": "Вы запросили выписку или копии, пока человек в стационаре",
+   "result_label": "Должны выдать не позже",
+   "from_event": "requested",
+   "from_event_label": "Когда попросили",
+   "who": "стационар",
+   "value": 1,
+   "unit": "within_24h",
+   "direction": "forward",
+   "pre": null,
+   "extension": null,
+   "shift_if_nonworking": "no",
+   "margin_working_days": 0,
+   "norm_ids": [
+    "789n"
+   ],
+   "quote_ids": [
+    "789n-p-8"
+   ],
+   "ambiguous": false,
+   "ambiguity_note": null,
+   "escalation_ids": [],
+   "audience": [
+    "family"
+   ],
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  },
+  {
+   "id": "208n-p23-transition",
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "fixture-pal-norms",
+   "situation": "Ребёнку скоро 18",
+   "result_label": "Сведения должны передать не позже",
+   "from_event": "turns-18",
+   "from_event_label": "Дата, когда исполнится 18",
+   "who": "детская медицинская организация",
+   "value": 90,
+   "unit": "working_days",
+   "direction": "backward",
+   "pre": null,
+   "extension": null,
+   "shift_if_nonworking": "no",
+   "margin_working_days": 5,
+   "norm_ids": [
+    "208n-243n"
+   ],
+   "quote_ids": [
+    "208n-243n-p-23"
+   ],
+   "ambiguous": false,
+   "ambiguity_note": null,
+   "escalation_ids": [],
+   "audience": [
+    "family"
+   ],
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+id: deadline-complaint
+tier: T0
+order: "4"
+title: Жалоба
+name: Пожаловаться, что не ответили в срок
+gives: Тот, кто выше, узнаёт, что вам не ответили, и может потребовать ответ
+when_needed: Срок ответа на ваше письменное обращение прошёл, а ответа нет
+addressee_kinds: [rzn_to, minzdrav_region, rzn_central, minzdrav_rf, prosecutor]
+roles: [self, proxy, guardian, parent]
+norm_refs: ["59-fz#p-12-1"]
+fields:
+  - group: addressee
+    hints:
+      addressee_name: Должность и название ведомства, куда вы жалуетесь. Например, руководителю территориального органа Росздравнадзора по вашему региону, министру здравоохранения вашего региона или прокурору
+  - group: applicant
+  - group: representation
+  - id: filed_at
+    label: Когда вы подали обращение
+    hint: Дата на вашем экземпляре с отметкой о приёме или на почтовой квитанции
+    type: date
+    required: "true"
+    personal: "false"
+  - id: filed_to
+    label: Куда вы подали обращение
+    hint: Название организации или должность того, кому писали
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "240"
+  - id: reg_number
+    label: Номер регистрации
+    hint: Если его поставили на вашем экземпляре или прислали
+    type: text
+    required: "false"
+    personal: "false"
+    max_len: "40"
+  - id: filed_subject
+    label: О чём было обращение
+    hint: Одной-двумя фразами
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "500"
+  - group: answer
+  - group: attach
+  - group: sign
+blocks:
+  - use: head
+  - use: role
+  - id: facts
+    text: "{{date:filed_at}} я подал(а) письменное обращение. Кому: {{filed_to}}. Суть обращения: {{filed_subject}}."
+  - id: reg-number
+    when: reg_number
+    text: "Регистрационный номер обращения: {{reg_number}}."
+  - id: no-answer
+    norm_refs: ["59-fz#p-12-1"]
+    text: Ответ на моё обращение в установленный срок не получен ({{norm:59-fz#p-12-1}}).
+    fallback: Ответ на моё обращение в установленный срок не получен.
+  - id: ask
+    text: Прошу проверить, почему мне не ответили в установленный срок, принять меры, чтобы мне дали ответ по существу, и сообщить мне о результатах.
+  - use: answer
+  - use: foot
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person, paper-mail, ezp, esia-pos, esia-minzdrav-rf]
+esia_summary: "{{date:filed_at}} я подал(а) письменное обращение, ответ в установленный срок не получен. Кому: {{filed_to}}. Прошу проверить и сообщить мне о результатах. Жалоба во вложении."
+attachments_hint:
+  - копия вашего обращения с отметкой о приёме или почтовая квитанция и опись вложения
+  - копия доверенности, если обращаетесь по доверенности
+review_notes:
+  - Срок ответа и куда жаловаться при его нарушении проверить юристу в РФ. Текст закона об обращениях граждан пока не сверен с официальной публикацией
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

@@ -1,0 +1,83 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "escalation",
+ "repo": "pal-norms",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 90,
+ "license": "CC-BY-4.0",
+ "source": [
+  {
+   "id": "fixture-pal-norms",
+   "title": "Тестовый снимок pal-norms для obrashchenie-kit. Реквизиты и переносы взяты из официальных публикаций 11.10.2026, тексты норм не сверены. Не заменяет pal-norms"
+  },
+  {
+   "id": "pravo-api",
+   "title": "Метаданные актов из API портала официального опубликования",
+   "url": "http://publication.pravo.gov.ru/api/Document",
+   "retrieved_at": "2026-10-11"
+  }
+ ],
+ "content_sha256": "b38db6870277aec6627020cbecb439992ebe4019368e904036f7c4dd5569b2fc",
+ "counts": {
+  "items": 2,
+  "unverified": 2,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "no-answer",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "fixture-pal-norms",
+   "order": 1,
+   "trigger": "no_answer_after_due",
+   "title": "Ответа нет после срока",
+   "what": "Жалоба на нарушение срока ответа",
+   "addressee_kind": "rzn_territorial",
+   "parallel": false,
+   "norm_ids": [
+    "59-fz"
+   ],
+   "quote_ids": [],
+   "rule_ids": [
+    "59fz-answer"
+   ],
+   "ok_doc": "deadline-complaint",
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  },
+  {
+   "id": "redirected",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "fixture-pal-norms",
+   "order": 2,
+   "trigger": "redirected_to_accused",
+   "title": "Жалобу переслали тому, на кого вы жаловались",
+   "what": "Повторная жалоба выше с просьбой не пересылать",
+   "addressee_kind": "rzn_central",
+   "parallel": false,
+   "norm_ids": [
+    "59-fz"
+   ],
+   "quote_ids": [],
+   "rule_ids": [],
+   "ok_doc": "repeat-complaint",
+   "legal_review": {
+    "status": "none",
+    "role": null,
+    "reviewed_at": null,
+    "expires_at": null,
+    "ref": null
+   }
+  }
+ ]
+}

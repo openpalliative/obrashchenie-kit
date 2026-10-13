@@ -1,0 +1,35 @@
+id: complain
+tier: T0
+order: "2"
+title: Жалоба
+name: Жалоба на срок
+gives: Проверка срока
+when_needed: Срок прошёл
+addressee_kinds: [rzn_to]
+roles: [self]
+fields:
+  - group: applicant
+  - id: filed_at
+    label: Когда подали
+    hint: Дата
+    type: date
+    required: "true"
+    personal: "false"
+  - group: sign
+blocks:
+  - use: head
+  - id: facts
+    norm_refs: ["law#p-12-1"]
+    text: Ответ на обращение от {{date:filed_at}} не получен ({{norm:law#p-12-1}}).
+    fallback: Ответ на обращение от {{date:filed_at}} в установленный срок не получен.
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person]
+esia_summary: ""
+attachments_hint: []
+review_notes: []
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

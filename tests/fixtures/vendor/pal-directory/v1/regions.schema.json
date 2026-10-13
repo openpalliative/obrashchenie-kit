@@ -1,0 +1,22 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "pal-directory regions, минимальная схема тестового снимка",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "regions"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "name",
+     "verified",
+     "verified_at"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,172 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "addressees",
+ "repo": "pal-directory",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 90,
+ "license": "CC0-1.0",
+ "source": [
+  {
+   "id": "fixture-pal-directory",
+   "title": "Тестовый снимок pal-directory для obrashchenie-kit. Названия ведомств из таблицы горячих линий Росздравнадзора от 03.03.2026, номера выдуманные. Не заменяет pal-directory"
+  },
+  {
+   "id": "rzn-hotlines",
+   "title": "Номера телефонов горячих линий в субъектах Российской Федерации, Росздравнадзор",
+   "url": "https://roszdravnadzor.gov.ru/pages/main/call/to/tel",
+   "retrieved_at": "2026-03-03",
+   "sha256": "0594711b33cfc449e5842c608a9b056b39f6cbaf9427209271132815cf9e3e90"
+  }
+ ],
+ "content_sha256": "88ba30416cfcc8d5b341ffab8a7a43ddb47787c6c7bef8c2977ac5868cd0971b",
+ "counts": {
+  "items": 11,
+  "unverified": 0,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "ru-chu-minzdrav",
+   "region_id": "RU-CHU",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Чукотского автономного округа",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-chu-rzn",
+   "region_id": "RU-CHU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Чукотскому автономному округу",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-chu-tfoms",
+   "region_id": "RU-CHU",
+   "agency": "tfoms",
+   "name": "Чукотский территориальный фонд обязательного медицинского страхования",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-irk-minzdrav",
+   "region_id": "RU-IRK",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Иркутской области",
+   "line_ids": [
+    "ru-irk-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-irk-rzn",
+   "region_id": "RU-IRK",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Иркутской области",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-irk-tfoms",
+   "region_id": "RU-IRK",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Иркутской области",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-kgd-minzdrav",
+   "region_id": "RU-KGD",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Калининградской области (Медицинский информационный аналитический центр (Контакт-центр 122)",
+   "line_ids": [
+    "ru-kgd-minzdrav-80000000001"
+   ],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-kgd-rzn",
+   "region_id": "RU-KGD",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Калининградской области",
+   "line_ids": [
+    "ru-kgd-rzn-80000000002"
+   ],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-kgd-tfoms",
+   "region_id": "RU-KGD",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Калининградской области",
+   "line_ids": [
+    "ru-kgd-tfoms-80000000003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-mow-minzdrav",
+   "region_id": "RU-MOW",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения г. Москвы",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "ru-mow-tfoms",
+   "region_id": "RU-MOW",
+   "agency": "tfoms",
+   "name": "Московский городской фонд обязательного медицинского страхования",
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  }
+ ]
+}

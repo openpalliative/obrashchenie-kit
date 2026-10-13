@@ -1,0 +1,75 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "addressees-federal",
+ "repo": "obrashchenie-kit",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 365,
+ "license": "CC-BY-SA-4.0",
+ "source": [
+  {
+   "id": "research-rzn-contacts",
+   "title": "Страница контактов Росздравнадзора, по исследованию проекта от 11.10.2026 (сайт проект не открывает)",
+   "url": "https://roszdravnadzor.gov.ru/about/contacts",
+   "retrieved_at": "2026-10-11"
+  },
+  {
+   "id": "research-minzdrav-rf",
+   "title": "Интернет-приёмная Минздрава России, по исследованию проекта от 11.10.2026 (сайт проект не открывает)",
+   "url": "https://minzdrav.gov.ru/reception",
+   "retrieved_at": "2026-10-11"
+  },
+  {
+   "id": "research-genproc",
+   "title": "Интернет-приёмная Генеральной прокуратуры, вход только через Госуслуги, по исследованию проекта от 11.10.2026",
+   "url": "https://epp.genproc.gov.ru/web/gprf/internet-reception/personal-receptionrequest",
+   "retrieved_at": "2026-10-11"
+  }
+ ],
+ "content_sha256": "097faef09c7c4b41f0d2093ee0780d6c32b8723216f5fcdf3fda39e3b3dbd8dc",
+ "counts": {
+  "items": 3,
+  "unverified": 3,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "rzn-central",
+   "node": "rzn_central",
+   "label": "Росздравнадзор",
+   "level": 3,
+   "url": "https://roszdravnadzor.gov.ru",
+   "how": "link_only",
+   "note": "Адрес для письма есть на сайте ведомства",
+   "source_ref": "research-rzn-contacts",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "minzdrav-rf",
+   "node": "minzdrav_rf",
+   "label": "Минздрав России",
+   "level": 3,
+   "url": "https://minzdrav.gov.ru/reception",
+   "how": "form",
+   "note": "Форма обращения работает через вход на Госуслуги",
+   "source_ref": "research-minzdrav-rf",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "genproc",
+   "node": "prosecutor",
+   "label": "Прокуратура",
+   "level": 2,
+   "url": "https://epp.genproc.gov.ru/web/gprf/internet-reception/personal-receptionrequest",
+   "how": "form",
+   "note": "Интернет-приёмная работает через вход на Госуслуги. Можно подать и на бумаге в прокуратуру района или региона",
+   "source_ref": "research-genproc",
+   "verified": false,
+   "verified_at": null
+  }
+ ]
+}

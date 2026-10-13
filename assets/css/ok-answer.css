@@ -1,0 +1,119 @@
+.ok-big .ok-q__title {
+  grid-column: 1 / -1;
+}
+
+@media (forced-colors: active) {
+  .ok-big__item:has(input:checked),
+  .ok-ladder__item.is-current .ok-ladder__mark {
+    outline: 3px solid CanvasText;
+  }
+}
+
+.ok-big {
+  border: 0;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+@media (min-width: 720px) {
+  .ok-big {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.ok-big__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 72px;
+  padding: 14px 18px;
+  background: var(--op-surface);
+  border: 1px solid var(--op-border);
+  border-radius: var(--op-radius);
+  font-size: var(--op-size-h3);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ok-big__item:has(input:checked) {
+  border: 3px solid var(--op-primary);
+  padding: 12px 16px;
+  background: var(--op-highlight);
+}
+
+.ok-big__item input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  accent-color: var(--op-primary);
+}
+
+.ok-more {
+  margin: 0 0 24px;
+  max-width: var(--op-col);
+}
+
+.ok-more[open] summary .op-icon {
+  transform: rotate(180deg);
+}
+
+.ok-result {
+  margin: 24px 0 32px;
+}
+
+.ok-result__meaning {
+  font-size: calc(var(--op-size-body) + 1px);
+  max-width: var(--op-col);
+}
+
+.ok-types dt {
+  margin-top: 16px;
+  font-weight: 650;
+}
+
+.ok-types dd {
+  margin: 4px 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ok-more summary .op-icon {
+    transition: none;
+  }
+}
+
+.ok-more summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .ok-big {
+    gap: 8px;
+  }
+
+  .ok-big .ok-q__title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .ok-big__item {
+    min-height: 56px;
+    padding: 8px 14px;
+    font-size: var(--op-size-body);
+  }
+
+  .ok-big__item:has(input:checked) {
+    padding: 6px 12px;
+  }
+}

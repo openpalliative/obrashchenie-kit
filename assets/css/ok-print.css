@@ -1,0 +1,288 @@
+.ok-noprint,
+.ok-live,
+.ok-back,
+.ok-share,
+.ok-promise,
+.ok-file,
+[data-js],
+.op-crumbs {
+  display: none !important;
+}
+
+.ok-docpage .op-draft-wrap,
+.ok-docpage .op-page > *:not(.ok-sheets-wrap) {
+  display: none !important;
+}
+
+.ok-sheets-wrap {
+  margin: 0;
+}
+
+.ok-sheets-wrap > h2 {
+  display: none;
+}
+
+.ok-sheet__body p {
+  text-align: justify;
+}
+
+.ok-sheet {
+  font-size: 14pt;
+  color: black;
+  break-after: page;
+}
+
+.ok-sheet__receipt {
+  border: 1pt dashed black;
+  break-inside: avoid;
+}
+
+.ok-sheet__copy,
+.ok-sheet__draft {
+  color: black;
+  font-size: 9pt;
+}
+
+.ok-print-memo .ok-memo {
+  display: block;
+  font-family: var(--op-font);
+}
+
+.ok-memo .op-sheet-footer {
+  display: block;
+}
+
+.ok-printing-timeline main > *:not(.op-page),
+.ok-printing-timeline .ok-casepage > *:not(.ok-tl) {
+  display: none !important;
+}
+
+.ok-printing-timeline .ok-tl {
+  display: block !important;
+  page: timeline;
+  color: black;
+  font-size: 11pt;
+  line-height: 1.35;
+}
+
+@page timeline {
+  size: A4;
+  margin: 14mm 14mm 18mm;
+
+  @bottom-center {
+    content: "Черновик. Страница " counter(page) " из " counter(pages);
+    font-size: 9pt;
+  }
+}
+
+.ok-tl__title {
+  margin: 0 0 2mm;
+  font-size: 16pt;
+}
+
+.ok-tl p {
+  margin: 0 0 1.5mm;
+}
+
+.ok-tl p:empty {
+  display: none;
+}
+
+.ok-tl__table {
+  width: 100%;
+  margin: 3mm 0 4mm;
+  border-collapse: collapse;
+}
+
+.ok-tl__table th,
+.ok-tl__table td {
+  padding: 1.5mm 2mm;
+  border: 0.75pt solid black;
+  font-size: 10pt;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ok-tl__table th {
+  font-weight: 700;
+}
+
+.ok-tl__table tr {
+  break-inside: avoid;
+}
+
+.ok-tl h3 {
+  margin: 4mm 0 1.5mm;
+  font-size: 12pt;
+}
+
+.ok-tl ul {
+  margin: 0;
+  padding-left: 5mm;
+}
+
+.ok-tl .op-status {
+  margin: 1.5mm 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.ok-tl__draft {
+  margin-top: 6mm !important;
+  font-size: 9pt;
+}
+
+.ok-callsheet {
+  border: 0;
+  padding: 0;
+}
+
+.ok-call .ok-tips,
+.ok-call .op-lead,
+.ok-callsheet .op-input,
+.ok-callsheet .op-field__hint,
+.ok-callsheet .op-date,
+.ok-callsheet .ok-cf__time,
+.ok-callsheet__next a::after {
+  display: none !important;
+}
+
+.ok-cf {
+  margin: 0 0 4mm;
+  break-inside: avoid;
+}
+
+.ok-cf .op-field {
+  margin: 0;
+}
+
+.ok-cf__print {
+  display: block;
+  margin: 0 0 4mm;
+}
+
+.ok-cf__value {
+  display: block;
+  margin: 1mm 0;
+  white-space: pre-wrap;
+}
+
+.ok-cf__lines {
+  display: block;
+}
+
+.ok-cf__lines span {
+  display: block;
+  height: 9mm;
+  border-bottom: 0.75pt solid black;
+}
+
+.ok-callsheet.is-filled .ok-cf__lines {
+  display: none;
+}
+
+.ok-t18__form,
+.ok-t18 .op-lead,
+.ok-t18 section:not(.ok-t18__result) {
+  display: none !important;
+}
+
+.ok-t18__result .op-sheet-footer {
+  display: block;
+}
+
+.ok-t18__date {
+  font-size: 12pt;
+}
+
+#ok-t18-res {
+  display: none;
+}
+
+.ok-t18__item p {
+  font-size: 10.5pt;
+  line-height: 1.35;
+  margin-bottom: 1mm;
+}
+
+.ok-t18__item p.ok-t18__date {
+  font-size: 12pt;
+}
+
+.ok-t18__status .op-status {
+  margin: 1mm 0 0;
+}
+
+.ok-t18__item {
+  grid-template-columns: 46mm 1fr;
+  padding: 2mm 0;
+  border-bottom: 0.75pt solid black;
+  break-inside: avoid;
+}
+
+.ok-t18__item.is-obligation_mo .ok-t18__date {
+  color: black;
+}
+
+.ok-print-memo .ok-sheets {
+  display: none;
+}
+
+.ok-callsheet {
+  max-width: none;
+}
+
+.ok-callsheet .op-field__label {
+  font-size: 12pt;
+}
+
+.ok-print-memo .ok-memo,
+.ok-print-memo .ok-sheets-wrap {
+  break-after: auto;
+  break-before: auto;
+}
+
+.ok-memo > h2:first-child {
+  margin-top: 0;
+}
+
+.ok-now__actions,
+.ok-now__note {
+  display: none;
+}
+
+.ok-firststeps li {
+  margin-bottom: 3mm;
+  font-size: 12pt;
+}
+
+.ok-firststeps__n {
+  display: block;
+  width: 6mm;
+  height: auto;
+  background: none;
+}
+
+.ok-docs__item {
+  padding: 2mm 0;
+}
+
+:root:not([data-theme="light"]) {
+  --op-bg: white;
+  --op-surface: white;
+  --op-sunken: white;
+  --op-text: black;
+  --op-muted: black;
+  --op-border: black;
+  --op-primary: black;
+  --op-on-primary: white;
+  --op-link: black;
+  --op-highlight: white;
+  --op-success: black;
+  --op-warning: black;
+  --op-danger: black;
+  --op-honey: black;
+  --op-tile: white;
+  color-scheme: light;
+}

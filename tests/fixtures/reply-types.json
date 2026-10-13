@@ -1,0 +1,184 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "reply-types",
+ "repo": "obrashchenie-kit",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 365,
+ "license": "CC-BY-SA-4.0",
+ "source": [
+  {
+   "id": "ok-pack",
+   "title": "Пакет T0 проекта openpalliative (демо, без проверки юристом в РФ)",
+   "url": "https://github.com/openpalliative/obrashchenie-kit",
+   "retrieved_at": "2026-10-11",
+   "license": "CC-BY-SA-4.0"
+  }
+ ],
+ "content_sha256": "82059ac5cb272d7dcda186af928dc3c1ab0ce020a3f1449efc2e266c898f7f32",
+ "counts": {
+  "items": 13,
+  "unverified": 13,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "none",
+   "parent": null,
+   "order": 1,
+   "label": "Ответа нет",
+   "hint": "Ни письма, ни уведомления",
+   "condition": "no_answer",
+   "meaning": "Если срок ещё не прошёл, ответ можно ждать до даты на экране дела. Если прошёл, можно пожаловаться на нарушение срока",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "refusal",
+   "parent": null,
+   "order": 2,
+   "label": "Отказали",
+   "hint": "В ответе написано, что сделать то, о чём вы просили, не могут или не будут",
+   "condition": "answer_refusal_no_basis",
+   "meaning": "Уточните выше, объяснили ли причину отказа",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "forwarded",
+   "parent": null,
+   "order": 3,
+   "label": "Переслали в другое место",
+   "hint": "Пришло уведомление, что обращение передали в другой орган или организацию",
+   "condition": "forwarded_other",
+   "meaning": "Уточните выше, кому переслали",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "other",
+   "parent": null,
+   "order": 4,
+   "label": "Другое или не знаю",
+   "hint": "Ответ непонятный, просят документы, сообщили о продлении срока",
+   "condition": "reply_unclear",
+   "meaning": "Можно попросить ответ по существу или показать ответ юристу",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "resolved",
+   "parent": "other",
+   "order": 5,
+   "label": "Просьбу выполнили",
+   "hint": "Сделали то, о чём вы просили",
+   "condition": "resolved",
+   "meaning": "Дело можно закрыть. Сохраните ответ вместе с вашим экземпляром обращения",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "refusal_with_basis",
+   "parent": "refusal",
+   "order": 6,
+   "label": "Отказали и объяснили, на каком основании",
+   "hint": "В ответе есть ссылка на документ, решение комиссии или правило",
+   "condition": "answer_refusal_with_basis",
+   "meaning": "Основание отказа названо. Можно запросить документы, на которые ссылается ответ, или показать ответ юристу",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "refusal_no_basis",
+   "parent": "refusal",
+   "order": 7,
+   "label": "Отказали без объяснения причин",
+   "hint": "Причина не названа или названа общими словами",
+   "condition": "answer_refusal_no_basis",
+   "meaning": "Можно попросить указать основание отказа или пожаловаться выше",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "explanation_only",
+   "parent": "other",
+   "order": 8,
+   "label": "Только разъяснили, а на просьбу не ответили",
+   "hint": "В ответе пересказ правил, но ни да, ни нет",
+   "condition": "answer_not_on_merits",
+   "meaning": "Ответа по существу нет. Можно попросить ответ по существу или пожаловаться выше",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "forwarded_to_respondent",
+   "parent": "forwarded",
+   "order": 9,
+   "label": "Переслали тому, на кого вы жалуетесь",
+   "hint": "Жалобу передали в организацию или орган, на чьи действия вы жаловались",
+   "condition": "forwarded_to_respondent",
+   "meaning": "Можно подать повторную жалобу выше с просьбой не пересылать её тому, на кого вы жалуетесь",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "forwarded_other",
+   "parent": "forwarded",
+   "order": 10,
+   "label": "Переслали в другой орган по его работе",
+   "hint": "Передали туда, кто занимается такими вопросами, и сообщили вам",
+   "condition": "forwarded_other",
+   "meaning": "Ответ должен прийти оттуда, куда переслали. Запишите дату уведомления в журнал",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "extended",
+   "parent": "other",
+   "order": 11,
+   "label": "Сообщили, что срок ответа продлили",
+   "hint": "Пришло уведомление о продлении",
+   "condition": "extended",
+   "meaning": "Запишите новую дату ответа из уведомления",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "docs_requested",
+   "parent": "other",
+   "order": 12,
+   "label": "Попросили прислать документы или сведения",
+   "hint": "В ответе просят что-то дослать",
+   "condition": "docs_requested",
+   "meaning": "Отправьте то, что попросили, и запишите дату отправки",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  },
+  {
+   "id": "unknown",
+   "parent": "other",
+   "order": 13,
+   "label": "Не знаю, что это значит",
+   "hint": "Ответ есть, но непонятно, что в нём",
+   "condition": "reply_unclear",
+   "meaning": "Можно попросить ответ по существу или показать ответ юристу",
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack"
+  }
+ ]
+}

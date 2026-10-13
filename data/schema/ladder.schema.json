@@ -1,0 +1,160 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/ladder.schema.json",
+ "title": "Лестница шагов",
+ "description": "Рёбра графа: что можно сделать при условии condition, если обжалуется уровень respondent_level (1 медицинская организация, 2 регион, 3 федеральный, 0 любой). Жалоба никогда не ведёт в уровень обжалуемого",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "ladder"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "from_condition",
+     "respondent_level",
+     "to",
+     "to_label",
+     "to_level",
+     "to_branch",
+     "to_source",
+     "doc",
+     "kind",
+     "rule_id",
+     "norm_refs",
+     "label",
+     "hint",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "from_condition": {
+      "enum": [
+       "oral_refusal",
+       "vk_not_held",
+       "vk_refused",
+       "no_answer",
+       "no_answer_waiting",
+       "deadline_passed",
+       "answer_refusal_with_basis",
+       "answer_refusal_no_basis",
+       "answer_not_on_merits",
+       "forwarded_to_respondent",
+       "forwarded_other",
+       "extended",
+       "docs_requested",
+       "discharge_planned",
+       "reply_unclear",
+       "resolved"
+      ]
+     },
+     "respondent_level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+     },
+     "to": {
+      "enum": [
+       "mo_head",
+       "mo_vk",
+       "rzn_to",
+       "minzdrav_region",
+       "rzn_central",
+       "minzdrav_rf",
+       "prosecutor",
+       "none"
+      ]
+     },
+     "to_label": {
+      "type": "string"
+     },
+     "to_level": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "to_branch": {
+      "enum": [
+       null,
+       "mo",
+       "oversight",
+       "health",
+       "prosecutor"
+      ]
+     },
+     "to_source": {
+      "type": "string"
+     },
+     "doc": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+     },
+     "kind": {
+      "enum": [
+       "request",
+       "complaint",
+       "wait",
+       "info"
+      ]
+     },
+     "rule_id": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+     },
+     "norm_refs": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(#p-[a-z0-9]+(-[a-z0-9]+)*)?$",
+       "x-message-ru": "ссылка на норму в виде id или id#p-N, например 180n#p-16"
+      }
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "hint": {
+      "type": "string"
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

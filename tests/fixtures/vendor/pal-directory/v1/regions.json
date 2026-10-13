@@ -1,0 +1,84 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "regions",
+ "repo": "pal-directory",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 90,
+ "license": "CC0-1.0",
+ "source": [
+  {
+   "id": "fixture-pal-directory",
+   "title": "Тестовый снимок pal-directory для obrashchenie-kit. Названия ведомств из таблицы горячих линий Росздравнадзора от 03.03.2026, номера выдуманные. Не заменяет pal-directory"
+  },
+  {
+   "id": "rzn-hotlines",
+   "title": "Номера телефонов горячих линий в субъектах Российской Федерации, Росздравнадзор",
+   "url": "https://roszdravnadzor.gov.ru/pages/main/call/to/tel",
+   "retrieved_at": "2026-03-03",
+   "sha256": "0594711b33cfc449e5842c608a9b056b39f6cbaf9427209271132815cf9e3e90"
+  }
+ ],
+ "content_sha256": "ec06758c8d791145d94d35a0654113254955b797b7f37ad512b8e2633187da44",
+ "counts": {
+  "items": 4,
+  "unverified": 0,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "RU-CHU",
+   "slug": "ru-chu",
+   "name": "Чукотский автономный округ",
+   "name_genitive": "Чукотского автономного округа",
+   "route": null,
+   "router": null,
+   "lines": 0,
+   "has_pain_pmp": false,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "RU-IRK",
+   "slug": "ru-irk",
+   "name": "Иркутская область",
+   "name_genitive": "Иркутской области",
+   "route": null,
+   "router": null,
+   "lines": 1,
+   "has_pain_pmp": false,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "RU-KGD",
+   "slug": "ru-kgd",
+   "name": "Калининградская область",
+   "name_genitive": "Калининградской области",
+   "route": "ru-kgd",
+   "router": null,
+   "lines": 3,
+   "has_pain_pmp": true,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  },
+  {
+   "id": "RU-MOW",
+   "slug": "ru-mow",
+   "name": "Москва",
+   "name_genitive": "Москвы",
+   "route": null,
+   "router": "ru-mow",
+   "lines": 0,
+   "has_pain_pmp": false,
+   "verified": true,
+   "verified_at": "2026-10-11",
+   "source_ref": "rzn-hotlines"
+  }
+ ]
+}

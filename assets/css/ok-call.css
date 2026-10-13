@@ -1,0 +1,86 @@
+.ok-callout {
+  padding: 20px;
+  margin: 0 0 32px;
+  background: var(--op-surface);
+  border: 1px solid var(--op-border);
+  border-radius: var(--op-radius);
+  max-width: var(--op-col);
+}
+
+.ok-callout h2 {
+  margin-top: 0;
+}
+
+.ok-tips {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  max-width: var(--op-col);
+}
+
+.ok-tips li {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+
+.ok-tips .op-icon {
+  flex: none;
+  color: var(--op-success);
+  margin-top: 0.2em;
+}
+
+.ok-callsheet {
+  max-width: var(--op-col);
+  padding: 20px;
+  background: var(--op-surface);
+  border: 1px solid var(--op-border);
+  border-radius: var(--op-radius);
+}
+
+.ok-callsheet__title {
+  margin-top: 0;
+}
+
+.ok-cf--when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  align-items: flex-start;
+}
+
+.ok-cf__time .op-input {
+  width: 8em;
+}
+
+.ok-cf__print,
+.ok-cf__value,
+.ok-cf__lines {
+  display: none;
+}
+
+.ok-cf textarea {
+  width: 100%;
+}
+
+.ok-call__save {
+  display: contents;
+}
+
+.ok-call__lead {
+  margin-top: 24px;
+}
+
+.ok-call__pick {
+  margin: 20px 0 0;
+}
+
+@media (max-width: 480px) {
+  .ok-callsheet {
+    padding: 14px;
+  }
+
+  .ok-callsheet__title {
+    margin-bottom: 8px;
+  }
+}

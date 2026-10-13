@@ -1,0 +1,60 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% set C = content.call %}
+{% block title %}Отказали по телефону или при визите{% endblock %}
+{% block description %}{{ C.lead }}{% endblock %}
+{% block head %}{{ ok.css(["call"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-call">
+  {{ op.crumbs([("openpalliative", hub("")), (site.title, url("")), ("Отказали по телефону", "")]) }}
+  <h1>Отказали по телефону или при визите</h1>
+  <form class="ok-callsheet op-sheet" data-callsheet novalidate>
+    <h2 class="ok-callsheet__title">{{ C.title }}</h2>
+    <div class="ok-cf ok-cf--when">
+      {{ ok.date3("ok-call-date", "Когда", none) }}
+      <div class="op-field ok-cf__time">
+        <label class="op-field__label" for="ok-call-time">Время <span class="op-field__optional">(можно не заполнять)</span></label>
+        <input class="op-input" id="ok-call-time" name="time" type="time">
+      </div>
+      <p class="ok-cf__print" aria-hidden="true">Дата «___» ____________ 20___ г., время ______</p>
+    </div>
+    {% for f in C.fields %}
+    <div class="ok-cf">
+      <div class="op-field">
+        <label class="op-field__label" for="ok-call-{{ f.id }}">{{ f.label }}</label>
+        <p class="op-field__hint" id="ok-call-{{ f.id }}-hint">{{ f.hint }}</p>
+        <textarea class="op-input op-input--area" id="ok-call-{{ f.id }}" name="{{ f.id }}" rows="{{ [f.lines | int, 3] | min }}" maxlength="400" aria-describedby="ok-call-{{ f.id }}-hint"></textarea>
+      </div>
+      <p class="ok-cf__value" data-value="{{ f.id }}"></p>
+      <div class="ok-cf__lines" aria-hidden="true">{% for _ in range(f.lines | int) %}<span></span>{% endfor %}</div>
+    </div>
+    {% endfor %}
+    <p class="ok-callsheet__next">Дальше: попросите ответ на бумаге. Для этого есть <a href="{{ url('docs/written-answer/') }}">заявление на имя главного врача</a></p>
+    {{ op.sheet_footer(site.kit.documents.data_date, site.plus_days(site.kit.documents.data_date, 365), "openpalliative.github.io/obrashchenie-kit/call/", "none") }}
+  </form>
+  <fieldset class="op-choice ok-call__pick ok-noprint" data-case-pick hidden>
+    <legend class="op-field__label">В какое дело записать</legend>
+    <div data-case-pick-list></div>
+  </fieldset>
+  <div class="op-actions">
+    {{ op.print_btn("Распечатать лист") }}
+    <div data-js hidden class="ok-call__save">
+      <button class="op-btn op-btn--primary" type="button" data-add>{{ icon("plus") }}<span>Добавить в дело</span></button>
+    </div>
+  </div>
+  <p class="ok-live" data-live role="status" aria-live="polite"></p>
+  <p class="op-lead ok-call__lead">{{ C.lead }}</p>
+  <section class="ok-call__tips ok-noprint" aria-labelledby="ok-tips-title">
+    <h2 id="ok-tips-title">Как говорить, чтобы потом было проще</h2>
+    <ul class="ok-tips">
+      {% for t in C.tips %}<li>{{ icon("check") }}<span>{{ t }}</span></li>{% endfor %}
+    </ul>
+  </section>
+  <p data-nojs class="ok-muted ok-noprint">Без JavaScript лист печатается пустым, заполните его ручкой</p>
+  {{ ok.back() }}
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/call-page.js') }}"></script>
+<script type="module" src="{{ url('assets/js/back.js') }}"></script>
+{% endblock %}

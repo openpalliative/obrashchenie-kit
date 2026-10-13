@@ -1,0 +1,24 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "pal-directory federal-lines, минимальная схема тестового снимка",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "federal-lines"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "number",
+     "tel",
+     "label",
+     "verified",
+     "verified_at"
+    ]
+   }
+  }
+ }
+}

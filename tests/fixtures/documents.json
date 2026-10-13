@@ -1,0 +1,2678 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "documents",
+ "repo": "obrashchenie-kit",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 365,
+ "license": "CC-BY-SA-4.0",
+ "source": [
+  {
+   "id": "ok-pack",
+   "title": "Пакет T0 проекта openpalliative (демо, без проверки юристом в РФ)",
+   "url": "https://github.com/openpalliative/obrashchenie-kit",
+   "retrieved_at": "2026-10-11",
+   "license": "CC-BY-SA-4.0"
+  },
+  {
+   "id": "pal-norms-acts",
+   "title": "pal-norms: acts, тестовый снимок версии 2026.10.11, данные от 2026-10-11",
+   "url": "https://openpalliative.github.io/pal-norms/data/v1/acts.json",
+   "retrieved_at": "2026-10-11"
+  }
+ ],
+ "content_sha256": "6052987c213121745c0643666787f96ef5a2b585789dd739f9f9b13560f9b7f7",
+ "counts": {
+  "items": 6,
+  "unverified": 6,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "written-answer",
+   "tier": "T0",
+   "order": 1,
+   "title": "Заявление",
+   "name": "Попросить письменный ответ вместо устного отказа",
+   "gives": "Отказ на словах превращается в просьбу на бумаге. На неё должны ответить письменно, а с даты подачи начинается срок ответа",
+   "when_needed": "Вам отказали на словах, по телефону или при визите, не созывают врачебную комиссию, или ответ пришёл не по существу",
+   "addressee_kinds": [
+    "mo_head",
+    "minzdrav_region"
+   ],
+   "roles": [
+    "self",
+    "proxy",
+    "guardian",
+    "parent"
+   ],
+   "fields": [
+    {
+     "id": "addressee_name",
+     "label": "Кому",
+     "hint": "Должность и название организации. Например, главному врачу городской поликлиники. Название есть на вывеске и на сайте",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "addressee_address",
+     "label": "Адрес организации",
+     "hint": "Нужен, если отправляете почтой. Есть на сайте организации",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "applicant_name",
+     "label": "Ваши фамилия, имя, отчество",
+     "hint": "Как в паспорте",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "autocomplete": "name",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_address",
+     "label": "Ваш почтовый адрес для ответа",
+     "hint": "С индексом. По этому адресу пришлют ответ",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "autocomplete": "street-address",
+     "max_len": 200
+    },
+    {
+     "id": "applicant_phone",
+     "label": "Телефон",
+     "hint": "Чтобы с вами могли связаться, если что-то неясно",
+     "type": "text",
+     "required": false,
+     "personal": true,
+     "autocomplete": "tel",
+     "max_len": 40
+    },
+    {
+     "id": "applicant_email",
+     "label": "Электронная почта",
+     "hint": "Нужна, если хотите получить ответ на почту",
+     "type": "text",
+     "required": false,
+     "required_if": "answer_way=email",
+     "personal": true,
+     "autocomplete": "email",
+     "max_len": 120
+    },
+    {
+     "id": "patient_name",
+     "label": "Фамилия, имя, отчество человека, за которого вы обращаетесь",
+     "hint": "Как в его паспорте или свидетельстве о рождении",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 120,
+     "roles": [
+      "proxy",
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "proxy_date",
+     "label": "Дата доверенности",
+     "hint": "Есть на первой странице доверенности",
+     "type": "date",
+     "required": true,
+     "personal": true,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "proxy_issuer",
+     "label": "Кто удостоверил доверенность",
+     "hint": "Например, нотариус и его фамилия или организация, где удостоверили",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "guardian_act",
+     "label": "Решение органа опеки о назначении опекуна",
+     "hint": "Дата и номер решения",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "guardian"
+     ]
+    },
+    {
+     "id": "child_birth_cert",
+     "label": "Свидетельство о рождении ребёнка",
+     "hint": "Серия и номер",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 60,
+     "roles": [
+      "parent"
+     ]
+    },
+    {
+     "id": "request",
+     "label": "О чём вы просите",
+     "hint": "Своими словами, коротко. Например, созвать врачебную комиссию, выдать медицинское изделие для дома, прислать врача на дом. Диагноз можно не писать",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 800
+    },
+    {
+     "id": "refused_at",
+     "label": "Когда вам отказали",
+     "hint": "Если отказывали несколько раз, укажите последний",
+     "type": "date",
+     "required": true,
+     "personal": false
+    },
+    {
+     "id": "refused_where",
+     "label": "Где и кто отказал",
+     "hint": "Например, в регистратуре, лечащий врач, по телефону. Должность и фамилию, если их назвали",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 300
+    },
+    {
+     "id": "refusal_words",
+     "label": "Что вам ответили",
+     "hint": "Как можно ближе к словам",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 500
+    },
+    {
+     "id": "answer_way",
+     "label": "Как получить ответ",
+     "hint": "Выберите один способ",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "post",
+       "label": "Почтой по моему адресу"
+      },
+      {
+       "value": "email",
+       "label": "На мою электронную почту"
+      },
+      {
+       "value": "in_person",
+       "label": "Заберу лично"
+      }
+     ]
+    },
+    {
+     "id": "attachments",
+     "label": "Что вы прикладываете",
+     "hint": "По одному документу на строку",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 600
+    },
+    {
+     "id": "signed_at",
+     "label": "Дата на документе",
+     "hint": "Обычно это день, когда вы подписываете и подаёте документ",
+     "type": "date",
+     "required": true,
+     "personal": false,
+     "default": "today"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "to",
+     "place": "head",
+     "text": "{{addressee_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "to-address",
+     "place": "head",
+     "when": "addressee_address",
+     "text": "{{addressee_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from",
+     "place": "head",
+     "text": "заявитель: {{applicant_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-address",
+     "place": "head",
+     "text": "адрес для ответа: {{applicant_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-phone",
+     "place": "head",
+     "when": "applicant_phone",
+     "text": "телефон: {{applicant_phone}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-email",
+     "place": "head",
+     "when": "applicant_email",
+     "text": "электронная почта: {{applicant_email}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-proxy",
+     "roles": [
+      "proxy"
+     ],
+     "text": "Обращаюсь в интересах пациента ({{patient_name}}) по доверенности от {{date:proxy_date}}, удостоверенной: {{proxy_issuer}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-guardian",
+     "roles": [
+      "guardian"
+     ],
+     "text": "Обращаюсь как опекун пациента ({{patient_name}}) на основании решения органа опеки и попечительства {{guardian_act}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-parent",
+     "roles": [
+      "parent"
+     ],
+     "text": "Обращаюсь как родитель несовершеннолетнего ребёнка ({{patient_name}}), свидетельство о рождении {{child_birth_cert}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "request",
+     "text": "Прошу: {{request}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "facts",
+     "text": "{{date:refused_at}} мне отказали в этой просьбе устно, письменного ответа я не получил(а). Где и кто отказал: {{refused_where}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "refusal-words",
+     "when": "refusal_words",
+     "text": "Мне сказали: {{refusal_words}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "ask-written",
+     "text": "Прошу рассмотреть мою просьбу и дать письменный ответ по существу. Если в просьбе будет отказано, прошу указать в ответе, кто принял решение и на каком основании.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-post",
+     "when": "answer_way=post",
+     "text": "Ответ прошу направить почтой по адресу для ответа, указанному выше.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-email",
+     "when": "answer_way=email",
+     "text": "Ответ прошу направить на электронную почту {{applicant_email}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-in-person",
+     "when": "answer_way=in_person",
+     "text": "Ответ заберу лично, прошу сообщить мне, когда он будет готов.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "attachments",
+     "place": "foot",
+     "kind": "list",
+     "when": "attachments",
+     "text": "Приложения:",
+     "list_field": "attachments",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signed",
+     "place": "foot",
+     "text": "{{date:signed_at}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signature",
+     "place": "foot",
+     "kind": "signature",
+     "text": "Подпись ____________ {{applicant_name}}",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    }
+   ],
+   "copies": 2,
+   "receipt_block": true,
+   "channels": [
+    "paper-in-person",
+    "paper-mail",
+    "ezp",
+    "esia-pos"
+   ],
+   "esia_summary": "Прошу дать письменный ответ по существу на мою просьбу: {{request}}. {{date:refused_at}} мне отказали устно. Заявление во вложении.",
+   "attachments_hint": [
+    "копия доверенности, если обращаетесь по доверенности",
+    "копия решения органа опеки, если вы опекун",
+    "копия свидетельства о рождении ребёнка, если вы родитель"
+   ],
+   "review_notes": [
+    "Проверить юристу в РФ, достаточно ли этой формулировки, чтобы обращение зарегистрировали как письменное",
+    "Проверить юристу в РФ, какой срок ответа и порядок рассмотрения действуют, если клиника частная"
+   ],
+   "reviewed_by": [],
+   "reviewed_at": null,
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack",
+   "norm_refs": [],
+   "norm_state": "none",
+   "maturity": "demo"
+  },
+  {
+   "id": "vk-extract",
+   "tier": "T0",
+   "order": 2,
+   "title": "Заявление",
+   "name": "Запросить выписку из протокола врачебной комиссии",
+   "gives": "На руках будет решение комиссии на бумаге. С ним понятно, что именно решили, и его можно приложить к следующему обращению",
+   "when_needed": "Врачебная комиссия прошла, но решение вам не выдали, или решение сообщили только на словах",
+   "addressee_kinds": [
+    "mo_head"
+   ],
+   "roles": [
+    "self",
+    "proxy",
+    "guardian",
+    "parent"
+   ],
+   "norm_refs": [
+    "180n#p-16"
+   ],
+   "fields": [
+    {
+     "id": "addressee_name",
+     "label": "Кому",
+     "hint": "Должность и название организации. Например, главному врачу городской поликлиники. Название есть на вывеске и на сайте",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "addressee_address",
+     "label": "Адрес организации",
+     "hint": "Нужен, если отправляете почтой. Есть на сайте организации",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "applicant_name",
+     "label": "Ваши фамилия, имя, отчество",
+     "hint": "Как в паспорте",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "autocomplete": "name",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_address",
+     "label": "Ваш почтовый адрес для ответа",
+     "hint": "С индексом. По этому адресу пришлют ответ",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "autocomplete": "street-address",
+     "max_len": 200
+    },
+    {
+     "id": "applicant_phone",
+     "label": "Телефон",
+     "hint": "Чтобы с вами могли связаться, если что-то неясно",
+     "type": "text",
+     "required": false,
+     "personal": true,
+     "autocomplete": "tel",
+     "max_len": 40
+    },
+    {
+     "id": "applicant_email",
+     "label": "Электронная почта",
+     "hint": "Нужна, если хотите получить ответ на почту",
+     "type": "text",
+     "required": false,
+     "required_if": "answer_way=email",
+     "personal": true,
+     "autocomplete": "email",
+     "max_len": 120
+    },
+    {
+     "id": "patient_name",
+     "label": "Фамилия, имя, отчество человека, за которого вы обращаетесь",
+     "hint": "Как в его паспорте или свидетельстве о рождении",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 120,
+     "roles": [
+      "proxy",
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "proxy_date",
+     "label": "Дата доверенности",
+     "hint": "Есть на первой странице доверенности",
+     "type": "date",
+     "required": true,
+     "personal": true,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "proxy_issuer",
+     "label": "Кто удостоверил доверенность",
+     "hint": "Например, нотариус и его фамилия или организация, где удостоверили",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "guardian_act",
+     "label": "Решение органа опеки о назначении опекуна",
+     "hint": "Дата и номер решения",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "guardian"
+     ]
+    },
+    {
+     "id": "child_birth_cert",
+     "label": "Свидетельство о рождении ребёнка",
+     "hint": "Серия и номер",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 60,
+     "roles": [
+      "parent"
+     ]
+    },
+    {
+     "id": "vk_subject",
+     "label": "По какому вопросу была комиссия",
+     "hint": "Например, о паллиативной помощи, о медицинском изделии для дома, о лекарствах",
+     "type": "text",
+     "required": true,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "vk_date",
+     "label": "Когда была комиссия",
+     "hint": "Если не знаете точно, оставьте пустым",
+     "type": "date",
+     "required": false,
+     "personal": false
+    },
+    {
+     "id": "want_conclusion",
+     "label": "Нужна ли копия заключения",
+     "hint": "Если по итогам комиссии оформили заключение, его копию можно попросить в том же заявлении",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "yes",
+       "label": "Да, попросить и копию заключения"
+      },
+      {
+       "value": "no",
+       "label": "Нет, только выписку"
+      }
+     ]
+    },
+    {
+     "id": "answer_way",
+     "label": "Как получить ответ",
+     "hint": "Выберите один способ",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "post",
+       "label": "Почтой по моему адресу"
+      },
+      {
+       "value": "email",
+       "label": "На мою электронную почту"
+      },
+      {
+       "value": "in_person",
+       "label": "Заберу лично"
+      }
+     ]
+    },
+    {
+     "id": "attachments",
+     "label": "Что вы прикладываете",
+     "hint": "По одному документу на строку",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 600
+    },
+    {
+     "id": "signed_at",
+     "label": "Дата на документе",
+     "hint": "Обычно это день, когда вы подписываете и подаёте документ",
+     "type": "date",
+     "required": true,
+     "personal": false,
+     "default": "today"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "to",
+     "place": "head",
+     "text": "{{addressee_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "to-address",
+     "place": "head",
+     "when": "addressee_address",
+     "text": "{{addressee_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from",
+     "place": "head",
+     "text": "заявитель: {{applicant_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-address",
+     "place": "head",
+     "text": "адрес для ответа: {{applicant_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-phone",
+     "place": "head",
+     "when": "applicant_phone",
+     "text": "телефон: {{applicant_phone}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-email",
+     "place": "head",
+     "when": "applicant_email",
+     "text": "электронная почта: {{applicant_email}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-proxy",
+     "roles": [
+      "proxy"
+     ],
+     "text": "Обращаюсь в интересах пациента ({{patient_name}}) по доверенности от {{date:proxy_date}}, удостоверенной: {{proxy_issuer}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-guardian",
+     "roles": [
+      "guardian"
+     ],
+     "text": "Обращаюсь как опекун пациента ({{patient_name}}) на основании решения органа опеки и попечительства {{guardian_act}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-parent",
+     "roles": [
+      "parent"
+     ],
+     "text": "Обращаюсь как родитель несовершеннолетнего ребёнка ({{patient_name}}), свидетельство о рождении {{child_birth_cert}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "request",
+     "text": "Прошу выдать мне выписку из протокола заседания врачебной комиссии по вопросу: {{vk_subject}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "vk-date",
+     "when": "vk_date",
+     "text": "Заседание комиссии проходило {{date:vk_date}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "conclusion",
+     "when": "want_conclusion=yes",
+     "text": "Если по итогам заседания оформлено заключение, прошу выдать и его копию.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "term",
+     "norm_refs": [
+      "180n#p-16"
+     ],
+     "text": "Выписку прошу выдать в установленный срок (пункт 16 приказа Министерства здравоохранения Российской Федерации от 10.04.2025 № 180н).",
+     "fallback": "Выписку прошу выдать в установленный срок.",
+     "place": "body",
+     "kind": "text",
+     "norm_state": "ok",
+     "norm_reason": null,
+     "norm_links": [
+      {
+       "ref": "180n#p-16",
+       "act_id": "180n",
+       "anchor": "p-16",
+       "point": "пункт 16",
+       "status": "in_force",
+       "verified": true,
+       "citation": "пункт 16 приказа Министерства здравоохранения Российской Федерации от 10.04.2025 № 180н"
+      }
+     ]
+    },
+    {
+     "id": "answer-post",
+     "when": "answer_way=post",
+     "text": "Ответ прошу направить почтой по адресу для ответа, указанному выше.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-email",
+     "when": "answer_way=email",
+     "text": "Ответ прошу направить на электронную почту {{applicant_email}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-in-person",
+     "when": "answer_way=in_person",
+     "text": "Ответ заберу лично, прошу сообщить мне, когда он будет готов.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "attachments",
+     "place": "foot",
+     "kind": "list",
+     "when": "attachments",
+     "text": "Приложения:",
+     "list_field": "attachments",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signed",
+     "place": "foot",
+     "text": "{{date:signed_at}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signature",
+     "place": "foot",
+     "kind": "signature",
+     "text": "Подпись ____________ {{applicant_name}}",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    }
+   ],
+   "copies": 2,
+   "receipt_block": true,
+   "channels": [
+    "paper-in-person",
+    "paper-mail",
+    "ezp",
+    "esia-pos"
+   ],
+   "esia_summary": "Прошу выдать выписку из протокола заседания врачебной комиссии по вопросу: {{vk_subject}}. Заявление во вложении.",
+   "attachments_hint": [
+    "копия доверенности, если обращаетесь по доверенности",
+    "копия письменного согласия человека на передачу вам сведений о его здоровье, если вы не его законный представитель",
+    "копия решения органа опеки, если вы опекун"
+   ],
+   "review_notes": [
+    "Кто может получить выписку, сказано в пункте 16 порядка о врачебной комиссии. Проверить юристу в РФ, нужна ли доверенному лицу копия согласия на разглашение врачебной тайны"
+   ],
+   "reviewed_by": [],
+   "reviewed_at": null,
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack",
+   "norm_state": "ok",
+   "maturity": "demo"
+  },
+  {
+   "id": "med-records",
+   "tier": "T0",
+   "order": 3,
+   "title": "Запрос",
+   "name": "Запросить копии медицинских документов и выписки",
+   "gives": "Копии карты, выписки и результаты обследований на руках. Они нужны для врачебной комиссии, другой больницы, юриста или жалобы",
+   "when_needed": "Человека выписывают, переводят, вы готовите обращение или хотите понять, что записано в документах",
+   "addressee_kinds": [
+    "mo_head"
+   ],
+   "roles": [
+    "self",
+    "proxy",
+    "guardian",
+    "parent"
+   ],
+   "norm_refs": [
+    "789n#p-8"
+   ],
+   "fields_basis": "789n#p-2",
+   "fields": [
+    {
+     "id": "addressee_name",
+     "label": "Кому",
+     "hint": "Должность и название организации. Например, главному врачу городской поликлиники. Название есть на вывеске и на сайте",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "addressee_address",
+     "label": "Адрес организации",
+     "hint": "Нужен, если отправляете почтой. Есть на сайте организации",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "applicant_name",
+     "label": "Ваши фамилия, имя, отчество",
+     "hint": "Как в паспорте",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "autocomplete": "name",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_address",
+     "label": "Ваш почтовый адрес для ответа",
+     "hint": "С индексом. По этому адресу пришлют ответ",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "autocomplete": "street-address",
+     "max_len": 200
+    },
+    {
+     "id": "applicant_phone",
+     "label": "Телефон",
+     "hint": "Чтобы с вами могли связаться, если что-то неясно",
+     "type": "text",
+     "required": false,
+     "personal": true,
+     "autocomplete": "tel",
+     "max_len": 40
+    },
+    {
+     "id": "applicant_email",
+     "label": "Электронная почта",
+     "hint": "Нужна, если хотите получить ответ на почту",
+     "type": "text",
+     "required": false,
+     "required_if": "answer_way=email",
+     "personal": true,
+     "autocomplete": "email",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_id_doc",
+     "label": "Ваш паспорт",
+     "hint": "Серия, номер, кем и когда выдан. Для запроса нужны сведения и о вас как о законном представителе",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "max_len": 200,
+     "roles": [
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "applicant_residence",
+     "label": "Ваш адрес места жительства или пребывания",
+     "hint": "Как в паспорте или по месту пребывания. Если совпадает с адресом для ответа, впишите его ещё раз",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "max_len": 200,
+     "roles": [
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "patient_name",
+     "label": "Фамилия, имя, отчество человека, за которого вы обращаетесь",
+     "hint": "Как в его паспорте или свидетельстве о рождении",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 120,
+     "roles": [
+      "proxy",
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "proxy_date",
+     "label": "Дата доверенности",
+     "hint": "Есть на первой странице доверенности",
+     "type": "date",
+     "required": true,
+     "personal": true,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "proxy_issuer",
+     "label": "Кто удостоверил доверенность",
+     "hint": "Например, нотариус и его фамилия или организация, где удостоверили",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "guardian_act",
+     "label": "Решение органа опеки о назначении опекуна",
+     "hint": "Дата и номер решения",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "guardian"
+     ]
+    },
+    {
+     "id": "child_birth_cert",
+     "label": "Свидетельство о рождении ребёнка",
+     "hint": "Серия и номер",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 60,
+     "roles": [
+      "parent"
+     ]
+    },
+    {
+     "id": "patient_id_doc",
+     "label": "Паспорт человека, чьи документы нужны",
+     "hint": "Серия, номер, кем и когда выдан. Если документы ваши, это ваш паспорт. У ребёнка до 14 лет - свидетельство о рождении",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "max_len": 200
+    },
+    {
+     "id": "patient_residence",
+     "label": "Адрес, где этот человек живёт или временно находится",
+     "hint": "Как в паспорте или по месту пребывания",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "max_len": 200
+    },
+    {
+     "id": "records_list",
+     "label": "Какие документы нужны",
+     "hint": "Например, копия медицинской карты, выписка из истории болезни, результаты обследований",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 600
+    },
+    {
+     "id": "records_period",
+     "label": "За какой период",
+     "hint": "Например, с января 2026 года по сегодняшний день",
+     "type": "text",
+     "required": true,
+     "personal": false,
+     "max_len": 120
+    },
+    {
+     "id": "receive_way",
+     "label": "Как получить документы",
+     "hint": "Выберите один способ",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "in_person",
+       "label": "Лично"
+      },
+      {
+       "value": "post",
+       "label": "Почтой, заказным письмом"
+      },
+      {
+       "value": "gosuslugi",
+       "label": "В личный кабинет на Госуслугах"
+      }
+     ]
+    },
+    {
+     "id": "inpatient",
+     "label": "Человек сейчас в стационаре",
+     "hint": "Отметьте, если он лежит в больнице или в дневном стационаре",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "no",
+       "label": "Нет"
+      },
+      {
+       "value": "yes",
+       "label": "Да"
+      }
+     ]
+    },
+    {
+     "id": "attachments",
+     "label": "Что вы прикладываете",
+     "hint": "По одному документу на строку",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 600
+    },
+    {
+     "id": "signed_at",
+     "label": "Дата на документе",
+     "hint": "Обычно это день, когда вы подписываете и подаёте документ",
+     "type": "date",
+     "required": true,
+     "personal": false,
+     "default": "today"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "to",
+     "place": "head",
+     "text": "{{addressee_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "to-address",
+     "place": "head",
+     "when": "addressee_address",
+     "text": "{{addressee_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from",
+     "place": "head",
+     "text": "заявитель: {{applicant_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-address",
+     "place": "head",
+     "text": "адрес для ответа: {{applicant_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-phone",
+     "place": "head",
+     "when": "applicant_phone",
+     "text": "телефон: {{applicant_phone}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-email",
+     "place": "head",
+     "when": "applicant_email",
+     "text": "электронная почта: {{applicant_email}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-proxy",
+     "roles": [
+      "proxy"
+     ],
+     "text": "Обращаюсь в интересах пациента ({{patient_name}}) по доверенности от {{date:proxy_date}}, удостоверенной: {{proxy_issuer}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-guardian",
+     "roles": [
+      "guardian"
+     ],
+     "text": "Обращаюсь как опекун пациента ({{patient_name}}) на основании решения органа опеки и попечительства {{guardian_act}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-parent",
+     "roles": [
+      "parent"
+     ],
+     "text": "Обращаюсь как родитель несовершеннолетнего ребёнка ({{patient_name}}), свидетельство о рождении {{child_birth_cert}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "patient-self",
+     "roles": [
+      "self"
+     ],
+     "text": "Сведения обо мне: {{applicant_name}}, документ, удостоверяющий личность: {{patient_id_doc}}, адрес места жительства (пребывания): {{patient_residence}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "patient-other",
+     "roles": [
+      "proxy",
+      "guardian",
+      "parent"
+     ],
+     "text": "Сведения о пациенте: {{patient_name}}, документ, удостоверяющий личность: {{patient_id_doc}}, адрес места жительства (пребывания): {{patient_residence}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "representative",
+     "roles": [
+      "guardian",
+      "parent"
+     ],
+     "text": "Сведения о законном представителе: {{applicant_name}}, документ, удостоверяющий личность: {{applicant_id_doc}}, адрес места жительства (пребывания): {{applicant_residence}}, почтовый адрес для ответа: {{applicant_address}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "request",
+     "text": "Прошу предоставить медицинские документы (их копии) или выписки из них: {{records_list}}. Период: {{records_period}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "way-in-person",
+     "when": "receive_way=in_person",
+     "text": "Документы получу лично.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "way-post",
+     "when": "receive_way=post",
+     "text": "Документы прошу направить заказным почтовым отправлением с уведомлением о вручении по адресу для ответа, указанному выше.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "way-gosuslugi",
+     "when": "receive_way=gosuslugi",
+     "text": "Документы прошу направить в форме электронных документов в мой личный кабинет на Едином портале государственных и муниципальных услуг.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "inpatient",
+     "when": "inpatient=yes",
+     "text": "Пациент сейчас находится на лечении в стационарных условиях.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "term",
+     "norm_refs": [
+      "789n#p-8"
+     ],
+     "text": "Документы прошу предоставить в установленный срок (пункт 8 приказа Министерства здравоохранения Российской Федерации от 31.07.2020 № 789н).",
+     "fallback": "Документы прошу предоставить в установленный срок.",
+     "place": "body",
+     "kind": "text",
+     "norm_state": "ok",
+     "norm_reason": null,
+     "norm_links": [
+      {
+       "ref": "789n#p-8",
+       "act_id": "789n",
+       "anchor": "p-8",
+       "point": "пункт 8",
+       "status": "in_force",
+       "verified": true,
+       "citation": "пункт 8 приказа Министерства здравоохранения Российской Федерации от 31.07.2020 № 789н"
+      }
+     ]
+    },
+    {
+     "id": "attachments",
+     "place": "foot",
+     "kind": "list",
+     "when": "attachments",
+     "text": "Приложения:",
+     "list_field": "attachments",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signed",
+     "place": "foot",
+     "text": "{{date:signed_at}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signature",
+     "place": "foot",
+     "kind": "signature",
+     "text": "Подпись ____________ {{applicant_name}}",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    }
+   ],
+   "copies": 2,
+   "receipt_block": true,
+   "channels": [
+    "paper-in-person",
+    "paper-mail",
+    "ezp"
+   ],
+   "esia_summary": "Прошу предоставить копии медицинских документов и выписки из них: {{records_list}}. Период: {{records_period}}. Запрос во вложении.",
+   "attachments_hint": [
+    "копия доверенности, если обращаетесь по доверенности",
+    "копия решения органа опеки, если вы опекун",
+    "копия свидетельства о рождении ребёнка, если вы родитель"
+   ],
+   "review_notes": [
+    "Состав запроса взят из пункта 2 порядка выдачи медицинских документов. Там сказано о пациенте и законном представителе. Опекун и родитель указывают о себе те же сведения, что о пациенте. Проверить юристу в РФ, как подаёт запрос человек по доверенности и нужны ли в запросе его паспортные данные"
+   ],
+   "reviewed_by": [],
+   "reviewed_at": null,
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack",
+   "norm_state": "ok",
+   "maturity": "demo"
+  },
+  {
+   "id": "deadline-complaint",
+   "tier": "T0",
+   "order": 4,
+   "title": "Жалоба",
+   "name": "Пожаловаться, что не ответили в срок",
+   "gives": "Тот, кто выше, узнаёт, что вам не ответили, и может потребовать ответ",
+   "when_needed": "Срок ответа на ваше письменное обращение прошёл, а ответа нет",
+   "addressee_kinds": [
+    "rzn_to",
+    "minzdrav_region",
+    "rzn_central",
+    "minzdrav_rf",
+    "prosecutor"
+   ],
+   "roles": [
+    "self",
+    "proxy",
+    "guardian",
+    "parent"
+   ],
+   "norm_refs": [
+    "59-fz#p-12-1"
+   ],
+   "fields": [
+    {
+     "id": "addressee_name",
+     "label": "Кому",
+     "hint": "Должность и название ведомства, куда вы жалуетесь. Например, руководителю территориального органа Росздравнадзора по вашему региону, министру здравоохранения вашего региона или прокурору",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "addressee_address",
+     "label": "Адрес организации",
+     "hint": "Нужен, если отправляете почтой. Есть на сайте организации",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "applicant_name",
+     "label": "Ваши фамилия, имя, отчество",
+     "hint": "Как в паспорте",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "autocomplete": "name",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_address",
+     "label": "Ваш почтовый адрес для ответа",
+     "hint": "С индексом. По этому адресу пришлют ответ",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "autocomplete": "street-address",
+     "max_len": 200
+    },
+    {
+     "id": "applicant_phone",
+     "label": "Телефон",
+     "hint": "Чтобы с вами могли связаться, если что-то неясно",
+     "type": "text",
+     "required": false,
+     "personal": true,
+     "autocomplete": "tel",
+     "max_len": 40
+    },
+    {
+     "id": "applicant_email",
+     "label": "Электронная почта",
+     "hint": "Нужна, если хотите получить ответ на почту",
+     "type": "text",
+     "required": false,
+     "required_if": "answer_way=email",
+     "personal": true,
+     "autocomplete": "email",
+     "max_len": 120
+    },
+    {
+     "id": "patient_name",
+     "label": "Фамилия, имя, отчество человека, за которого вы обращаетесь",
+     "hint": "Как в его паспорте или свидетельстве о рождении",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 120,
+     "roles": [
+      "proxy",
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "proxy_date",
+     "label": "Дата доверенности",
+     "hint": "Есть на первой странице доверенности",
+     "type": "date",
+     "required": true,
+     "personal": true,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "proxy_issuer",
+     "label": "Кто удостоверил доверенность",
+     "hint": "Например, нотариус и его фамилия или организация, где удостоверили",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "guardian_act",
+     "label": "Решение органа опеки о назначении опекуна",
+     "hint": "Дата и номер решения",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "guardian"
+     ]
+    },
+    {
+     "id": "child_birth_cert",
+     "label": "Свидетельство о рождении ребёнка",
+     "hint": "Серия и номер",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 60,
+     "roles": [
+      "parent"
+     ]
+    },
+    {
+     "id": "filed_at",
+     "label": "Когда вы подали обращение",
+     "hint": "Дата на вашем экземпляре с отметкой о приёме или на почтовой квитанции",
+     "type": "date",
+     "required": true,
+     "personal": false
+    },
+    {
+     "id": "filed_to",
+     "label": "Куда вы подали обращение",
+     "hint": "Название организации или должность того, кому писали",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "reg_number",
+     "label": "Номер регистрации",
+     "hint": "Если его поставили на вашем экземпляре или прислали",
+     "type": "text",
+     "required": false,
+     "personal": false,
+     "max_len": 40
+    },
+    {
+     "id": "filed_subject",
+     "label": "О чём было обращение",
+     "hint": "Одной-двумя фразами",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 500
+    },
+    {
+     "id": "answer_way",
+     "label": "Как получить ответ",
+     "hint": "Выберите один способ",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "post",
+       "label": "Почтой по моему адресу"
+      },
+      {
+       "value": "email",
+       "label": "На мою электронную почту"
+      },
+      {
+       "value": "in_person",
+       "label": "Заберу лично"
+      }
+     ]
+    },
+    {
+     "id": "attachments",
+     "label": "Что вы прикладываете",
+     "hint": "По одному документу на строку",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 600
+    },
+    {
+     "id": "signed_at",
+     "label": "Дата на документе",
+     "hint": "Обычно это день, когда вы подписываете и подаёте документ",
+     "type": "date",
+     "required": true,
+     "personal": false,
+     "default": "today"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "to",
+     "place": "head",
+     "text": "{{addressee_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "to-address",
+     "place": "head",
+     "when": "addressee_address",
+     "text": "{{addressee_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from",
+     "place": "head",
+     "text": "заявитель: {{applicant_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-address",
+     "place": "head",
+     "text": "адрес для ответа: {{applicant_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-phone",
+     "place": "head",
+     "when": "applicant_phone",
+     "text": "телефон: {{applicant_phone}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-email",
+     "place": "head",
+     "when": "applicant_email",
+     "text": "электронная почта: {{applicant_email}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-proxy",
+     "roles": [
+      "proxy"
+     ],
+     "text": "Обращаюсь в интересах пациента ({{patient_name}}) по доверенности от {{date:proxy_date}}, удостоверенной: {{proxy_issuer}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-guardian",
+     "roles": [
+      "guardian"
+     ],
+     "text": "Обращаюсь как опекун пациента ({{patient_name}}) на основании решения органа опеки и попечительства {{guardian_act}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-parent",
+     "roles": [
+      "parent"
+     ],
+     "text": "Обращаюсь как родитель несовершеннолетнего ребёнка ({{patient_name}}), свидетельство о рождении {{child_birth_cert}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "facts",
+     "text": "{{date:filed_at}} я подал(а) письменное обращение. Кому: {{filed_to}}. Суть обращения: {{filed_subject}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "reg-number",
+     "when": "reg_number",
+     "text": "Регистрационный номер обращения: {{reg_number}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "no-answer",
+     "norm_refs": [
+      "59-fz#p-12-1"
+     ],
+     "text": "Ответ на моё обращение в установленный срок не получен.",
+     "fallback": "Ответ на моё обращение в установленный срок не получен.",
+     "place": "body",
+     "kind": "text",
+     "norm_state": "fallback",
+     "norm_reason": "unverified",
+     "norm_links": [
+      {
+       "ref": "59-fz#p-12-1",
+       "act_id": "59-fz",
+       "anchor": "p-12-1",
+       "point": "часть 1 статьи 12",
+       "status": "in_force",
+       "verified": false,
+       "citation": ""
+      }
+     ]
+    },
+    {
+     "id": "ask",
+     "text": "Прошу проверить, почему мне не ответили в установленный срок, принять меры, чтобы мне дали ответ по существу, и сообщить мне о результатах.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-post",
+     "when": "answer_way=post",
+     "text": "Ответ прошу направить почтой по адресу для ответа, указанному выше.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-email",
+     "when": "answer_way=email",
+     "text": "Ответ прошу направить на электронную почту {{applicant_email}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-in-person",
+     "when": "answer_way=in_person",
+     "text": "Ответ заберу лично, прошу сообщить мне, когда он будет готов.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "attachments",
+     "place": "foot",
+     "kind": "list",
+     "when": "attachments",
+     "text": "Приложения:",
+     "list_field": "attachments",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signed",
+     "place": "foot",
+     "text": "{{date:signed_at}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signature",
+     "place": "foot",
+     "kind": "signature",
+     "text": "Подпись ____________ {{applicant_name}}",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    }
+   ],
+   "copies": 2,
+   "receipt_block": true,
+   "channels": [
+    "paper-in-person",
+    "paper-mail",
+    "ezp",
+    "esia-pos",
+    "esia-minzdrav-rf"
+   ],
+   "esia_summary": "{{date:filed_at}} я подал(а) письменное обращение, ответ в установленный срок не получен. Кому: {{filed_to}}. Прошу проверить и сообщить мне о результатах. Жалоба во вложении.",
+   "attachments_hint": [
+    "копия вашего обращения с отметкой о приёме или почтовая квитанция и опись вложения",
+    "копия доверенности, если обращаетесь по доверенности"
+   ],
+   "review_notes": [
+    "Срок ответа и куда жаловаться при его нарушении проверить юристу в РФ. Текст закона об обращениях граждан пока не сверен с официальной публикацией"
+   ],
+   "reviewed_by": [],
+   "reviewed_at": null,
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack",
+   "norm_state": "fallback",
+   "maturity": "demo"
+  },
+  {
+   "id": "repeat-complaint",
+   "tier": "T0",
+   "order": 5,
+   "title": "Жалоба",
+   "name": "Повторная жалоба, если ответили не по существу или переслали тому, на кого вы жалуетесь",
+   "gives": "Жалоба уходит выше, а в тексте есть просьба не пересылать её тому, на чьи действия вы жалуетесь",
+   "when_needed": "На жалобу ответили отпиской или её переслали в организацию, на которую вы жаловались",
+   "addressee_kinds": [
+    "rzn_to",
+    "minzdrav_region",
+    "rzn_central",
+    "minzdrav_rf",
+    "prosecutor"
+   ],
+   "roles": [
+    "self",
+    "proxy",
+    "guardian",
+    "parent"
+   ],
+   "norm_refs": [
+    "59-fz#p-8-6"
+   ],
+   "fields": [
+    {
+     "id": "addressee_name",
+     "label": "Кому",
+     "hint": "Должность и название ведомства, куда вы жалуетесь. Например, руководителю территориального органа Росздравнадзора по вашему региону, министру здравоохранения вашего региона или прокурору",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "addressee_address",
+     "label": "Адрес организации",
+     "hint": "Нужен, если отправляете почтой. Есть на сайте организации",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "applicant_name",
+     "label": "Ваши фамилия, имя, отчество",
+     "hint": "Как в паспорте",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "autocomplete": "name",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_address",
+     "label": "Ваш почтовый адрес для ответа",
+     "hint": "С индексом. По этому адресу пришлют ответ",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "autocomplete": "street-address",
+     "max_len": 200
+    },
+    {
+     "id": "applicant_phone",
+     "label": "Телефон",
+     "hint": "Чтобы с вами могли связаться, если что-то неясно",
+     "type": "text",
+     "required": false,
+     "personal": true,
+     "autocomplete": "tel",
+     "max_len": 40
+    },
+    {
+     "id": "applicant_email",
+     "label": "Электронная почта",
+     "hint": "Нужна, если хотите получить ответ на почту",
+     "type": "text",
+     "required": false,
+     "required_if": "answer_way=email",
+     "personal": true,
+     "autocomplete": "email",
+     "max_len": 120
+    },
+    {
+     "id": "patient_name",
+     "label": "Фамилия, имя, отчество человека, за которого вы обращаетесь",
+     "hint": "Как в его паспорте или свидетельстве о рождении",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 120,
+     "roles": [
+      "proxy",
+      "guardian",
+      "parent"
+     ]
+    },
+    {
+     "id": "proxy_date",
+     "label": "Дата доверенности",
+     "hint": "Есть на первой странице доверенности",
+     "type": "date",
+     "required": true,
+     "personal": true,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "proxy_issuer",
+     "label": "Кто удостоверил доверенность",
+     "hint": "Например, нотариус и его фамилия или организация, где удостоверили",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "proxy"
+     ]
+    },
+    {
+     "id": "guardian_act",
+     "label": "Решение органа опеки о назначении опекуна",
+     "hint": "Дата и номер решения",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 160,
+     "roles": [
+      "guardian"
+     ]
+    },
+    {
+     "id": "child_birth_cert",
+     "label": "Свидетельство о рождении ребёнка",
+     "hint": "Серия и номер",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "max_len": 60,
+     "roles": [
+      "parent"
+     ]
+    },
+    {
+     "id": "prev_filed_at",
+     "label": "Когда вы подали первую жалобу",
+     "hint": "Дата на вашем экземпляре или квитанции",
+     "type": "date",
+     "required": true,
+     "personal": false
+    },
+    {
+     "id": "prev_filed_to",
+     "label": "Куда вы подали первую жалобу",
+     "hint": "Название органа или организации",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "respondent",
+     "label": "На чьи действия вы жалуетесь",
+     "hint": "Организация или должность. Например, поликлиника или минздрав региона",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "complaint_subject",
+     "label": "Суть жалобы",
+     "hint": "Что произошло и о чём вы просите. Коротко",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 800
+    },
+    {
+     "id": "reply_kind",
+     "label": "Что произошло с первой жалобой",
+     "hint": "Выберите одно",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "not_on_merits",
+       "label": "Ответили не по существу"
+      },
+      {
+       "value": "forwarded_to_respondent",
+       "label": "Переслали тому, на кого я жалуюсь"
+      }
+     ]
+    },
+    {
+     "id": "reply_at",
+     "label": "Дата ответа или уведомления о пересылке",
+     "hint": "Если есть",
+     "type": "date",
+     "required": false,
+     "personal": false
+    },
+    {
+     "id": "reply_from",
+     "label": "Кто ответил или куда переслали",
+     "hint": "Название органа или организации",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "answer_way",
+     "label": "Как получить ответ",
+     "hint": "Выберите один способ",
+     "type": "select",
+     "required": true,
+     "personal": false,
+     "options": [
+      {
+       "value": "post",
+       "label": "Почтой по моему адресу"
+      },
+      {
+       "value": "email",
+       "label": "На мою электронную почту"
+      },
+      {
+       "value": "in_person",
+       "label": "Заберу лично"
+      }
+     ]
+    },
+    {
+     "id": "attachments",
+     "label": "Что вы прикладываете",
+     "hint": "По одному документу на строку",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 600
+    },
+    {
+     "id": "signed_at",
+     "label": "Дата на документе",
+     "hint": "Обычно это день, когда вы подписываете и подаёте документ",
+     "type": "date",
+     "required": true,
+     "personal": false,
+     "default": "today"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "to",
+     "place": "head",
+     "text": "{{addressee_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "to-address",
+     "place": "head",
+     "when": "addressee_address",
+     "text": "{{addressee_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from",
+     "place": "head",
+     "text": "заявитель: {{applicant_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-address",
+     "place": "head",
+     "text": "адрес для ответа: {{applicant_address}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-phone",
+     "place": "head",
+     "when": "applicant_phone",
+     "text": "телефон: {{applicant_phone}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from-email",
+     "place": "head",
+     "when": "applicant_email",
+     "text": "электронная почта: {{applicant_email}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-proxy",
+     "roles": [
+      "proxy"
+     ],
+     "text": "Обращаюсь в интересах пациента ({{patient_name}}) по доверенности от {{date:proxy_date}}, удостоверенной: {{proxy_issuer}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-guardian",
+     "roles": [
+      "guardian"
+     ],
+     "text": "Обращаюсь как опекун пациента ({{patient_name}}) на основании решения органа опеки и попечительства {{guardian_act}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "role-parent",
+     "roles": [
+      "parent"
+     ],
+     "text": "Обращаюсь как родитель несовершеннолетнего ребёнка ({{patient_name}}), свидетельство о рождении {{child_birth_cert}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "facts",
+     "text": "{{date:prev_filed_at}} я подал(а) жалобу. Кому: {{prev_filed_to}}. Я обжалую действия (бездействие): {{respondent}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "subject",
+     "text": "Суть жалобы: {{complaint_subject}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "reply-date",
+     "when": "reply_at",
+     "text": "Ответ или уведомление датированы {{date:reply_at}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "not-on-merits",
+     "when": "reply_kind=not_on_merits",
+     "text": "Ответ прислал(а): {{reply_from}}. В ответе нет ответа по существу поставленных мной вопросов.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "forwarded",
+     "when": "reply_kind=forwarded_to_respondent",
+     "text": "Мою жалобу направили на рассмотрение: {{reply_from}}, то есть тому, на чьи действия я жалуюсь.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "do-not-forward",
+     "norm_refs": [
+      "59-fz#p-8-6"
+     ],
+     "text": "Прошу не направлять эту жалобу на рассмотрение в орган или должностному лицу, чьи решения или действия (бездействие) я обжалую.",
+     "fallback": "Прошу не направлять эту жалобу на рассмотрение в орган или должностному лицу, чьи решения или действия (бездействие) я обжалую.",
+     "place": "body",
+     "kind": "text",
+     "norm_state": "fallback",
+     "norm_reason": "unverified",
+     "norm_links": [
+      {
+       "ref": "59-fz#p-8-6",
+       "act_id": "59-fz",
+       "anchor": "p-8-6",
+       "point": "часть 6 статьи 8",
+       "status": "in_force",
+       "verified": false,
+       "citation": ""
+      }
+     ]
+    },
+    {
+     "id": "ask",
+     "text": "Прошу рассмотреть жалобу по существу и дать мне письменный ответ.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-post",
+     "when": "answer_way=post",
+     "text": "Ответ прошу направить почтой по адресу для ответа, указанному выше.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-email",
+     "when": "answer_way=email",
+     "text": "Ответ прошу направить на электронную почту {{applicant_email}}.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "answer-in-person",
+     "when": "answer_way=in_person",
+     "text": "Ответ заберу лично, прошу сообщить мне, когда он будет готов.",
+     "place": "body",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "attachments",
+     "place": "foot",
+     "kind": "list",
+     "when": "attachments",
+     "text": "Приложения:",
+     "list_field": "attachments",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signed",
+     "place": "foot",
+     "text": "{{date:signed_at}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signature",
+     "place": "foot",
+     "kind": "signature",
+     "text": "Подпись ____________ {{applicant_name}}",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    }
+   ],
+   "copies": 2,
+   "receipt_block": true,
+   "channels": [
+    "paper-in-person",
+    "paper-mail",
+    "ezp",
+    "esia-pos",
+    "esia-minzdrav-rf"
+   ],
+   "esia_summary": "Повторная жалоба. Первая жалоба от {{date:prev_filed_at}} не рассмотрена по существу или переслана тому, на кого я жалуюсь. Прошу не направлять эту жалобу в орган, чьи действия я обжалую. Жалоба во вложении.",
+   "attachments_hint": [
+    "копия первой жалобы с отметкой о приёме или квитанция",
+    "копия ответа или уведомления о пересылке",
+    "копия доверенности, если обращаетесь по доверенности"
+   ],
+   "review_notes": [
+    "Просьба не пересылать жалобу написана просьбой, а не обвинением, так решено в проекте. Проверить юристу в РФ"
+   ],
+   "reviewed_by": [],
+   "reviewed_at": null,
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack",
+   "norm_state": "fallback",
+   "maturity": "demo"
+  },
+  {
+   "id": "filing-sheet",
+   "tier": "T0",
+   "order": 6,
+   "title": "Опись",
+   "name": "Опись документов и отметка о приёме",
+   "gives": "У вас остаётся экземпляр со списком того, что вы подали, и отметкой о приёме. Это доказательство, что документы приняли",
+   "when_needed": "Вы подаёте несколько документов сразу или отправляете их почтой",
+   "addressee_kinds": [
+    "none"
+   ],
+   "roles": [
+    "self",
+    "proxy",
+    "guardian",
+    "parent"
+   ],
+   "fields": [
+    {
+     "id": "applicant_name",
+     "label": "Ваши фамилия, имя, отчество",
+     "hint": "Как в паспорте",
+     "type": "text",
+     "required": true,
+     "personal": true,
+     "autocomplete": "name",
+     "max_len": 120
+    },
+    {
+     "id": "applicant_address",
+     "label": "Ваш почтовый адрес для ответа",
+     "hint": "С индексом. По этому адресу пришлют ответ",
+     "type": "textarea",
+     "required": true,
+     "personal": true,
+     "autocomplete": "street-address",
+     "max_len": 200
+    },
+    {
+     "id": "applicant_phone",
+     "label": "Телефон",
+     "hint": "Чтобы с вами могли связаться, если что-то неясно",
+     "type": "text",
+     "required": false,
+     "personal": true,
+     "autocomplete": "tel",
+     "max_len": 40
+    },
+    {
+     "id": "applicant_email",
+     "label": "Электронная почта",
+     "hint": "Нужна, если хотите получить ответ на почту",
+     "type": "text",
+     "required": false,
+     "required_if": "answer_way=email",
+     "personal": true,
+     "autocomplete": "email",
+     "max_len": 120
+    },
+    {
+     "id": "filed_to",
+     "label": "Куда вы подаёте документы",
+     "hint": "Название организации или органа",
+     "type": "textarea",
+     "required": true,
+     "personal": false,
+     "max_len": 240
+    },
+    {
+     "id": "main_doc",
+     "label": "Главный документ",
+     "hint": "Например, заявление о выдаче выписки из протокола врачебной комиссии",
+     "type": "text",
+     "required": true,
+     "personal": false,
+     "max_len": 200
+    },
+    {
+     "id": "attachments",
+     "label": "Что вы прикладываете",
+     "hint": "По одному документу на строку, с числом листов. Например, копия доверенности, 1 лист",
+     "type": "textarea",
+     "required": false,
+     "personal": false,
+     "max_len": 800
+    },
+    {
+     "id": "signed_at",
+     "label": "Дата на документе",
+     "hint": "Обычно это день, когда вы подписываете и подаёте документ",
+     "type": "date",
+     "required": true,
+     "personal": false,
+     "default": "today"
+    }
+   ],
+   "blocks": [
+    {
+     "id": "title-to",
+     "place": "head",
+     "text": "Опись документов, которые подаются: {{filed_to}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "from",
+     "place": "head",
+     "text": "заявитель: {{applicant_name}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "main",
+     "kind": "list_item",
+     "text": "{{main_doc}}",
+     "place": "body",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "attachments-list",
+     "kind": "list",
+     "when": "attachments",
+     "list_field": "attachments",
+     "text": "Приложения:",
+     "place": "body",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signed",
+     "place": "foot",
+     "text": "{{date:signed_at}}",
+     "kind": "text",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    },
+    {
+     "id": "signature",
+     "place": "foot",
+     "kind": "signature",
+     "text": "Подпись ____________ {{applicant_name}}",
+     "norm_refs": [],
+     "norm_state": "none",
+     "norm_reason": null,
+     "norm_links": []
+    }
+   ],
+   "copies": 2,
+   "receipt_block": true,
+   "channels": [
+    "paper-in-person",
+    "paper-mail"
+   ],
+   "esia_summary": "",
+   "attachments_hint": [],
+   "review_notes": [],
+   "reviewed_by": [],
+   "reviewed_at": null,
+   "verified": false,
+   "verified_at": null,
+   "source_ref": "ok-pack",
+   "norm_refs": [],
+   "norm_state": "none",
+   "maturity": "demo"
+  }
+ ]
+}

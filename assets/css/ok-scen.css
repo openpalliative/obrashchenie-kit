@@ -1,0 +1,137 @@
+.ok-home .op-lead {
+  max-width: 34em;
+}
+
+.ok-continue {
+  margin: 24px 0 8px;
+  padding: 20px;
+  background: var(--op-surface);
+  border: 1px solid var(--op-border);
+  border-left: 5px solid var(--op-primary);
+  border-radius: 0 var(--op-radius) var(--op-radius) 0;
+  max-width: 40em;
+}
+
+.ok-continue__line {
+  margin: 12px 0 0;
+  font-weight: 500;
+}
+
+.ok-promise ul {
+  list-style: none;
+  padding: 20px 0 0;
+  margin: 8px 0 24px;
+  border-top: 1px solid var(--op-border);
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 900px) {
+  .ok-promise ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.ok-promise li {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  color: var(--op-muted);
+  font-size: var(--op-size-small);
+}
+
+.ok-promise .op-icon {
+  flex: none;
+  color: var(--op-primary);
+  margin-top: 0.15em;
+}
+
+.ok-now {
+  margin: 24px 0 40px;
+}
+
+.ok-firststeps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  max-width: 38em;
+}
+
+.ok-firststeps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 0 0 16px;
+  font-size: calc(var(--op-size-body) + 1px);
+}
+
+.ok-firststeps__n {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--op-highlight);
+  color: var(--op-text);
+  font-weight: 700;
+}
+
+.ok-now__note {
+  color: var(--op-muted);
+  font-size: var(--op-size-small);
+  margin-top: 0;
+}
+
+.ok-strong-link {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 48px;
+  font-weight: 600;
+}
+
+.ok-docs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  max-width: 44em;
+}
+
+.ok-docs__item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--op-border);
+  max-width: none;
+}
+
+.ok-docs__item:first-child {
+  border-top: 1px solid var(--op-border);
+}
+
+.ok-docs__title {
+  margin: 0 0 4px;
+  font-size: var(--op-size-h3);
+}
+
+.ok-docs__gives {
+  margin: 0;
+  color: var(--op-muted);
+  font-size: var(--op-size-small);
+}
+
+.ok-iffailed {
+  max-width: 40em;
+}
+
+.ok-iffailed li {
+  margin-bottom: 10px;
+}
+
+.ok-share .op-actions {
+  align-items: flex-start;
+}

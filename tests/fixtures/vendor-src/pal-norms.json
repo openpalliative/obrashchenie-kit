@@ -1,0 +1,684 @@
+{
+ "repo": "pal-norms",
+ "license": "CC-BY-4.0",
+ "source": [
+  {
+   "id": "fixture-pal-norms",
+   "title": "Тестовый снимок pal-norms для obrashchenie-kit. Реквизиты и переносы взяты из официальных публикаций 11.10.2026, тексты норм не сверены. Не заменяет pal-norms"
+  },
+  {
+   "id": "pravo-api",
+   "title": "Метаданные актов из API портала официального опубликования",
+   "url": "http://publication.pravo.gov.ru/api/Document",
+   "retrieved_at": "2026-10-11"
+  }
+ ],
+ "datasets": {
+  "acts": [
+   {
+    "id": "208n-243n",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "joint_order",
+    "authority": "Министерство труда и социальной защиты Российской Федерации, Министерство здравоохранения Российской Федерации",
+    "number": "208н/243н",
+    "doc_date": "2025-04-14",
+    "title": "Об утверждении Положения об организации оказания паллиативной медицинской помощи, включая порядок взаимодействия медицинских организаций, организаций социального обслуживания и общественных объединений, иных некоммерческих организаций, осуществляющих свою деятельность в сфере охраны здоровья",
+    "short_title": "Положение об организации паллиативной медицинской помощи",
+    "topics": [
+     "palliative"
+    ],
+    "eoNumber": "0001202505290031",
+    "publish_date": "2025-05-29",
+    "pages": 196,
+    "url": "http://publication.pravo.gov.ru/document/0001202505290031",
+    "pdf_url": "http://publication.pravo.gov.ru/file/pdf?eoNumber=0001202505290031",
+    "pdf_sha256": null,
+    "text_source": "official_pdf",
+    "alt_source": null,
+    "status": "in_force",
+    "status_basis": null,
+    "in_force_from": "2025-09-01",
+    "valid_until": "2031-09-01",
+    "repealed_at": null,
+    "supersedes": [
+     "345n-372n"
+    ],
+    "superseded_by": [],
+    "amended_by": [],
+    "cites": [],
+    "cites_repealed": [],
+    "aliases": [
+     "208н/243н"
+    ],
+    "quote_ids": [],
+    "rule_ids": [
+     "208n-p23-transition"
+    ],
+    "review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    },
+    "notes": null
+   },
+   {
+    "id": "345n-372n",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "joint_order",
+    "authority": "Министерство здравоохранения Российской Федерации, Министерство труда и социальной защиты Российской Федерации",
+    "number": "345н/372н",
+    "doc_date": "2019-05-31",
+    "title": "Об утверждении Положения об организации оказания паллиативной медицинской помощи, включая порядок взаимодействия медицинских организаций, организаций социального обслуживания и общественных объединений, иных некоммерческих организаций, осуществляющих свою деятельность в сфере охраны здоровья",
+    "short_title": "Прежнее положение о паллиативной помощи",
+    "topics": [
+     "palliative"
+    ],
+    "eoNumber": "0001201906270031",
+    "publish_date": "2019-06-27",
+    "pages": 108,
+    "url": "http://publication.pravo.gov.ru/document/0001201906270031",
+    "pdf_url": null,
+    "pdf_sha256": null,
+    "text_source": "official_pdf",
+    "alt_source": null,
+    "status": "repealed",
+    "status_basis": {
+     "act_id": "208n-243n",
+     "point": "п. 2",
+     "quote_id": null
+    },
+    "in_force_from": null,
+    "valid_until": null,
+    "repealed_at": "2025-09-01",
+    "supersedes": [],
+    "superseded_by": [
+     "208n-243n"
+    ],
+    "amended_by": [],
+    "cites": [],
+    "cites_repealed": [],
+    "aliases": [
+     "345н/372н"
+    ],
+    "quote_ids": [],
+    "rule_ids": [],
+    "review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    },
+    "notes": null
+   },
+   {
+    "id": "180n",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "ministry_order",
+    "authority": "Министерство здравоохранения Российской Федерации",
+    "number": "180н",
+    "doc_date": "2025-04-10",
+    "title": "Об утверждении порядка создания и деятельности врачебной комиссии медицинской организации",
+    "short_title": "Порядок работы врачебной комиссии",
+    "topics": [
+     "vk"
+    ],
+    "eoNumber": "0001202505160009",
+    "publish_date": "2025-05-16",
+    "pages": 9,
+    "url": "http://publication.pravo.gov.ru/document/0001202505160009",
+    "pdf_url": null,
+    "pdf_sha256": null,
+    "text_source": "official_pdf",
+    "alt_source": null,
+    "status": "in_force",
+    "status_basis": null,
+    "in_force_from": null,
+    "valid_until": null,
+    "repealed_at": null,
+    "supersedes": [],
+    "superseded_by": [],
+    "amended_by": [],
+    "cites": [],
+    "cites_repealed": [],
+    "aliases": [
+     "180н"
+    ],
+    "quote_ids": [],
+    "rule_ids": [
+     "180n-protocol-extract"
+    ],
+    "review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    },
+    "notes": null
+   },
+   {
+    "id": "789n",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "ministry_order",
+    "authority": "Министерство здравоохранения Российской Федерации",
+    "number": "789н",
+    "doc_date": "2020-07-31",
+    "title": "Об утверждении порядка и сроков предоставления медицинских документов (их копий) и выписок из них",
+    "short_title": "Порядок выдачи медицинских документов",
+    "topics": [
+     "records"
+    ],
+    "eoNumber": "0001202009240027",
+    "publish_date": "2020-09-24",
+    "pages": 7,
+    "url": "http://publication.pravo.gov.ru/document/0001202009240027",
+    "pdf_url": null,
+    "pdf_sha256": null,
+    "text_source": "official_pdf",
+    "alt_source": null,
+    "status": "in_force",
+    "status_basis": null,
+    "in_force_from": null,
+    "valid_until": null,
+    "repealed_at": null,
+    "supersedes": [],
+    "superseded_by": [],
+    "amended_by": [],
+    "cites": [],
+    "cites_repealed": [],
+    "aliases": [
+     "789н"
+    ],
+    "quote_ids": [],
+    "rule_ids": [
+     "789n-copies",
+     "789n-inpatient"
+    ],
+    "review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    },
+    "notes": null
+   },
+   {
+    "id": "59-fz",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "kind": "federal_law",
+    "authority": "Президент Российской Федерации",
+    "number": "59-ФЗ",
+    "doc_date": "2006-05-02",
+    "title": "О порядке рассмотрения обращений граждан Российской Федерации",
+    "short_title": "Закон об обращениях граждан",
+    "topics": [
+     "appeals"
+    ],
+    "eoNumber": null,
+    "publish_date": null,
+    "pages": null,
+    "url": null,
+    "pdf_url": null,
+    "pdf_sha256": null,
+    "text_source": "ips_archive",
+    "alt_source": null,
+    "status": "in_force",
+    "status_basis": null,
+    "in_force_from": null,
+    "valid_until": null,
+    "repealed_at": null,
+    "supersedes": [],
+    "superseded_by": [],
+    "amended_by": [
+     {
+      "eoNumber": "0001202412280052",
+      "doc_date": "2024-12-28",
+      "title": "О внесении изменений в Федеральный закон «О порядке рассмотрения обращений граждан Российской Федерации»"
+     }
+    ],
+    "cites": [],
+    "cites_repealed": [],
+    "aliases": [
+     "59-ФЗ"
+    ],
+    "quote_ids": [],
+    "rule_ids": [
+     "59fz-answer",
+     "59fz-redirect"
+    ],
+    "review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    },
+    "notes": "Текста нет на портале официального опубликования, только копии. Не проверено"
+   }
+  ],
+  "deadline-rules": [
+   {
+    "id": "59fz-answer",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "situation": "Вы подали письменное обращение",
+    "result_label": "Ответ должен прийти не позже",
+    "from_event": "received",
+    "from_event_label": "Когда обращение получили",
+    "who": "орган или организация, куда вы написали",
+    "value": 30,
+    "unit": "calendar_days",
+    "direction": "forward",
+    "pre": {
+     "value": 3,
+     "unit": "calendar_days",
+     "label": "на регистрацию"
+    },
+    "extension": {
+     "value": 30,
+     "unit": "calendar_days",
+     "label": "могут продлить, но должны сообщить вам"
+    },
+    "shift_if_nonworking": "unknown",
+    "margin_working_days": 0,
+    "norm_ids": [
+     "59-fz"
+    ],
+    "quote_ids": [
+     "59-fz-p-12-1"
+    ],
+    "ambiguous": true,
+    "ambiguity_note": "В тексте не сказано, переносится ли срок с выходного дня",
+    "escalation_ids": [
+     "no-answer"
+    ],
+    "audience": [
+     "family",
+     "org"
+    ],
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   },
+   {
+    "id": "59fz-redirect",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "situation": "Обращение не по адресу",
+    "result_label": "Должны переслать по компетенции не позже",
+    "from_event": "registered",
+    "from_event_label": "Когда обращение зарегистрировали",
+    "who": "орган, куда вы написали",
+    "value": 7,
+    "unit": "calendar_days",
+    "direction": "forward",
+    "pre": null,
+    "extension": null,
+    "shift_if_nonworking": "unknown",
+    "margin_working_days": 0,
+    "norm_ids": [
+     "59-fz"
+    ],
+    "quote_ids": [
+     "59-fz-p-8-3"
+    ],
+    "ambiguous": true,
+    "ambiguity_note": "В тексте не сказано, переносится ли срок с выходного дня",
+    "escalation_ids": [],
+    "audience": [
+     "family",
+     "org"
+    ],
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   },
+   {
+    "id": "180n-protocol-extract",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "fixture-pal-norms",
+    "situation": "Вы попросили выписку из протокола врачебной комиссии",
+    "result_label": "Выписку должны выдать не позже",
+    "from_event": "received",
+    "from_event_label": "Когда запрос поступил в медицинскую организацию",
+    "who": "медицинская организация",
+    "value": 3,
+    "unit": "working_days",
+    "direction": "forward",
+    "pre": null,
+    "extension": null,
+    "shift_if_nonworking": "no",
+    "margin_working_days": 0,
+    "norm_ids": [
+     "180n"
+    ],
+    "quote_ids": [
+     "180n-p-16"
+    ],
+    "ambiguous": false,
+    "ambiguity_note": null,
+    "escalation_ids": [],
+    "audience": [
+     "family",
+     "org"
+    ],
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   },
+   {
+    "id": "789n-copies",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "situation": "Вы запросили копии медицинских документов",
+    "result_label": "Документы должны выдать не позже",
+    "from_event": "received",
+    "from_event_label": "Когда запрос зарегистрировали",
+    "who": "медицинская организация",
+    "value": 30,
+    "unit": "calendar_days",
+    "direction": "forward",
+    "pre": null,
+    "extension": null,
+    "shift_if_nonworking": "unknown",
+    "margin_working_days": 0,
+    "norm_ids": [
+     "789n",
+     "59-fz"
+    ],
+    "quote_ids": [
+     "789n-p-8"
+    ],
+    "ambiguous": true,
+    "ambiguity_note": "Срок взят из закона об обращениях граждан, на который ссылается пункт 8",
+    "escalation_ids": [],
+    "audience": [
+     "family",
+     "org"
+    ],
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   },
+   {
+    "id": "789n-inpatient",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "fixture-pal-norms",
+    "situation": "Вы запросили выписку или копии, пока человек в стационаре",
+    "result_label": "Должны выдать не позже",
+    "from_event": "requested",
+    "from_event_label": "Когда попросили",
+    "who": "стационар",
+    "value": 1,
+    "unit": "within_24h",
+    "direction": "forward",
+    "pre": null,
+    "extension": null,
+    "shift_if_nonworking": "no",
+    "margin_working_days": 0,
+    "norm_ids": [
+     "789n"
+    ],
+    "quote_ids": [
+     "789n-p-8"
+    ],
+    "ambiguous": false,
+    "ambiguity_note": null,
+    "escalation_ids": [],
+    "audience": [
+     "family"
+    ],
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   },
+   {
+    "id": "208n-p23-transition",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "fixture-pal-norms",
+    "situation": "Ребёнку скоро 18",
+    "result_label": "Сведения должны передать не позже",
+    "from_event": "turns-18",
+    "from_event_label": "Дата, когда исполнится 18",
+    "who": "детская медицинская организация",
+    "value": 90,
+    "unit": "working_days",
+    "direction": "backward",
+    "pre": null,
+    "extension": null,
+    "shift_if_nonworking": "no",
+    "margin_working_days": 5,
+    "norm_ids": [
+     "208n-243n"
+    ],
+    "quote_ids": [
+     "208n-243n-p-23"
+    ],
+    "ambiguous": false,
+    "ambiguity_note": null,
+    "escalation_ids": [],
+    "audience": [
+     "family"
+    ],
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   }
+  ],
+  "calendar": [
+   {
+    "id": "baseline",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "kind": "baseline",
+    "year": null,
+    "holidays_mmdd": [
+     "01-01",
+     "01-02",
+     "01-03",
+     "01-04",
+     "01-05",
+     "01-06",
+     "01-07",
+     "01-08",
+     "02-23",
+     "03-08",
+     "05-01",
+     "05-09",
+     "06-12",
+     "11-04"
+    ],
+    "carry_over": true,
+    "carry_exclude_mmdd": [
+     "01-01",
+     "01-02",
+     "01-03",
+     "01-04",
+     "01-05",
+     "01-06",
+     "01-07",
+     "01-08"
+    ],
+    "quote_ids": []
+   },
+   {
+    "id": "2025",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "year",
+    "year": 2025,
+    "decree_act_id": "pp-1335",
+    "decree_eoNumber": "0001202410040023",
+    "transfers": [
+     {
+      "from": "2025-01-04",
+      "to": "2025-05-02"
+     },
+     {
+      "from": "2025-01-05",
+      "to": "2025-12-31"
+     },
+     {
+      "from": "2025-02-23",
+      "to": "2025-05-08"
+     },
+     {
+      "from": "2025-03-08",
+      "to": "2025-06-13"
+     },
+     {
+      "from": "2025-11-01",
+      "to": "2025-11-03"
+     }
+    ],
+    "quote_ids": []
+   },
+   {
+    "id": "2026",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "year",
+    "year": 2026,
+    "decree_act_id": "pp-1466",
+    "decree_eoNumber": "0001202509240023",
+    "transfers": [
+     {
+      "from": "2026-01-03",
+      "to": "2026-01-09"
+     },
+     {
+      "from": "2026-01-04",
+      "to": "2026-12-31"
+     }
+    ],
+    "quote_ids": []
+   },
+   {
+    "id": "2027",
+    "verified": true,
+    "verified_at": "2026-10-11",
+    "source_ref": "pravo-api",
+    "kind": "year",
+    "year": 2027,
+    "decree_act_id": "pp-1187",
+    "decree_eoNumber": "0001202609180037",
+    "transfers": [
+     {
+      "from": "2027-01-02",
+      "to": "2027-11-05"
+     },
+     {
+      "from": "2027-01-03",
+      "to": "2027-12-31"
+     },
+     {
+      "from": "2027-02-20",
+      "to": "2027-02-22"
+     }
+    ],
+    "quote_ids": []
+   }
+  ],
+  "escalation": [
+   {
+    "id": "no-answer",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "order": 1,
+    "trigger": "no_answer_after_due",
+    "title": "Ответа нет после срока",
+    "what": "Жалоба на нарушение срока ответа",
+    "addressee_kind": "rzn_territorial",
+    "parallel": false,
+    "norm_ids": [
+     "59-fz"
+    ],
+    "quote_ids": [],
+    "rule_ids": [
+     "59fz-answer"
+    ],
+    "ok_doc": "deadline-complaint",
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   },
+   {
+    "id": "redirected",
+    "verified": false,
+    "verified_at": null,
+    "source_ref": "fixture-pal-norms",
+    "order": 2,
+    "trigger": "redirected_to_accused",
+    "title": "Жалобу переслали тому, на кого вы жаловались",
+    "what": "Повторная жалоба выше с просьбой не пересылать",
+    "addressee_kind": "rzn_central",
+    "parallel": false,
+    "norm_ids": [
+     "59-fz"
+    ],
+    "quote_ids": [],
+    "rule_ids": [],
+    "ok_doc": "repeat-complaint",
+    "legal_review": {
+     "status": "none",
+     "role": null,
+     "reviewed_at": null,
+     "expires_at": null,
+     "ref": null
+    }
+   }
+  ]
+ }
+}

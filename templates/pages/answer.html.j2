@@ -1,0 +1,72 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% set types = site.kit["reply-types"]["items"] %}
+{% block title %}Что пришло в ответ{% endblock %}
+{% block description %}Выберите, что вам ответили, и посмотрите варианты следующего шага{% endblock %}
+{% block head %}{{ ok.css(["answer"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-answer">
+  {{ op.crumbs([("openpalliative", hub("")), (site.title, url("")), ("Что пришло в ответ", "")]) }}
+  <h1>Что пришло в ответ</h1>
+  <div class="ok-doc__case" data-case-line hidden></div>
+
+  <form class="ok-answer__form" data-js hidden novalidate>
+    <fieldset class="ok-big">
+      <legend class="ok-q__title">Что вам ответили?</legend>
+      {% for t in types if not t.get("parent") %}
+      <label class="ok-big__item"><input type="radio" name="reply" value="{{ t.id }}"><span class="ok-big__label">{{ t.label }}</span></label>
+      {% endfor %}
+    </fieldset>
+    <details class="ok-more" data-more>
+      <summary>{{ icon("chevron-down") }}<span>Уточнить</span></summary>
+      <fieldset class="op-choice">
+        <legend class="op-field__label">Точнее</legend>
+        {% for t in types if t.get("parent") %}
+        <label class="op-choice__item" data-parent="{{ t.parent }}"><input type="radio" name="reply" value="{{ t.id }}"><span>{{ t.label }}{% if t.get("hint") %}<span class="op-choice__hint">{{ t.hint }}</span>{% endif %}</span></label>
+        {% endfor %}
+      </fieldset>
+    </details>
+    <fieldset class="op-choice" data-level-q>
+      <legend class="op-field__label">Куда вы писали в этот раз?</legend>
+      <label class="op-choice__item"><input type="radio" name="level" value="1" checked><span>В больницу или поликлинику</span></label>
+      <label class="op-choice__item"><input type="radio" name="level" value="2"><span>В минздрав региона или Росздравнадзор в регионе</span></label>
+      <label class="op-choice__item"><input type="radio" name="level" value="3"><span>В федеральное ведомство</span></label>
+    </fieldset>
+  </form>
+  <p class="ok-muted ok-answer__lead">Выберите, что вам ответили, и мы покажем, что это обычно значит, и варианты следующего шага. Решаете вы</p>
+
+  <section class="ok-result" data-result hidden aria-live="polite" aria-labelledby="ok-res-title">
+    <h2 id="ok-res-title">Варианты. Решаете вы</h2>
+    <p class="ok-result__meaning" data-meaning></p>
+    <ul class="ok-optlist" data-optlist></ul>
+    <div class="ok-answer__save" data-save-wrap hidden>
+      {{ ok.date3("ok-ans-at", "Когда пришёл ответ", "Дата на письме или в уведомлении") }}
+      <div class="op-actions">
+        <button class="op-btn op-btn--primary" type="button" data-save>{{ icon("circle-check") }}<span>Записать ответ в дело</span></button>
+      </div>
+    </div>
+    <p class="ok-live" data-live role="status"></p>
+  </section>
+
+  <section data-nojs aria-labelledby="ok-all-title">
+    <h2 id="ok-all-title">Типы ответов и что можно сделать</h2>
+    <dl class="ok-types">
+      {% for t in types %}
+      <dt>{{ t.label }}</dt>
+      <dd>
+        <p>{{ t.meaning }}</p>
+        {% set opts = site.options_by_condition.get(t.condition, []) %}
+        {% if opts %}<ul>{% for o in opts %}<li>{{ o }}</li>{% endfor %}</ul>{% endif %}
+      </dd>
+      {% endfor %}
+    </dl>
+  </section>
+  <p class="ok-muted">Жалобу не отправляют тому, на кого вы жалуетесь. Поэтому варианты зависят от того, куда вы писали</p>
+  {{ ok.back() }}
+</div>
+<template id="ok-option-item"><li class="ok-opt"><p class="ok-opt__label"></p><p class="ok-opt__to"></p><a class="op-btn op-btn--secondary ok-opt__btn"><span>Собрать документ</span></a></li></template>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/answer-page.js') }}"></script>
+<script type="module" src="{{ url('assets/js/back.js') }}"></script>
+{% endblock %}

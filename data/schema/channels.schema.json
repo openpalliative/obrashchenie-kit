@@ -1,0 +1,113 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/channels.schema.json",
+ "title": "Каналы подачи",
+ "description": "Бумага, форма с входом через Госуслуги, электронное заказное письмо",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "channels"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "label",
+     "kind",
+     "limit_chars",
+     "limit_files",
+     "limit_mb",
+     "limit_pages",
+     "url",
+     "steps",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "kind": {
+      "enum": [
+       "paper",
+       "esia_form",
+       "ezp"
+      ]
+     },
+     "limit_chars": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "limit_files": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "limit_mb": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "limit_pages": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "limit_note": {
+      "type": "string"
+     },
+     "url": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^https://"
+     },
+     "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

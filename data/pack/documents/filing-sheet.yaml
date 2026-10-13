@@ -1,0 +1,66 @@
+id: filing-sheet
+tier: T0
+order: "6"
+title: Опись
+name: Опись документов и отметка о приёме
+gives: У вас остаётся экземпляр со списком того, что вы подали, и отметкой о приёме. Это доказательство, что документы приняли
+when_needed: Вы подаёте несколько документов сразу или отправляете их почтой
+addressee_kinds: [none]
+roles: [self, proxy, guardian, parent]
+fields:
+  - group: applicant
+  - id: filed_to
+    label: Куда вы подаёте документы
+    hint: Название организации или органа
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "240"
+  - id: main_doc
+    label: Главный документ
+    hint: Например, заявление о выдаче выписки из протокола врачебной комиссии
+    type: text
+    required: "true"
+    personal: "false"
+    max_len: "200"
+  - id: attachments
+    label: Что вы прикладываете
+    hint: По одному документу на строку, с числом листов. Например, копия доверенности, 1 лист
+    type: textarea
+    required: "false"
+    personal: "false"
+    max_len: "800"
+  - group: sign
+blocks:
+  - id: title-to
+    place: head
+    text: "Опись документов, которые подаются: {{filed_to}}"
+  - id: from
+    place: head
+    text: "заявитель: {{applicant_name}}"
+  - id: main
+    kind: list_item
+    text: "{{main_doc}}"
+  - id: attachments-list
+    kind: list
+    when: attachments
+    list_field: attachments
+    text: "Приложения:"
+  - id: signed
+    place: foot
+    text: "{{date:signed_at}}"
+  - id: signature
+    place: foot
+    kind: signature
+    text: "Подпись ____________ {{applicant_name}}"
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person, paper-mail]
+esia_summary: ""
+attachments_hint: []
+review_notes: []
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

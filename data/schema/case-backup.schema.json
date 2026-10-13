@@ -1,0 +1,319 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/schema/case-backup.schema.json",
+ "title": "Файл дел на устройстве (экспорт и импорт)",
+ "description": "Файл, который сохраняет человек. Ключи case:<id> и profile. Тексты из файла показываются только как текст",
+ "type": "object",
+ "required": [
+  "format",
+  "repo",
+  "exported_at",
+  "entries"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "format": {
+   "const": "openpalliative-backup/1",
+   "x-message-ru": "это не файл дел этого инструмента"
+  },
+  "repo": {
+   "const": "obrashchenie-kit",
+   "x-message-ru": "это не файл дел этого инструмента"
+  },
+  "exported_at": {
+   "type": "string"
+  },
+  "entries": {
+   "type": "array",
+   "maxItems": 20,
+   "items": {
+    "oneOf": [
+     {
+      "type": "object",
+      "required": [
+       "key",
+       "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "key": {
+        "type": "string",
+        "pattern": "^case:[a-z0-9]{10}$"
+       },
+       "value": {
+        "type": "object",
+        "required": [
+         "id",
+         "schema",
+         "created_at",
+         "scenario",
+         "role",
+         "events"
+        ],
+        "additionalProperties": true,
+        "properties": {
+         "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]{10}$"
+         },
+         "schema": {
+          "const": 1
+         },
+         "created_at": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "x-message-ru": "дата в виде ГГГГ-ММ-ДД"
+         },
+         "closed_at": {
+          "type": [
+           "string",
+           "null"
+          ],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+         },
+         "scenario": {
+          "enum": [
+           "oral-refusal",
+           "no-answer",
+           "vk-refused",
+           "discharge",
+           "forwarded"
+          ]
+         },
+         "role": {
+          "enum": [
+           "self",
+           "proxy",
+           "guardian",
+           "parent"
+          ]
+         },
+         "region_id": {
+          "type": [
+           "string",
+           "null"
+          ],
+          "pattern": "^RU-[A-Z]{2,3}$"
+         },
+         "respondent_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+         },
+         "device": {
+          "type": [
+           "string",
+           "null"
+          ],
+          "pattern": "^\\d{6}$"
+         },
+         "nut": {
+          "type": [
+           "string",
+           "null"
+          ],
+          "pattern": "^[a-z0-9-]{1,40}$"
+         },
+         "pack_version": {
+          "type": "string",
+          "maxLength": 20
+         },
+         "addressees": {
+          "type": "object",
+          "additionalProperties": {
+           "type": "object",
+           "required": [
+            "name"
+           ],
+           "additionalProperties": false,
+           "properties": {
+            "name": {
+             "type": "string",
+             "maxLength": 240
+            },
+            "address": {
+             "type": "string",
+             "maxLength": 200
+            }
+           }
+          }
+         },
+         "docs": {
+          "type": "object",
+          "additionalProperties": {
+           "type": "object",
+           "required": [
+            "fields"
+           ],
+           "additionalProperties": false,
+           "properties": {
+            "fields": {
+             "type": "object",
+             "additionalProperties": {
+              "type": "string",
+              "maxLength": 800
+             }
+            },
+            "built_at": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+             "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+            }
+           }
+          }
+         },
+         "events": {
+          "type": "array",
+          "maxItems": 200,
+          "items": {
+           "type": "object",
+           "required": [
+            "seq",
+            "at",
+            "type"
+           ],
+           "additionalProperties": false,
+           "properties": {
+            "seq": {
+             "type": "integer",
+             "minimum": 1
+            },
+            "at": {
+             "type": "string",
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+             "x-message-ru": "дата в виде ГГГГ-ММ-ДД"
+            },
+            "type": {
+             "enum": [
+              "oral_refusal",
+              "call",
+              "filed",
+              "registered",
+              "reply",
+              "forwarded",
+              "extended",
+              "docs_requested",
+              "note",
+              "closed"
+             ]
+            },
+            "channel": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "maxLength": 40
+            },
+            "doc": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "maxLength": 40
+            },
+            "to": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "maxLength": 40
+            },
+            "reg_number": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "maxLength": 40
+            },
+            "reply_type": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "maxLength": 40
+            },
+            "to_respondent": {
+             "type": [
+              "boolean",
+              "null"
+             ]
+            },
+            "new_due": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+             "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+            },
+            "note": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "maxLength": 500
+            },
+            "edited_at": {
+             "type": [
+              "string",
+              "null"
+             ],
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+             "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     },
+     {
+      "type": "object",
+      "required": [
+       "key",
+       "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "key": {
+        "const": "profile"
+       },
+       "value": {
+        "type": "object",
+        "additionalProperties": {
+         "type": "string",
+         "maxLength": 240
+        }
+       }
+      }
+     },
+     {
+      "type": "object",
+      "required": [
+       "key",
+       "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "key": {
+        "type": "string",
+        "pattern": "^seen:[a-z0-9-]{1,40}$"
+       },
+       "value": {
+        "type": [
+         "boolean",
+         "string"
+        ]
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,206 @@
+description: >-
+  Эталоны сроков по официальному календарю (переносы выходных из постановлений Правительства с eoNumber
+  0001202410040023, 0001202509240023, 0001202609180037, raw/pravo/). Счёт по правилам pal-norms (ARCHITECTURE pal-norms 4.3).
+  Раздел compute проверяет computeDeadline, раздел cases проверяет reduceCase.
+calendar: tests/fixtures/vendor/pal-norms/v1/calendar.json
+rules: tests/fixtures/vendor/pal-norms/v1/deadline-rules.json
+case_rules:
+  - Срок ответа считается от последнего события filed по правилу 59fz-answer, вместе с днями на регистрацию
+  - Если после filed есть событие registered, срок считается от него без дней на регистрацию
+  - Событие extended с new_due заменяет дату ответа на new_due, due_alt пусто
+  - В deadlines проверяются только перечисленные поля
+  - overdue, если today позже latest и после filed нет reply, forwarded или closed
+  - Событие reply даёт stage answered и условие из reply-types по reply_type
+  - Событие forwarded с to_respondent true даёт stage answered и условие forwarded_to_respondent
+  - Только oral_refusal без filed даёт stage prepare и условие oral_refusal
+compute:
+  - id: answer-newyear
+    note: подача 28.12.2026, конец срока в субботу 30.01.2027
+    rule_id: 59fz-answer
+    start: "2026-12-28"
+    expect: {due: "2027-01-30", due_alt: "2027-02-01", latest: "2027-02-01", ambiguous: true, verified: false, calendar_verified: true, margin_applied: 0}
+  - id: answer-may-2027
+    note: конец срока 01.05.2027, ближайший рабочий день 04.05.2027
+    rule_id: 59fz-answer
+    start: "2027-03-29"
+    expect: {due: "2027-05-01", due_alt: "2027-05-04", latest: "2027-05-04", calendar_verified: true, margin_applied: 0}
+  - id: answer-nov-4
+    note: конец срока 04.11.2026, праздник
+    rule_id: 59fz-answer
+    start: "2026-10-02"
+    expect: {due: "2026-11-04", due_alt: "2026-11-05", latest: "2026-11-05", calendar_verified: true, margin_applied: 0}
+  - id: answer-working-day
+    note: конец срока в рабочий день, переноса нет
+    rule_id: 59fz-answer
+    start: "2026-10-01"
+    expect: {due: "2026-11-03", due_alt: null, latest: "2026-11-03", calendar_verified: true, margin_applied: 0}
+  - id: answer-2028
+    note: календарь на 2028 год ещё не утверждён
+    rule_id: 59fz-answer
+    start: "2028-03-01"
+    expect: {due: "2028-04-03", due_alt: null, latest: "2028-04-03", calendar_verified: false, margin_applied: 0}
+  - id: vk-extract-newyear
+    note: 3 рабочих дня через новогодние праздники
+    rule_id: 180n-protocol-extract
+    start: "2026-12-29"
+    expect: {due: "2027-01-12", due_alt: null, latest: "2027-01-12", ambiguous: false, verified: true, calendar_verified: true, margin_applied: 0}
+  - id: vk-extract-may
+    note: 3 рабочих дня через майские праздники 2027
+    rule_id: 180n-protocol-extract
+    start: "2027-04-29"
+    expect: {due: "2027-05-05", due_alt: null, latest: "2027-05-05", calendar_verified: true, margin_applied: 0}
+  - id: inpatient-24h
+    note: в стационаре в суточный срок, срок не переносится
+    rule_id: 789n-inpatient
+    start: "2026-12-30"
+    expect: {due: "2026-12-31", due_alt: null, latest: "2026-12-31", calendar_verified: true, margin_applied: 0}
+  - id: p23-sunday
+    note: 18 лет в воскресенье 09.05.2027
+    rule_id: 208n-p23-transition
+    start: "2027-05-09"
+    expect: {due: "2026-12-21", due_alt: null, latest: "2026-12-21", calendar_verified: true, margin_applied: 0}
+  - id: p23-2028
+    note: 18 лет 01.03.2028, календарь на 2028 год не утверждён, вычитается запас 5 рабочих дней
+    rule_id: 208n-p23-transition
+    start: "2028-03-01"
+    expect: {due: "2027-10-07", due_alt: null, latest: "2027-10-07", calendar_verified: false, margin_applied: 5}
+cases:
+  - id: newyear-overdue
+    note: подача 28.12.2026, через новогодние праздники, срок прошёл
+    today: "2027-02-10"
+    case:
+      scenario: no-answer
+      role: self
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-12-28", type: filed, doc: written-answer, to: mo_head}
+    expect:
+      stage: overdue
+      conditions: [deadline_passed]
+      deadlines:
+        - {rule_id: 59fz-answer, due: "2027-01-30", due_alt: "2027-02-01", ambiguous: true, verified: false, calendar_verified: true, overdue: true}
+  - id: may-2027-last-day
+    note: срок в майские праздники 2027, сегодня последний возможный день
+    today: "2027-05-04"
+    case:
+      scenario: oral-refusal
+      role: proxy
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2027-03-20", type: oral_refusal}
+        - {seq: 2, at: "2027-03-29", type: filed, doc: written-answer, to: mo_head}
+    expect:
+      stage: waiting
+      conditions: [no_answer_waiting]
+      deadlines:
+        - {rule_id: 59fz-answer, due: "2027-05-01", due_alt: "2027-05-04", calendar_verified: true, overdue: false}
+  - id: nov-4-overdue
+    note: срок около 04.11.2026
+    today: "2026-11-06"
+    case:
+      scenario: no-answer
+      role: parent
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-10-02", type: filed, doc: written-answer, to: mo_head}
+    expect:
+      stage: overdue
+      conditions: [deadline_passed]
+      deadlines:
+        - {rule_id: 59fz-answer, due: "2026-11-04", due_alt: "2026-11-05", overdue: true}
+  - id: registered-known
+    note: известна дата регистрации, дни на регистрацию не добавляются
+    today: "2026-10-20"
+    case:
+      scenario: no-answer
+      role: self
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-10-01", type: filed, doc: written-answer, to: mo_head}
+        - {seq: 2, at: "2026-10-05", type: registered, reg_number: "123"}
+    expect:
+      stage: waiting
+      conditions: [no_answer_waiting]
+      deadlines:
+        - {rule_id: 59fz-answer, due: "2026-11-04", due_alt: "2026-11-05", overdue: false}
+  - id: extended
+    note: срок продлили, новая дата из уведомления
+    today: "2026-12-01"
+    case:
+      scenario: no-answer
+      role: self
+      respondent_level: 2
+      events:
+        - {seq: 1, at: "2026-10-02", type: filed, doc: deadline-complaint, to: rzn_to}
+        - {seq: 2, at: "2026-10-28", type: extended, new_due: "2026-12-04"}
+    expect:
+      stage: waiting
+      conditions: [no_answer_waiting]
+      deadlines:
+        - {due: "2026-12-04", overdue: false}
+  - id: forwarded-to-respondent
+    note: жалобу переслали тому, на кого жаловались
+    today: "2026-10-20"
+    case:
+      scenario: forwarded
+      role: guardian
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-10-02", type: filed, doc: deadline-complaint, to: rzn_to}
+        - {seq: 2, at: "2026-10-12", type: forwarded, to_respondent: true}
+    expect:
+      stage: answered
+      conditions: [forwarded_to_respondent]
+  - id: unverified-2028
+    note: календарь на 2028 год не утверждён
+    today: "2028-03-10"
+    case:
+      scenario: no-answer
+      role: self
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2028-03-01", type: filed, doc: written-answer, to: mo_head}
+    expect:
+      stage: waiting
+      conditions: [no_answer_waiting]
+      deadlines:
+        - {rule_id: 59fz-answer, due: "2028-04-03", due_alt: null, calendar_verified: false, overdue: false}
+  - id: oral-only
+    note: только устный отказ, документ ещё не подан
+    today: "2026-10-12"
+    case:
+      scenario: oral-refusal
+      role: self
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-10-10", type: oral_refusal, channel: visit}
+    expect:
+      stage: prepare
+      conditions: [oral_refusal]
+      deadlines: []
+  - id: reply-refusal
+    note: пришёл отказ без объяснения причин
+    today: "2026-10-25"
+    case:
+      scenario: oral-refusal
+      role: self
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-10-02", type: filed, doc: written-answer, to: mo_head}
+        - {seq: 2, at: "2026-10-20", type: reply, reply_type: refusal_no_basis}
+    expect:
+      stage: answered
+      conditions: [answer_refusal_no_basis]
+  - id: closed
+    note: дело закрыто
+    today: "2026-11-30"
+    case:
+      scenario: vk-refused
+      role: self
+      respondent_level: 1
+      events:
+        - {seq: 1, at: "2026-10-02", type: filed, doc: vk-extract, to: mo_head}
+        - {seq: 2, at: "2026-10-07", type: reply, reply_type: resolved}
+        - {seq: 3, at: "2026-10-08", type: closed}
+    expect:
+      stage: closed

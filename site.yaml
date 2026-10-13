@@ -1,0 +1,21 @@
+repo: obrashchenie-kit
+title: Заявления и жалобы
+tagline: Поможем попросить ответ на бумаге, посчитаем, до какого числа его ждать, и подскажем следующий шаг. Документ составляете вы
+prefix: ok
+port: 8703
+base: /obrashchenie-kit/
+site_url: https://openpalliative.github.io
+lang: ru
+pwa: true
+stale_after_days: 90
+draft_default: legal
+github: https://github.com/openpalliative/obrashchenie-kit
+nav:
+  - title: Что произошло
+    path: ""
+  - title: Моё дело
+    path: case/
+  - title: Что пришло в ответ
+    path: answer/
+  - title: Ребёнку скоро 18
+    path: turning-18/

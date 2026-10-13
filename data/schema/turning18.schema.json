@@ -1,0 +1,112 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/turning18.schema.json",
+ "title": "Вехи перехода во взрослую систему",
+ "description": "Обязанность медицинской организации по правилу rule_id из pal-norms и ориентиры семей",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "turning18"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "order",
+     "kind",
+     "label",
+     "rule_id",
+     "offset",
+     "unit",
+     "margin_wd",
+     "norm_refs",
+     "text",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "order": {
+      "type": "integer"
+     },
+     "kind": {
+      "enum": [
+       "fact",
+       "obligation_mo",
+       "family_orientir"
+      ]
+     },
+     "label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "rule_id": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+     },
+     "offset": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "unit": {
+      "enum": [
+       null,
+       "working",
+       "calendar",
+       "months"
+      ]
+     },
+     "margin_wd": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "norm_refs": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(#p-[a-z0-9]+(-[a-z0-9]+)*)?$",
+       "x-message-ru": "ссылка на норму в виде id или id#p-N, например 180n#p-16"
+      }
+     },
+     "text": {
+      "type": "string",
+      "minLength": 1
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

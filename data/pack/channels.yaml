@@ -1,0 +1,81 @@
+channels:
+  - id: paper-in-person
+    label: Отнести лично
+    kind: paper
+    limit_chars: ""
+    limit_files: ""
+    limit_mb: ""
+    limit_pages: ""
+    url: ""
+    steps:
+      - Распечатайте документ в двух экземплярах и подпишите оба
+      - Отдайте один экземпляр в канцелярию или приёмную
+      - Попросите поставить на вашем экземпляре отметку о приёме, дату и входящий номер
+      - Сохраните ваш экземпляр с отметкой
+    source_ref: ok-pack
+    verified: "false"
+    verified_at: ""
+  - id: paper-mail
+    label: Отправить заказным письмом
+    kind: paper
+    limit_chars: ""
+    limit_files: ""
+    limit_mb: ""
+    limit_pages: ""
+    url: ""
+    steps:
+      - Распечатайте документ и подпишите
+      - Отправьте заказным письмом с уведомлением о вручении и описью вложения
+      - Сохраните квитанцию и опись. По номеру отправления видно, когда письмо получили
+    source_ref: ok-pack
+    verified: "false"
+    verified_at: ""
+  - id: ezp
+    label: Электронное заказное письмо Почты России
+    kind: ezp
+    limit_chars: ""
+    limit_files: "5"
+    limit_mb: "10"
+    limit_pages: "5"
+    limit_note: В приложении Почты 5 фотографий или один файл PDF до 5 страниц. На сайте файл до 10 МБ, для доставки на бумаге не больше 19 страниц
+    url: https://pro-palliativ.ru/library/items/podat-elektronnoe-obrashchenie-v-gosorgany-mozhno-cherez-pochtu-rossii
+    steps:
+      - Распечатайте документ, подпишите и сохраните его как PDF или сфотографируйте
+      - Войдите в приложение или на сайт Почты через Госуслуги и загрузите файл
+      - Если адресат не получает электронные письма, Почта напечатает письмо и доставит на бумаге
+      - Сохраните трек-номер
+    source_ref: research-ezp
+    verified: "false"
+    verified_at: ""
+  - id: esia-minzdrav-rf
+    label: Форма на сайте Минздрава России
+    kind: esia_form
+    limit_chars: "2000"
+    limit_files: "1"
+    limit_mb: "5"
+    limit_pages: ""
+    limit_note: Текст до 2000 знаков и один файл до 5 МБ. Несколько файлов можно собрать в архив
+    url: https://minzdrav.gov.ru/reception/appeals/new
+    steps:
+      - Вставьте короткий текст в поле формы
+      - Приложите подписанный документ одним файлом PDF
+      - Отправьте через вход на Госуслуги
+    source_ref: research-minzdrav-reception
+    verified: "false"
+    verified_at: ""
+  - id: esia-pos
+    label: Форма на Госуслугах или на сайте ведомства
+    kind: esia_form
+    limit_chars: ""
+    limit_files: ""
+    limit_mb: ""
+    limit_pages: ""
+    limit_note: Ограничения по знакам и файлам официально не опубликованы
+    url: ""
+    steps:
+      - Вставьте короткий текст в поле формы
+      - Приложите подписанный документ файлом PDF
+      - Сохраните номер обращения, который покажет форма
+    source_ref: ok-pack
+    verified: "false"
+    verified_at: ""

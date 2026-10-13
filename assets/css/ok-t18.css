@@ -1,0 +1,72 @@
+.ok-t18__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: flex-end;
+  margin: 24px 0 32px;
+}
+
+.ok-t18__form .op-date {
+  margin-bottom: 0;
+}
+
+.ok-t18__form .op-btn {
+  margin-bottom: 4px;
+}
+
+.ok-t18__for {
+  font-size: var(--op-size-h3);
+  font-weight: 600;
+}
+
+.ok-t18__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  max-width: var(--op-col);
+}
+
+.ok-t18__item {
+  display: grid;
+  gap: 4px 24px;
+  margin: 0;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--op-border);
+  max-width: none;
+}
+
+@media (min-width: 720px) {
+  .ok-t18__item {
+    grid-template-columns: 13em 1fr;
+  }
+}
+
+.ok-t18__item p {
+  margin: 0 0 4px;
+}
+
+.ok-t18__date {
+  font-weight: 650;
+  font-size: var(--op-size-h3);
+}
+
+.ok-t18__item.is-obligation_mo .ok-t18__date {
+  color: var(--op-primary);
+}
+
+.ok-t18__label {
+  font-weight: 600;
+}
+
+.ok-t18__formula {
+  color: var(--op-muted);
+  font-size: var(--op-size-small);
+}
+
+.ok-t18__status .op-status {
+  margin: 8px 0 0;
+}
+
+.ok-t18__result .op-sheet-footer {
+  display: none;
+}

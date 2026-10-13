@@ -1,0 +1,20 @@
+pal-norms:
+  major: 1
+  datasets: [acts, deadline-rules, calendar, escalation]
+  lib: [deadlines.js]
+  version: 2026.10.11
+  data_date: '2026-10-11'
+  content_sha256: {acts: 157fd6f370c077d379560d119a161a308ff742040f4aef99259ee7da527f8a04,
+    deadline-rules: ee3903bed7add904f7654f77d314be9da4d5718a09c6f697fa5273dba0802d2d,
+    calendar: 3d018c8d06d6be8f6958ebf6dc59aa3b60764b9b3f9f86f832f758f897c0c976, escalation: fe139d64e598f1093810f2f2f4db4959a5761667845e931414105e479528c963}
+  synced_at: '2026-10-13T06:32:04Z'
+pal-directory:
+  major: 1
+  datasets: [regions, addressees, region-lines, federal-lines]
+  version: 2026.10.11
+  data_date: '2026-10-13'
+  content_sha256: {regions: 83745e83d632d397a07c063a205aac474df41a0b73cc94441557ae577b3823f5,
+    addressees: 1e5ded6c8ea5baf282a0421e4b185ce88f7e47ac46153c0f6393d6923dea1424,
+    region-lines: 543878f48b14d2569162896495ed3becbfbfa6c796e2efe3109ead7154e3d2a9,
+    federal-lines: aa449ff9d35ab752a5df22bfcaf73ba4cf351e579199137cba6d3dc309cbfeb8}
+  synced_at: '2026-10-13T06:32:04Z'

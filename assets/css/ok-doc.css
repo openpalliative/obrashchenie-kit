@@ -1,0 +1,298 @@
+.ok-check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 8px 0 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--op-border);
+  border-radius: 8px;
+  max-width: var(--op-col);
+  cursor: pointer;
+}
+
+.ok-check input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 0.15em;
+  accent-color: var(--op-primary);
+}
+
+.ok-doc__case {
+  margin: 0 0 16px;
+}
+
+.ok-steps {
+  margin: 8px 0 24px;
+}
+
+.ok-step__title {
+  margin-top: 0;
+}
+
+.ok-step__title:focus {
+  outline: none;
+}
+
+.ok-fields {
+  max-width: var(--op-col);
+}
+
+.ok-field-wrap .op-input {
+  width: 100%;
+}
+
+.ok-paper {
+  margin: 16px 0 24px;
+  padding: clamp(16px, 5vw, 56px);
+  background: var(--op-surface);
+  border: 1px solid var(--op-border);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 var(--op-sunken), 0 8px 0 -4px var(--op-sunken);
+  max-width: 48em;
+  overflow-wrap: anywhere;
+}
+
+.ok-sheet {
+  font-family: var(--op-font-doc);
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--op-text);
+}
+
+.ok-sheet p {
+  max-width: none;
+}
+
+.ok-sheet__head {
+  margin: 0 0 32px auto;
+  max-width: 22em;
+}
+
+.ok-sheet__head p {
+  margin: 0;
+}
+
+.ok-sheet__title {
+  margin: 0 0 20px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.ok-sheet__body p {
+  margin: 0 0 12px;
+  text-indent: 1.5em;
+}
+
+@media (min-width: 720px) {
+  .ok-sheet__body p {
+    text-align: justify;
+  }
+}
+
+.ok-nav {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.ok-sheet__foot {
+  margin-top: 28px;
+}
+
+.ok-sheet__foot p {
+  margin: 0 0 8px;
+}
+
+.ok-sheet__signature {
+  text-align: right;
+}
+
+.ok-sheet__excluded {
+  text-indent: 0;
+  padding: 6px 10px;
+  border: 1px dashed var(--op-border);
+  color: var(--op-muted);
+  font-family: var(--op-font);
+  font-size: var(--op-size-small);
+}
+
+.ok-sheet__receipt {
+  margin-top: 28px;
+  padding: 12px 14px;
+  border: 1.5px dashed var(--op-text);
+}
+
+.ok-sheet__receipt p {
+  margin: 0 0 6px;
+}
+
+.ok-sheet__receipt-title {
+  font-weight: 700;
+}
+
+.ok-sheet__copy,
+.ok-sheet__draft {
+  margin: 20px 0 0;
+  font-size: 0.8em;
+  color: var(--op-muted);
+}
+
+.ok-sheet__draft {
+  margin-top: 4px;
+}
+
+.ok-notes:empty {
+  display: none;
+}
+
+.ok-ready .op-status {
+  max-width: var(--op-col);
+}
+
+.ok-esia {
+  margin: 24px 0;
+  padding: 0 16px;
+  border: 1px solid var(--op-border);
+  border-radius: var(--op-radius);
+  max-width: var(--op-col);
+}
+
+.ok-esia summary,
+.ok-more summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ok-esia[open] {
+  padding-bottom: 16px;
+}
+
+.ok-esia textarea {
+  width: 100%;
+}
+
+.ok-esia__count {
+  color: var(--op-muted);
+  font-size: var(--op-size-small);
+}
+
+.ok-filed {
+  margin: 24px 0;
+  padding: 18px 20px;
+  background: var(--op-surface);
+  border: 1px solid var(--op-border);
+  border-left: 5px solid var(--op-success);
+  border-radius: 0 var(--op-radius) var(--op-radius) 0;
+  max-width: var(--op-col);
+}
+
+.ok-filed h3 {
+  margin-top: 0;
+}
+
+.ok-save-hint {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--op-muted);
+  max-width: var(--op-col);
+}
+
+.ok-save-hint .op-icon {
+  flex: none;
+  margin-top: 0.2em;
+}
+
+.ok-how {
+  margin-top: 40px;
+}
+
+.ok-channels {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: var(--op-col);
+}
+
+.ok-channels > li {
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--op-sunken);
+  max-width: none;
+}
+
+.ok-channels p {
+  margin: 0 0 6px;
+}
+
+.ok-channels__name {
+  font-weight: 600;
+}
+
+.ok-channels ol {
+  margin: 4px 0 8px;
+  color: var(--op-muted);
+  font-size: var(--op-size-small);
+}
+
+.ok-sheets-wrap {
+  margin-top: 40px;
+}
+
+.ok-memo {
+  display: none;
+}
+
+.ok-channels__name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.ok-channel[open] .ok-channels__name .op-icon {
+  transform: rotate(180deg);
+}
+
+.ok-fgroup {
+  margin: 0 0 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--op-sunken);
+}
+
+.ok-fgroup__title {
+  margin: 16px 0 16px;
+  font-size: var(--op-size-h3);
+}
+
+.ok-measure {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  width: 186mm;
+  visibility: hidden;
+}
+
+.ok-measure .ok-sheet {
+  font-size: 14pt;
+}
+
+.ok-measure .ok-sheet__body p {
+  text-align: justify;
+}
+
+.ok-measure .ok-sheet__copy,
+.ok-measure .ok-sheet__draft {
+  font-size: 9pt;
+}
+
+.ok-measure .ok-sheet__excluded {
+  display: none;
+}

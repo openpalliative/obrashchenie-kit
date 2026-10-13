@@ -1,0 +1,51 @@
+{
+ "repo": "pal-norms",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "opsite_version": "0.1.0",
+ "datasets": [
+  {
+   "name": "acts",
+   "path": "acts.json",
+   "schema": "acts.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "cc07c9cae6baee4aa9f9ee62163cd0caa6b6666c2c67929b54a42636fe17c502",
+   "bytes": 9248,
+   "items": 5
+  },
+  {
+   "name": "deadline-rules",
+   "path": "deadline-rules.json",
+   "schema": "deadline-rules.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "28a48687570b6d5db3bdef1e81de4b7ee6a300d5e3d941164f0f8b1bc328d146",
+   "bytes": 7351,
+   "items": 6
+  },
+  {
+   "name": "calendar",
+   "path": "calendar.json",
+   "schema": "calendar.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "a8d68655e96a23fe62ddf6a8dad63e0164fbd7e97b105df1399015bae762bf88",
+   "bytes": 4118,
+   "items": 4
+  },
+  {
+   "name": "escalation",
+   "path": "escalation.json",
+   "schema": "escalation.schema.json",
+   "schema_version": "1.0.0",
+   "version": "2026.10.11",
+   "data_date": "2026-10-11",
+   "content_sha256": "b38db6870277aec6627020cbecb439992ebe4019368e904036f7c4dd5569b2fc",
+   "bytes": 2282,
+   "items": 2
+  }
+ ]
+}

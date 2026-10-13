@@ -1,0 +1,714 @@
+nodes:
+- id: mo_head
+  label: Главный врач медицинской организации
+  level: '1'
+  branch: mo
+  addressee_source: user
+- id: mo_vk
+  label: Врачебная комиссия медицинской организации
+  level: '1'
+  branch: mo
+  addressee_source: user
+- id: rzn_to
+  label: Территориальный орган Росздравнадзора в вашем регионе
+  level: '2'
+  branch: oversight
+  addressee_source: pal-directory:rzn
+- id: minzdrav_region
+  label: Минздрав или департамент здравоохранения вашего региона
+  level: '2'
+  branch: health
+  addressee_source: pal-directory:minzdrav
+- id: rzn_central
+  label: Росздравнадзор
+  level: '3'
+  branch: oversight
+  addressee_source: federal:rzn-central
+- id: minzdrav_rf
+  label: Минздрав России
+  level: '3'
+  branch: health
+  addressee_source: federal:minzdrav-rf
+- id: prosecutor
+  label: Прокуратура
+  level: '2'
+  branch: prosecutor
+  addressee_source: federal:genproc
+edges:
+- id: oral-refusal-written-1
+  from_condition: oral_refusal
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить ответ на бумаге
+  hint: Документ на имя главного врача
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: vk-not-held-written-1
+  from_condition: vk_not_held
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить созвать врачебную комиссию и ответить письменно
+  hint: Документ на имя главного врача
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: oral-refusal-records-1
+  from_condition: oral_refusal
+  respondent_level: '1'
+  to: mo_head
+  doc: med-records
+  kind: request
+  rule_id: 789n-copies
+  norm_refs:
+  - 789n#p-8
+  label: Запросить копии медицинских документов
+  hint: Пригодятся для следующего обращения
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: oral-refusal-written-2
+  from_condition: oral_refusal
+  respondent_level: '2'
+  to: minzdrav_region
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить ответ на бумаге
+  hint: Документ в тот же орган, где отказали
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: vk-refused-extract-1
+  from_condition: vk_refused
+  respondent_level: '1'
+  to: mo_head
+  doc: vk-extract
+  kind: request
+  rule_id: 180n-protocol-extract
+  norm_refs:
+  - 180n#p-16
+  label: Запросить выписку из протокола врачебной комиссии
+  hint: Решение комиссии будет на бумаге
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: vk-refused-written-1
+  from_condition: vk_refused
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить письменно объяснить отказ
+  hint: Кто принял решение и на каком основании
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: vk-refused-records-1
+  from_condition: vk_refused
+  respondent_level: '1'
+  to: mo_head
+  doc: med-records
+  kind: request
+  rule_id: 789n-copies
+  norm_refs:
+  - 789n#p-8
+  label: Запросить копии медицинских документов
+  hint: Пригодятся для следующего обращения
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: discharge-records-1
+  from_condition: discharge_planned
+  respondent_level: '1'
+  to: mo_head
+  doc: med-records
+  kind: request
+  rule_id: 789n-inpatient
+  norm_refs:
+  - 789n#p-8
+  label: Запросить выписку и копии документов до выхода из больницы
+  hint: Пока человек в стационаре, срок выдачи короче
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: discharge-extract-1
+  from_condition: discharge_planned
+  respondent_level: '1'
+  to: mo_head
+  doc: vk-extract
+  kind: request
+  rule_id: 180n-protocol-extract
+  norm_refs:
+  - 180n#p-16
+  label: Запросить выписку из протокола врачебной комиссии
+  hint: Если комиссия решала про паллиативную помощь или изделия для дома
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: discharge-written-1
+  from_condition: discharge_planned
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить письменный ответ, если в чём-то отказали при выписке
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-rzn-1
+  from_condition: no_answer
+  respondent_level: '1'
+  to: rzn_to
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: &id001
+  - 59-fz#p-12-1
+  label: Жалоба на нарушение срока в Росздравнадзор региона
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-mz-1
+  from_condition: no_answer
+  respondent_level: '1'
+  to: minzdrav_region
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id001
+  label: Жалоба на нарушение срока в минздрав региона
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-prok-1
+  from_condition: no_answer
+  respondent_level: '1'
+  to: prosecutor
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id001
+  label: Жалоба на нарушение срока в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-rzn-2
+  from_condition: no_answer
+  respondent_level: '2'
+  to: rzn_central
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id001
+  label: Жалоба на нарушение срока в Росздравнадзор
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-mz-2
+  from_condition: no_answer
+  respondent_level: '2'
+  to: minzdrav_rf
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id001
+  label: Жалоба на нарушение срока в Минздрав России
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-prok-2
+  from_condition: no_answer
+  respondent_level: '2'
+  to: prosecutor
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id001
+  label: Жалоба на нарушение срока в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-prok-3
+  from_condition: no_answer
+  respondent_level: '3'
+  to: prosecutor
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id001
+  label: Жалоба на нарушение срока в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-rzn-1
+  from_condition: deadline_passed
+  respondent_level: '1'
+  to: rzn_to
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: &id002
+  - 59-fz#p-12-1
+  label: Жалоба на нарушение срока в Росздравнадзор региона
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-mz-1
+  from_condition: deadline_passed
+  respondent_level: '1'
+  to: minzdrav_region
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id002
+  label: Жалоба на нарушение срока в минздрав региона
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-prok-1
+  from_condition: deadline_passed
+  respondent_level: '1'
+  to: prosecutor
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id002
+  label: Жалоба на нарушение срока в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-rzn-2
+  from_condition: deadline_passed
+  respondent_level: '2'
+  to: rzn_central
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id002
+  label: Жалоба на нарушение срока в Росздравнадзор
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-mz-2
+  from_condition: deadline_passed
+  respondent_level: '2'
+  to: minzdrav_rf
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id002
+  label: Жалоба на нарушение срока в Минздрав России
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-prok-2
+  from_condition: deadline_passed
+  respondent_level: '2'
+  to: prosecutor
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id002
+  label: Жалоба на нарушение срока в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: deadline-passed-prok-3
+  from_condition: deadline_passed
+  respondent_level: '3'
+  to: prosecutor
+  doc: deadline-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id002
+  label: Жалоба на нарушение срока в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-rzn-1
+  from_condition: answer_not_on_merits
+  respondent_level: '1'
+  to: rzn_to
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: &id003
+  - 59-fz#p-8-6
+  label: 'Повторная жалоба: ответили не по существу, в Росздравнадзор региона'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-mz-1
+  from_condition: answer_not_on_merits
+  respondent_level: '1'
+  to: minzdrav_region
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id003
+  label: 'Повторная жалоба: ответили не по существу, в минздрав региона'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-rzn-2
+  from_condition: answer_not_on_merits
+  respondent_level: '2'
+  to: rzn_central
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id003
+  label: 'Повторная жалоба: ответили не по существу, в Росздравнадзор'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-mz-2
+  from_condition: answer_not_on_merits
+  respondent_level: '2'
+  to: minzdrav_rf
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id003
+  label: 'Повторная жалоба: ответили не по существу, в Минздрав России'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-prok-2
+  from_condition: answer_not_on_merits
+  respondent_level: '2'
+  to: prosecutor
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id003
+  label: 'Повторная жалоба: ответили не по существу, в прокуратуру'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-prok-3
+  from_condition: answer_not_on_merits
+  respondent_level: '3'
+  to: prosecutor
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id003
+  label: 'Повторная жалоба: ответили не по существу, в прокуратуру'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-to-respondent-rzn-1
+  from_condition: forwarded_to_respondent
+  respondent_level: '1'
+  to: rzn_to
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: &id004
+  - 59-fz#p-8-6
+  label: Повторная жалоба с просьбой не пересылать её тому, на кого вы жалуетесь, в Росздравнадзор региона
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-to-respondent-mz-1
+  from_condition: forwarded_to_respondent
+  respondent_level: '1'
+  to: minzdrav_region
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id004
+  label: Повторная жалоба с просьбой не пересылать её тому, на кого вы жалуетесь, в минздрав региона
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-to-respondent-rzn-2
+  from_condition: forwarded_to_respondent
+  respondent_level: '2'
+  to: rzn_central
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id004
+  label: Повторная жалоба с просьбой не пересылать её тому, на кого вы жалуетесь, в Росздравнадзор
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-to-respondent-mz-2
+  from_condition: forwarded_to_respondent
+  respondent_level: '2'
+  to: minzdrav_rf
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id004
+  label: Повторная жалоба с просьбой не пересылать её тому, на кого вы жалуетесь, в Минздрав России
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-to-respondent-prok-2
+  from_condition: forwarded_to_respondent
+  respondent_level: '2'
+  to: prosecutor
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id004
+  label: Повторная жалоба с просьбой не пересылать её тому, на кого вы жалуетесь, в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-to-respondent-prok-3
+  from_condition: forwarded_to_respondent
+  respondent_level: '3'
+  to: prosecutor
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs: *id004
+  label: Повторная жалоба с просьбой не пересылать её тому, на кого вы жалуетесь, в прокуратуру
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: answer-not-on-merits-written-1
+  from_condition: answer_not_on_merits
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить ответ по существу у того же адресата
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: reply-unclear-written-1
+  from_condition: reply_unclear
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить ответ по существу
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: reply-unclear-written-2
+  from_condition: reply_unclear
+  respondent_level: '2'
+  to: minzdrav_region
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить ответ по существу
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: reply-unclear-records-1
+  from_condition: reply_unclear
+  respondent_level: '1'
+  to: mo_head
+  doc: med-records
+  kind: request
+  rule_id: 789n-copies
+  norm_refs:
+  - 789n#p-8
+  label: Запросить документы, на которые ссылается ответ
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: reply-unclear-info
+  from_condition: reply_unclear
+  respondent_level: '0'
+  to: none
+  doc: ''
+  kind: info
+  rule_id: ''
+  norm_refs: []
+  label: Показать ответ юристу или в организацию, которая помогает семьям
+  hint: Мы не оцениваем ответы. Решаете вы
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: refusal-basis-records-1
+  from_condition: answer_refusal_with_basis
+  respondent_level: '1'
+  to: mo_head
+  doc: med-records
+  kind: request
+  rule_id: 789n-copies
+  norm_refs:
+  - 789n#p-8
+  label: Запросить документы, на которые ссылается отказ
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: refusal-basis-extract-1
+  from_condition: answer_refusal_with_basis
+  respondent_level: '1'
+  to: mo_head
+  doc: vk-extract
+  kind: request
+  rule_id: 180n-protocol-extract
+  norm_refs:
+  - 180n#p-16
+  label: Запросить выписку из протокола врачебной комиссии
+  hint: Если отказ ссылается на решение комиссии
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: refusal-basis-info
+  from_condition: answer_refusal_with_basis
+  respondent_level: '0'
+  to: none
+  doc: ''
+  kind: info
+  rule_id: ''
+  norm_refs: []
+  label: Показать ответ юристу или в организацию, которая помогает семьям
+  hint: Мы не оцениваем ответы. Решаете вы
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: refusal-no-basis-written-1
+  from_condition: answer_refusal_no_basis
+  respondent_level: '1'
+  to: mo_head
+  doc: written-answer
+  kind: request
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Попросить указать, на каком основании отказали
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: refusal-no-basis-repeat-1
+  from_condition: answer_refusal_no_basis
+  respondent_level: '1'
+  to: rzn_to
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs:
+  - 59-fz#p-8-6
+  label: 'Повторная жалоба: ответили не по существу, в Росздравнадзор региона'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: refusal-no-basis-repeat-2
+  from_condition: answer_refusal_no_basis
+  respondent_level: '2'
+  to: rzn_central
+  doc: repeat-complaint
+  kind: complaint
+  rule_id: 59fz-answer
+  norm_refs:
+  - 59-fz#p-8-6
+  label: 'Повторная жалоба: ответили не по существу, в Росздравнадзор'
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: forwarded-other-wait
+  from_condition: forwarded_other
+  respondent_level: '0'
+  to: none
+  doc: ''
+  kind: wait
+  rule_id: 59fz-redirect
+  norm_refs: []
+  label: Записать, куда переслали, и ждать ответ оттуда
+  hint: Добавьте событие «Переслали» с датой из уведомления
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: extended-wait
+  from_condition: extended
+  respondent_level: '0'
+  to: none
+  doc: ''
+  kind: wait
+  rule_id: ''
+  norm_refs: []
+  label: Записать новую дату ответа из уведомления
+  hint: Дата на экране дела станет той, что в уведомлении
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: docs-requested-wait
+  from_condition: docs_requested
+  respondent_level: '0'
+  to: none
+  doc: ''
+  kind: wait
+  rule_id: ''
+  norm_refs: []
+  label: Отправить то, что попросили, и записать дату отправки
+  hint: Отдельный документ не нужен, хватит короткого письма своими словами
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack
+- id: no-answer-wait
+  from_condition: no_answer_waiting
+  respondent_level: '0'
+  to: none
+  doc: ''
+  kind: wait
+  rule_id: 59fz-answer
+  norm_refs: []
+  label: Срок ещё не прошёл. Ждать до даты на экране дела
+  hint: ''
+  verified: 'false'
+  verified_at: ''
+  source_ref: ok-pack

@@ -1,0 +1,102 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% set s = scenario %}
+{% block title %}{{ s.title }}{% endblock %}
+{% block description %}{{ s.hint }}{% endblock %}
+{% block head %}{{ ok.css(["scen"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-scenario">
+  {{ op.crumbs([("openpalliative", hub("")), (site.title, url("")), (s.title, "")]) }}
+  <h1>{{ s.title }}</h1>
+  <p class="op-lead">{{ s.hint }}</p>
+
+  <section class="ok-now" aria-labelledby="now-title">
+    <h2 id="now-title">Что сделать сейчас</h2>
+    <ol class="ok-firststeps">
+      {% for step in s.first_steps %}
+      <li><span class="ok-firststeps__n" aria-hidden="true">{{ loop.index }}</span><span>{{ step }}</span></li>
+      {% endfor %}
+    </ol>
+    <div class="op-actions ok-now__actions">
+      {{ op.btn("Начать дело", href=xurl("obrashchenie-kit", "case/", {"new": 1, "s": s.id}), kind="primary", icon_name="folder-open", size="large") }}
+      {% if s.docs %}{{ op.btn("Сразу собрать документ", href=url("docs/" ~ s.docs[0] ~ "/"), kind="secondary", icon_name="file-text") }}{% endif %}
+    </div>
+    <p class="ok-now__note">Дело хранится только на этом устройстве. В нём будут документы, срок ответа и что делать дальше</p>
+  </section>
+
+  {% if text.parts.get("intro") %}
+  <section class="op-prose ok-why" aria-labelledby="why-title">
+    <h2 id="why-title">Почему это важно</h2>
+    {{ text.parts.intro }}
+  </section>
+  {% endif %}
+
+  {% if s.id == "discharge" %}
+  <section class="ok-callout" aria-labelledby="dis-title">
+    <h2 id="dis-title">Чек-лист выписки</h2>
+    <p>Что получить на руки до выхода из больницы, по пунктам. Его удобно распечатать и взять с собой</p>
+    <p><a class="ok-strong-link" href="{{ xurl('home-care-kit', 'discharge/') }}">{{ icon("printer") }}<span>Распечатать чек-лист выписки</span></a></p>
+  </section>
+  {% endif %}
+
+  {% if s.docs %}
+  <section aria-labelledby="docs-title">
+    <h2 id="docs-title">Какие документы помогут</h2>
+    <ul class="ok-docs">
+      {% for doc_id in s.docs if doc_id in site.docs %}
+      {% set d = site.docs[doc_id] %}
+      <li class="ok-docs__item">
+        <span class="ok-docs__icon">{{ icon("file-text") }}</span>
+        <div>
+          <h3 class="ok-docs__title"><a href="{{ url('docs/' ~ d.id ~ '/') }}">{{ d.name }}</a></h3>
+          <p class="ok-docs__gives">{{ d.gives }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if s.rule_ids %}
+  <section aria-labelledby="terms-title">
+    <h2 id="terms-title">Сроки</h2>
+    <p class="ok-muted">Точную дату для вашего случая посчитаем в деле. Здесь правило словами</p>
+    <ul class="ok-rules">
+      {% for rid in s.rule_ids %}{{ ok.rule_line(rid) }}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section aria-labelledby="fail-title">
+    <h2 id="fail-title">Если не получилось</h2>
+    <ul class="ok-iffailed">
+      {% for item in s.if_failed %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+    {% if text.parts.get("if-failed") %}<div class="op-prose">{{ text.parts["if-failed"] }}</div>{% endif %}
+    <p class="ok-noprint"><a href="{{ url('answer/') }}">Что пришло в ответ и что можно сделать дальше</a></p>
+  </section>
+
+  {% if s.see_also %}
+  <section class="ok-noprint" aria-labelledby="see-title">
+    <h2 id="see-title">Что ещё может пригодиться</h2>
+    <ul class="ok-links">
+      {% for a in s.see_also %}<li><a href="{{ xurl(a.repo, a.path) }}">{{ icon("arrow-right") }}<span>{{ a.label }}</span></a></li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="ok-share" aria-labelledby="share-title">
+    <h2 id="share-title">Отправить или распечатать</h2>
+    <p class="ok-muted">Отправляется только адрес этой страницы, без ваших данных</p>
+    <div class="op-actions">
+      {{ op.share(s.title ~ ": https://openpalliative.github.io/obrashchenie-kit/scenarios/" ~ s.id ~ "/", title=s.title) }}
+      {{ op.print_btn("Распечатать памятку") }}
+    </div>
+  </section>
+  {{ ok.back(true) }}
+  {{ op.sheet_footer(site.kit.scenarios.data_date, site.plus_days(site.kit.scenarios.data_date, 365), "openpalliative.github.io/obrashchenie-kit/scenarios/" ~ s.id ~ "/", "legal") }}
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/back.js') }}"></script>
+{% endblock %}

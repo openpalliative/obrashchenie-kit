@@ -1,0 +1,440 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/documents.schema.json",
+ "title": "Документы пакета T0",
+ "description": "Документы с полями и блоками. Ссылки на нормы уже разрешены при сборке: norm_state ok - в text подставлена ссылка из снимка pal-norms, fallback - в text запасная формулировка без нормы. Плейсхолдеры в text: {{field}}, {{date:field}}",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "documents"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "tier",
+     "order",
+     "title",
+     "name",
+     "gives",
+     "when_needed",
+     "addressee_kinds",
+     "roles",
+     "fields",
+     "blocks",
+     "norm_refs",
+     "norm_state",
+     "copies",
+     "receipt_block",
+     "channels",
+     "esia_summary",
+     "attachments_hint",
+     "review_notes",
+     "reviewed_by",
+     "reviewed_at",
+     "maturity",
+     "verified",
+     "verified_at",
+     "source_ref"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "tier": {
+      "enum": [
+       "T0",
+       "T1"
+      ]
+     },
+     "order": {
+      "type": "integer"
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "gives": {
+      "type": "string",
+      "minLength": 1
+     },
+     "when_needed": {
+      "type": "string",
+      "minLength": 1
+     },
+     "addressee_kinds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "enum": [
+        "mo_head",
+        "mo_vk",
+        "rzn_to",
+        "minzdrav_region",
+        "rzn_central",
+        "minzdrav_rf",
+        "prosecutor",
+        "none"
+       ]
+      }
+     },
+     "roles": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "self",
+        "proxy",
+        "guardian",
+        "parent"
+       ]
+      },
+      "minItems": 1
+     },
+     "fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "label",
+        "hint",
+        "type",
+        "required",
+        "personal"
+       ],
+       "additionalProperties": false,
+       "properties": {
+        "id": {
+         "type": "string",
+         "pattern": "^[a-z][a-z0-9_]*$",
+         "x-message-ru": "код латиницей через подчёркивание"
+        },
+        "label": {
+         "type": "string",
+         "minLength": 1
+        },
+        "hint": {
+         "type": "string"
+        },
+        "type": {
+         "enum": [
+          "text",
+          "textarea",
+          "date",
+          "select",
+          "number"
+         ]
+        },
+        "required": {
+         "type": "boolean",
+         "x-message-ru": "значение true или false"
+        },
+        "personal": {
+         "type": "boolean",
+         "x-message-ru": "значение true или false"
+        },
+        "autocomplete": {
+         "type": "string"
+        },
+        "max_len": {
+         "type": "integer"
+        },
+        "options": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "required": [
+           "value",
+           "label"
+          ],
+          "additionalProperties": false,
+          "properties": {
+           "value": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "x-message-ru": "код латиницей через подчёркивание"
+           },
+           "label": {
+            "type": "string",
+            "minLength": 1
+           }
+          }
+         }
+        },
+        "roles": {
+         "type": "array",
+         "items": {
+          "enum": [
+           "self",
+           "proxy",
+           "guardian",
+           "parent"
+          ]
+         }
+        },
+        "required_if": {
+         "type": "string",
+         "pattern": "^[a-z][a-z0-9_]*(=[a-z0-9_]+)?$",
+         "x-message-ru": "условие в виде поле или поле=значение"
+        },
+        "default": {
+         "enum": [
+          "today"
+         ]
+        }
+       }
+      }
+     },
+     "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "place",
+        "kind",
+        "text",
+        "norm_refs",
+        "norm_state",
+        "norm_reason",
+        "norm_links"
+       ],
+       "additionalProperties": false,
+       "properties": {
+        "id": {
+         "type": "string",
+         "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+         "x-message-ru": "id латиницей в нижнем регистре через дефис"
+        },
+        "place": {
+         "enum": [
+          "head",
+          "body",
+          "foot"
+         ]
+        },
+        "kind": {
+         "enum": [
+          "text",
+          "list",
+          "list_item",
+          "signature"
+         ]
+        },
+        "roles": {
+         "type": "array",
+         "items": {
+          "enum": [
+           "self",
+           "proxy",
+           "guardian",
+           "parent"
+          ]
+         }
+        },
+        "when": {
+         "type": "string",
+         "pattern": "^[a-z][a-z0-9_]*(=[a-z0-9_]+)?$",
+         "x-message-ru": "условие в виде поле или поле=значение"
+        },
+        "text": {
+         "type": "string",
+         "minLength": 1,
+         "x-message-ru": "у блока должен быть текст"
+        },
+        "fallback": {
+         "type": "string"
+        },
+        "list_field": {
+         "type": "string",
+         "pattern": "^[a-z][a-z0-9_]*$",
+         "x-message-ru": "код латиницей через подчёркивание"
+        },
+        "norm_refs": {
+         "type": "array",
+         "items": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(#p-[a-z0-9]+(-[a-z0-9]+)*)?$",
+          "x-message-ru": "ссылка на норму в виде id или id#p-N, например 180n#p-16"
+         }
+        },
+        "norm_state": {
+         "enum": [
+          "none",
+          "ok",
+          "fallback"
+         ]
+        },
+        "norm_reason": {
+         "enum": [
+          null,
+          "repealed",
+          "not_in_force",
+          "unverified",
+          "unknown"
+         ]
+        },
+        "norm_links": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "required": [
+           "ref",
+           "act_id",
+           "anchor",
+           "point",
+           "status",
+           "verified",
+           "citation"
+          ],
+          "additionalProperties": false,
+          "properties": {
+           "ref": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(#p-[a-z0-9]+(-[a-z0-9]+)*)?$",
+            "x-message-ru": "ссылка на норму в виде id или id#p-N, например 180n#p-16"
+           },
+           "act_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "x-message-ru": "id латиницей в нижнем регистре через дефис"
+           },
+           "anchor": {
+            "type": "string"
+           },
+           "point": {
+            "type": "string"
+           },
+           "status": {
+            "enum": [
+             "in_force",
+             "not_yet_in_force",
+             "repealed",
+             "draft",
+             "unknown"
+            ]
+           },
+           "verified": {
+            "type": "boolean",
+            "x-message-ru": "значение true или false"
+           },
+           "citation": {
+            "type": "string"
+           }
+          }
+         }
+        }
+       }
+      }
+     },
+     "norm_refs": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(#p-[a-z0-9]+(-[a-z0-9]+)*)?$",
+       "x-message-ru": "ссылка на норму в виде id или id#p-N, например 180n#p-16"
+      }
+     },
+     "fields_basis": {
+      "type": "string"
+     },
+     "norm_state": {
+      "enum": [
+       "none",
+       "ok",
+       "fallback"
+      ]
+     },
+     "copies": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+     },
+     "receipt_block": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "channels": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+       "x-message-ru": "id латиницей в нижнем регистре через дефис"
+      }
+     },
+     "esia_summary": {
+      "type": "string"
+     },
+     "attachments_hint": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "review_notes": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "reviewed_by": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "reviewed_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "maturity": {
+      "enum": [
+       "demo",
+       "draft",
+       "beta",
+       "stable"
+      ]
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     },
+     "source_ref": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     }
+    }
+   }
+  }
+ }
+}

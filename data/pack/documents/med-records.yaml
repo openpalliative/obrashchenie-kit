@@ -1,0 +1,131 @@
+id: med-records
+tier: T0
+order: "3"
+title: Запрос
+name: Запросить копии медицинских документов и выписки
+gives: Копии карты, выписки и результаты обследований на руках. Они нужны для врачебной комиссии, другой больницы, юриста или жалобы
+when_needed: Человека выписывают, переводят, вы готовите обращение или хотите понять, что записано в документах
+addressee_kinds: [mo_head]
+roles: [self, proxy, guardian, parent]
+norm_refs: ["789n#p-8"]
+fields_basis: 789n#p-2
+fields:
+  - group: addressee
+  - group: applicant
+  - id: applicant_id_doc
+    label: Ваш паспорт
+    hint: Серия, номер, кем и когда выдан. Для запроса нужны сведения и о вас как о законном представителе
+    type: textarea
+    required: "true"
+    personal: "true"
+    max_len: "200"
+    roles: [guardian, parent]
+  - id: applicant_residence
+    label: Ваш адрес места жительства или пребывания
+    hint: Как в паспорте или по месту пребывания. Если совпадает с адресом для ответа, впишите его ещё раз
+    type: textarea
+    required: "true"
+    personal: "true"
+    max_len: "200"
+    roles: [guardian, parent]
+  - group: representation
+  - id: patient_id_doc
+    label: Паспорт человека, чьи документы нужны
+    hint: Серия, номер, кем и когда выдан. Если документы ваши, это ваш паспорт. У ребёнка до 14 лет - свидетельство о рождении
+    type: textarea
+    required: "true"
+    personal: "true"
+    max_len: "200"
+  - id: patient_residence
+    label: Адрес, где этот человек живёт или временно находится
+    hint: Как в паспорте или по месту пребывания
+    type: textarea
+    required: "true"
+    personal: "true"
+    max_len: "200"
+  - id: records_list
+    label: Какие документы нужны
+    hint: Например, копия медицинской карты, выписка из истории болезни, результаты обследований
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "600"
+  - id: records_period
+    label: За какой период
+    hint: Например, с января 2026 года по сегодняшний день
+    type: text
+    required: "true"
+    personal: "false"
+    max_len: "120"
+  - id: receive_way
+    label: Как получить документы
+    hint: Выберите один способ
+    type: select
+    required: "true"
+    personal: "false"
+    options:
+      - value: in_person
+        label: Лично
+      - value: post
+        label: Почтой, заказным письмом
+      - value: gosuslugi
+        label: В личный кабинет на Госуслугах
+  - id: inpatient
+    label: Человек сейчас в стационаре
+    hint: Отметьте, если он лежит в больнице или в дневном стационаре
+    type: select
+    required: "true"
+    personal: "false"
+    options:
+      - value: "no"
+        label: Нет
+      - value: "yes"
+        label: Да
+  - group: attach
+  - group: sign
+blocks:
+  - use: head
+  - use: role
+  - id: patient-self
+    roles: [self]
+    text: "Сведения обо мне: {{applicant_name}}, документ, удостоверяющий личность: {{patient_id_doc}}, адрес места жительства (пребывания): {{patient_residence}}."
+  - id: patient-other
+    roles: [proxy, guardian, parent]
+    text: "Сведения о пациенте: {{patient_name}}, документ, удостоверяющий личность: {{patient_id_doc}}, адрес места жительства (пребывания): {{patient_residence}}."
+  - id: representative
+    roles: [guardian, parent]
+    text: "Сведения о законном представителе: {{applicant_name}}, документ, удостоверяющий личность: {{applicant_id_doc}}, адрес места жительства (пребывания): {{applicant_residence}}, почтовый адрес для ответа: {{applicant_address}}."
+  - id: request
+    text: "Прошу предоставить медицинские документы (их копии) или выписки из них: {{records_list}}. Период: {{records_period}}."
+  - id: way-in-person
+    when: receive_way=in_person
+    text: Документы получу лично.
+  - id: way-post
+    when: receive_way=post
+    text: Документы прошу направить заказным почтовым отправлением с уведомлением о вручении по адресу для ответа, указанному выше.
+  - id: way-gosuslugi
+    when: receive_way=gosuslugi
+    text: Документы прошу направить в форме электронных документов в мой личный кабинет на Едином портале государственных и муниципальных услуг.
+  - id: inpatient
+    when: inpatient=yes
+    text: Пациент сейчас находится на лечении в стационарных условиях.
+  - id: term
+    norm_refs: ["789n#p-8"]
+    text: Документы прошу предоставить в установленный срок ({{norm:789n#p-8}}).
+    fallback: Документы прошу предоставить в установленный срок.
+  - use: foot
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person, paper-mail, ezp]
+esia_summary: "Прошу предоставить копии медицинских документов и выписки из них: {{records_list}}. Период: {{records_period}}. Запрос во вложении."
+attachments_hint:
+  - копия доверенности, если обращаетесь по доверенности
+  - копия решения органа опеки, если вы опекун
+  - копия свидетельства о рождении ребёнка, если вы родитель
+review_notes:
+  - Состав запроса взят из пункта 2 порядка выдачи медицинских документов. Там сказано о пациенте и законном представителе. Опекун и родитель указывают о себе те же сведения, что о пациенте. Проверить юристу в РФ, как подаёт запрос человек по доверенности и нужны ли в запросе его паспортные данные
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

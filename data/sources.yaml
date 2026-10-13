@@ -1,0 +1,47 @@
+sources:
+  - id: ok-pack
+    title: Пакет T0 проекта openpalliative (демо, без проверки юристом в РФ)
+    url: https://github.com/openpalliative/obrashchenie-kit
+    retrieved_at: "2026-10-11"
+    license: CC-BY-SA-4.0
+  - id: pravo-208n-243n
+    title: Приказ Минтруда России и Минздрава России от 14.04.2025 № 208н/243н, Положение об организации оказания паллиативной медицинской помощи
+    url: http://publication.pravo.gov.ru/document/0001202505290031
+    eoNumber: "0001202505290031"
+    retrieved_at: "2026-10-11"
+    license: официальный документ, не объект авторского права (п. 6 ст. 1259 ГК РФ)
+  - id: pravo-180n
+    title: Приказ Минздрава России от 10.04.2025 № 180н, порядок создания и деятельности врачебной комиссии
+    url: http://publication.pravo.gov.ru/document/0001202505160009
+    eoNumber: "0001202505160009"
+    retrieved_at: "2026-10-11"
+    license: официальный документ, не объект авторского права (п. 6 ст. 1259 ГК РФ)
+  - id: pravo-789n
+    title: Приказ Минздрава России от 31.07.2020 № 789н, порядок и сроки предоставления медицинских документов (их копий) и выписок из них
+    url: http://publication.pravo.gov.ru/document/0001202009240027
+    eoNumber: "0001202009240027"
+    retrieved_at: "2026-10-11"
+    license: официальный документ, не объект авторского права (п. 6 ст. 1259 ГК РФ)
+  - id: research-minzdrav-reception
+    title: Форма обращения на сайте Минздрава России, описание формы по исследованию проекта от 11.10.2026 (сайт проект не открывает)
+    url: https://minzdrav.gov.ru/reception/appeals/new
+    retrieved_at: "2026-10-11"
+  - id: research-ezp
+    title: Статья «Подать электронное обращение в госорганы можно через Почту России», портал «Про паллиатив», 19.02.2025, по исследованию проекта (вторичный источник)
+    url: https://pro-palliativ.ru/library/items/podat-elektronnoe-obrashchenie-v-gosorgany-mozhno-cherez-pochtu-rossii
+    retrieved_at: "2026-10-11"
+  - id: research-genproc
+    title: Интернет-приёмная Генеральной прокуратуры, вход только через Госуслуги, по исследованию проекта от 11.10.2026
+    url: https://epp.genproc.gov.ru/web/gprf/internet-reception/personal-receptionrequest
+    retrieved_at: "2026-10-11"
+  - id: research-rzn-contacts
+    title: Страница контактов Росздравнадзора, по исследованию проекта от 11.10.2026 (сайт проект не открывает)
+    url: https://roszdravnadzor.gov.ru/about/contacts
+    retrieved_at: "2026-10-11"
+  - id: research-minzdrav-rf
+    title: Интернет-приёмная Минздрава России, по исследованию проекта от 11.10.2026 (сайт проект не открывает)
+    url: https://minzdrav.gov.ru/reception
+    retrieved_at: "2026-10-11"
+  - id: family-orientir
+    title: Ориентиры семей из открытых обсуждений, собраны исследованием проекта 11.10.2026. Это не норма
+    retrieved_at: "2026-10-11"

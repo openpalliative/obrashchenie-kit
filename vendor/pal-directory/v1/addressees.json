@@ -1,0 +1,4384 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "addressees",
+ "repo": "pal-directory",
+ "schema_version": "1.1.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-13T06:32:03Z",
+ "data_date": "2026-10-13",
+ "stale_after_days": 90,
+ "license": "rzn-source-terms",
+ "source": [
+  {
+   "id": "rzn-hotlines",
+   "title": "Росздравнадзор. Номера телефонов «Горячих линий» в субъектах Российской Федерации",
+   "url": "https://roszdravnadzor.gov.ru/i/upload/files/Главная%20страница/горячая%20линия/горячая%20линия-03.03.2026.xlsx",
+   "license": "на условиях источника, с указанием источника: Росздравнадзор",
+   "retrieved_at": "2026-10-13",
+   "sha256": "0594711b33cfc449e5842c608a9b056b39f6cbaf9427209271132815cf9e3e90"
+  },
+  {
+   "id": "rzn-lta",
+   "title": "Росздравнадзор, открытые данные «Перечень территориальных органов Росздравнадзора» (набор 7710537160-lta, версия 20261001)",
+   "url": "https://roszdravnadzor.gov.ru/opendata/7710537160-lta/data-20261001-structure-20180925.csv",
+   "retrieved_at": "2026-10-13",
+   "sha256": "509308ccabdda00ef3368528c5ea7052c9819b1a5da295372107893e70aeef21",
+   "license": "на условиях источника, с указанием источника: Росздравнадзор"
+  }
+ ],
+ "content_sha256": "1e5ded6c8ea5baf282a0421e4b185ce88f7e47ac46153c0f6393d6923dea1424",
+ "counts": {
+  "items": 247,
+  "unverified": 0,
+  "excluded": 15
+ },
+ "items": [
+  {
+   "id": "ru-ad-minzdrav",
+   "region_id": "RU-AD",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Адыгея",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ad-minzdrav-88772534997"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ad-rzn",
+   "region_id": "RU-AD",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Адыгея",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ad-rzn-88772523853"
+   ],
+   "postal_address": "385000, Россия, г. Майкоп, Республика Адыгея, г. Майкоп, ул.Советская, 166",
+   "email": "rzn01@reg1.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник - четверг с 9-00 до 18-00, пятница с 9-00 до 17-00, перерыв с 13-00 до 14-00, суббота, воскресенье - выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ad-tfoms",
+   "region_id": "RU-AD",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Адыгея",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ad-tfoms-88772570465"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-al-minzdrav",
+   "region_id": "RU-AL",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Алтай",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-al-minzdrav-89136910220"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-al-rzn",
+   "region_id": "RU-AL",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Алтай",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-al-rzn-83882220602"
+   ],
+   "postal_address": "649000, Россия, Республика Алтай, г. Горно-Алтайск, ул.Улагашева, д. 13",
+   "email": "info@reg2.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник-четверг с 09.00-18.00, пятница с 09.00-16.45, обеденный перерыв с 13.00 до 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-al-tfoms",
+   "region_id": "RU-AL",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Алтай",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-al-tfoms-88001005540"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-alt-minzdrav",
+   "region_id": "RU-ALT",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Алтайского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-alt-minzdrav-122",
+    "ru-alt-minzdrav-83852507114"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-alt-rzn",
+   "region_id": "RU-ALT",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Алтайскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-alt-rzn-89130854673"
+   ],
+   "postal_address": "656038, Россия, Алтайский край, город, г. Барнаул, пр. Комсомольский, д. 118",
+   "email": "office@reg22.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник-четверг с 9.00 до 18.00, пятница с 9.00-17.00. Перерыв на обед с 13.00 до 13.48",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-alt-tfoms",
+   "region_id": "RU-ALT",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования по Алтайскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-alt-tfoms-83852632979",
+    "ru-alt-tfoms-83852636287",
+    "ru-alt-tfoms-88007758565"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-amu-minzdrav",
+   "region_id": "RU-AMU",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Амурской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-amu-minzdrav-84162200952"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-amu-rzn",
+   "region_id": "RU-AMU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Амурской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-amu-rzn-84162532063"
+   ],
+   "postal_address": "675000, Россия, Амурская область, г. Благовещенск, ул.Мухина, д.31",
+   "email": "info@reg28.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг: с 9-00 до 18-00, перерыв с 13-00 до 13-45. Пятница: с 9-00 до 16-45, перерыв с 13-00 до 13-45. Выходной: суббота, воскресенье",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-amu-tfoms",
+   "region_id": "RU-AMU",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования по Амурской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-amu-tfoms-88001005660"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ark-minzdrav",
+   "region_id": "RU-ARK",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Архангельской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ark-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ark-rzn",
+   "region_id": "RU-ARK",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Архангельской области и Ненецкому автономному округу",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ark-rzn-88003505969"
+   ],
+   "postal_address": "163000, Россия, Архангельская область, г. Архангельск, пл. В.И. Ленина, дом 4, офис 1801",
+   "email": "main@reg29.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт 9.00- 17.45. перерыв на обед 13-13.30, пт. с 9.00-16.15.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ark-tfoms",
+   "region_id": "RU-ARK",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Архангельской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ark-tfoms-88001001129"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ast-minzdrav",
+   "region_id": "RU-AST",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Астраханской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ast-minzdrav-88512523030",
+    "ru-ast-minzdrav-88512524040",
+    "ru-ast-minzdrav-88003003723"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ast-rzn",
+   "region_id": "RU-AST",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Астраханской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ast-rzn-88512220106",
+    "ru-ast-rzn-88512220107"
+   ],
+   "postal_address": "414040, Россия, Астраханская область, г. Астрахань, ул. Коммунистическая, 27",
+   "email": "info@reg30.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт с 8:30 до 17:30, пт с 8:30 до 16.15. обеденный перерыв 13:00-13:45, сб-вск выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ast-tfoms",
+   "region_id": "RU-AST",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Астраханской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ast-tfoms-88007757630",
+    "ru-ast-tfoms-88512487630",
+    "ru-ast-tfoms-88512243014"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ba-minzdrav",
+   "region_id": "RU-BA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Башкортостан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ba-minzdrav-83472180053",
+    "ru-ba-minzdrav-83472180048",
+    "ru-ba-minzdrav-83472180076",
+    "ru-ba-minzdrav-83472222225",
+    "ru-ba-minzdrav-83472799120"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ba-rzn",
+   "region_id": "RU-BA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Башкортостан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ba-rzn-83472503022"
+   ],
+   "postal_address": "450052, Россия, Республика Башкортостан, г. Уфа, ул.Аксакова, д. 62, офис 403 (4-й этаж)",
+   "email": "info@reg3.roszdravnadzor.gov.ru",
+   "hours_text": "Ежедневно, кроме субботы и воскресения, с 9:00 до 18:00 (в пятницу до 16:45). Обед с 13:00 до 13:45.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ba-tfoms",
+   "region_id": "RU-BA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Башкортостан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ba-tfoms-88004449395",
+    "ru-ba-tfoms-83472725864"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bel-minzdrav",
+   "region_id": "RU-BEL",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Белгородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bel-minzdrav-84722235858",
+    "ru-bel-minzdrav-84722356467",
+    "ru-bel-minzdrav-84722273259",
+    "ru-bel-minzdrav-84722732003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bel-rzn",
+   "region_id": "RU-BEL",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Белгородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bel-rzn-84722310511"
+   ],
+   "postal_address": "308007, Россия, Белгородская область, Белгород, ул. Мичурина, 56",
+   "email": "roszdravnadzor31@reg31.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг: с 09:00 по 18:00 по московскому времени, перерыв на обед-с 13:00 до 13:45, Пятница: с 09:00 до 16:45 по московскому времени, перерыв на обед - с 13:00 до 13:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bel-tfoms",
+   "region_id": "RU-BEL",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Белгородской области (сокращенное наименование ТФОМС Белгородской области)",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bel-tfoms-88003022474"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bry-minzdrav",
+   "region_id": "RU-BRY",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения по Брянской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bry-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bry-rzn",
+   "region_id": "RU-BRY",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Брянской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bry-rzn-89192962522"
+   ],
+   "postal_address": "241050, Россия, Брянская область, Брянск, г.Брянск, ул. Трудовая д.1",
+   "email": "info@reg32.roszdravnadzor.gov.ru",
+   "hours_text": "8:30-17:30",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bry-tfoms",
+   "region_id": "RU-BRY",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Брянской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bry-tfoms-88002221177"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bu-minzdrav",
+   "region_id": "RU-BU",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Бурятия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bu-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bu-rzn",
+   "region_id": "RU-BU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Бурятия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bu-rzn-83012378322"
+   ],
+   "postal_address": "670000, Россия, Республика Бурятия, г. Улан-Удэ, ул. Некрасова, д., 20.",
+   "email": "info@reg4.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник-четверг с 8.30 до 17.30, пятница с 8.30 до 16.15, перерыв на обед с 12.00 до 12.45, суббота, воскресенье - выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-bu-tfoms",
+   "region_id": "RU-BU",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Бурятия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-bu-tfoms-88003012003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ce-minzdrav",
+   "region_id": "RU-CE",
+   "agency": "minzdrav",
+   "name": "Министерства здравоохранения Чеченской Республики",
+   "name_hotlines": null,
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ce-rzn",
+   "region_id": "RU-CE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Чеченской Республике",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ce-rzn-89389974622"
+   ],
+   "postal_address": "364024, Россия, Чеченская Республика, г. Грозный, пр. Исаева, 36",
+   "email": "info@reg20.roszdravnadzor.gov.ru",
+   "hours_text": "09:00 до 18:00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ce-tfoms",
+   "region_id": "RU-CE",
+   "agency": "tfoms",
+   "name": "Обязательное медицинское страхование по Чеченской Республике",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ce-tfoms-88005599449"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-che-minzdrav",
+   "region_id": "RU-CHE",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Челябинской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-che-minzdrav-122",
+    "ru-che-minzdrav-83512402222"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-che-rzn",
+   "region_id": "RU-CHE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Челябинской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-che-rzn-83512632122"
+   ],
+   "postal_address": "454091, Россия, Челябинская область, Челябинск, пл.Мопра, д.8а, 331",
+   "email": "info@reg74.roszdravnadzor.gov.ru",
+   "hours_text": "Пн.-Чт.: 08.30-17.30 (обеденный перерыв с 12.00-12.45), Пт.: 08.30-16.15 (обеденный перерыв с 12.00-12.45), сб вск - выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-che-tfoms",
+   "region_id": "RU-CHE",
+   "agency": "tfoms",
+   "name": "Территориальный Фонд обязательного медицинского страхования Челябинской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-che-tfoms-88003001003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-chu-minzdrav",
+   "region_id": "RU-CHU",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Чукотского автономного округа",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-chu-minzdrav-84272261112"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-chu-rzn",
+   "region_id": "RU-CHU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Хабаровскому краю, Еврейской автономной области и Чукотскому автономному округу",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Чукотскому автономному округу",
+   "line_ids": [
+    "ru-chu-rzn-84272226071",
+    "ru-chu-rzn-89140801537"
+   ],
+   "postal_address": "680000, Россия, Хабаровский край, Хабаровск, ул. П.Комарова, д. 6, офис 104",
+   "email": "info@reg27.roszdravnadzor.gov.ru",
+   "hours_text": "с 8-30 до 17-30",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-chu-tfoms",
+   "region_id": "RU-CHU",
+   "agency": "tfoms",
+   "name": "Чукотский территориальный фонд обязательного медицинского страхования",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-chu-tfoms-84272224216"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-cu-minzdrav",
+   "region_id": "RU-CU",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Чувашской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-cu-minzdrav-88352261414"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-cu-rzn",
+   "region_id": "RU-CU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Чувашской Республике",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-cu-rzn-88352582110"
+   ],
+   "postal_address": "428018, Россия, Чувашская Республика, Чебоксары, Московский проспект, д. 36",
+   "email": "info@reg21.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник - пятница: 8:00 - 17:00, перерыв: 12:00 - 13:00, суббота - воскресенье: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-cu-tfoms",
+   "region_id": "RU-CU",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Чувашской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-cu-tfoms-88007700955"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-da-minzdrav",
+   "region_id": "RU-DA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Дагестан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-da-minzdrav-88722682803",
+    "ru-da-minzdrav-88722780303",
+    "ru-da-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-da-rzn",
+   "region_id": "RU-DA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Дагестан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-da-rzn-88722637157"
+   ],
+   "postal_address": "367008, Россия, Республика Дагестан, г. Махачкала, ул.Буганова, 17 - б",
+   "email": "info@reg5.roszdravnadzor.gov.ru",
+   "hours_text": "с 9-00 до17.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-da-tfoms",
+   "region_id": "RU-DA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Дагестан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-da-tfoms-88002222905"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-in-minzdrav",
+   "region_id": "RU-IN",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Ингушетия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-in-minzdrav-89280990545"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-in-rzn",
+   "region_id": "RU-IN",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Ингушетия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-in-rzn-88732227031",
+    "ru-in-rzn-88732221604"
+   ],
+   "postal_address": "386103, Россия, Республика Ингушетия, Назрань, ул.Осканова, дом № 39",
+   "email": "rznri_06@reg6.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг с 09:00 до 18:00, пятница с 09:00 до 16:45, выходные: суббота, воскресенье.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-in-tfoms",
+   "region_id": "RU-IN",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Ингушетия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-in-tfoms-88003338806"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-irk-minzdrav",
+   "region_id": "RU-IRK",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Иркутской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-irk-minzdrav-89526171109",
+    "ru-irk-minzdrav-83952597126",
+    "ru-irk-minzdrav-89086632696",
+    "ru-irk-minzdrav-83952280326",
+    "ru-irk-minzdrav-83952260916"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-irk-rzn",
+   "region_id": "RU-IRK",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Иркутской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-irk-rzn-83952217013",
+    "ru-irk-rzn-83952280620"
+   ],
+   "postal_address": "664011, Россия, Иркутская область, г. Иркутск, ул. Горького, д.36",
+   "email": "onl@reg38.roszdravnadzor.gov.ru",
+   "hours_text": "С 8:00 до 17:00, обеденный перерыв с 12:00 до 12:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-irk-tfoms",
+   "region_id": "RU-IRK",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Иркутской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-irk-tfoms-83952332622",
+    "ru-irk-tfoms-88001005090"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-iva-minzdrav",
+   "region_id": "RU-IVA",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Ивановской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-iva-minzdrav-84932939797"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-iva-rzn",
+   "region_id": "RU-IVA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Ивановской области и Владимирской области",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Ивановской области",
+   "line_ids": [
+    "ru-iva-rzn-84932413689"
+   ],
+   "postal_address": "153025, Россия, Ивановская область, Ивановская область, г.Иваново, ул. Советская, 49",
+   "email": "info@reg37.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 8:30 - 17:30, пт: 8:30 - 16:15, сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-iva-tfoms",
+   "region_id": "RU-IVA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ивановской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-iva-tfoms-88002221509"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kam-minzdrav",
+   "region_id": "RU-KAM",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения по Камчатскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kam-minzdrav-88001410000",
+    "ru-kam-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kam-rzn",
+   "region_id": "RU-KAM",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Камчатскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kam-rzn-84152490211",
+    "ru-kam-rzn-84152215811",
+    "ru-kam-rzn-84152298791"
+   ],
+   "postal_address": "683003, Россия, Камчатский край, г. Петропавловск-Камчатский, ул. Топоркова, д. 7, пом. 6-9",
+   "email": "mail@reg41.roszdravnadzor.gov.ru",
+   "hours_text": "9.00-18.00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kam-tfoms",
+   "region_id": "RU-KAM",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Камчатского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kam-tfoms-88005006052",
+    "ru-kam-tfoms-88001000702"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kb-minzdrav",
+   "region_id": "RU-KB",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Кабардино-Балкарской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kb-minzdrav-88662408268",
+    "ru-kb-minzdrav-88662400911",
+    "ru-kb-minzdrav-88662420715",
+    "ru-kb-minzdrav-88662400911-2",
+    "ru-kb-minzdrav-88662406141"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kb-rzn",
+   "region_id": "RU-KB",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Кабардино-Балкарской Республике",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kb-rzn-88662777947"
+   ],
+   "postal_address": "360006, Россия, Кабардино-Балкарская Республика, г.Нальчик, КБР г.Нальчик, ул.Суворова, 127.",
+   "email": "info@reg7.roszdravnadzor.gov.ru",
+   "hours_text": "пон.-четв. с 9.00 до 18.00, пятн. с 9.00 до 16.45, перерыв с 13.00 до 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kb-tfoms",
+   "region_id": "RU-KB",
+   "agency": "tfoms",
+   "name": "Кабардино-Балкарской фонд медицинского страхования Кабардино-Балкарской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kb-tfoms-88005553040"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kc-minzdrav",
+   "region_id": "RU-KC",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Карачаево-Черкесской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kc-minzdrav-88782204483"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kc-rzn",
+   "region_id": "RU-KC",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Карачаево-Черкесской Республике",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kc-rzn-88782270633"
+   ],
+   "postal_address": "369001, Россия, Карачаево-Черкесская Республика, Черкесск, ул. Кочубея, 180Б",
+   "email": "info@reg9.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт: 09:00 - 18:00, пт: 09:00 - 16:45, перерыв: 13:00 - 13:45, выходные дни: сб, вс",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kc-tfoms",
+   "region_id": "RU-KC",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Карачаево-Черкесской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kc-tfoms-88004440951"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kda-minzdrav",
+   "region_id": "RU-KDA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Краснодарского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kda-minzdrav-88002000366"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kda-rzn",
+   "region_id": "RU-KDA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Краснодарскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kda-rzn-88619910896"
+   ],
+   "postal_address": "350015, Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 315",
+   "email": "info@reg23.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 8:00 - 17:00, пт: 8: - 15:45, сб - вс: выходные дни, перерыв: 12:00 - 12:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kda-tfoms",
+   "region_id": "RU-KDA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kda-tfoms-88002006050"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kem-minzdrav",
+   "region_id": "RU-KEM",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Кузбасса",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kem-minzdrav-83842584356"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kem-rzn",
+   "region_id": "RU-KEM",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Кемеровской области - Кузбассу",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Кемеровской области",
+   "line_ids": [
+    "ru-kem-rzn-83842780893"
+   ],
+   "postal_address": "650003, Россия, Кемеровская область - Кузбасс, г. Кемерово, б-р Строителей, стр. 54 А",
+   "email": "rznko@reg42.roszdravnadzor.gov.ru",
+   "hours_text": "Пятидневная рабочая неделя",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kem-tfoms",
+   "region_id": "RU-KEM",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования по Кемеровской области-Кузбассу",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kem-tfoms-88005551001"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kgd-minzdrav",
+   "region_id": "RU-KGD",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Калининградской области (Медицинский информационный аналитический центр (Контакт-центр 122)",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kgd-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kgd-rzn",
+   "region_id": "RU-KGD",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Калининградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kgd-rzn-84012535202",
+    "ru-kgd-rzn-84012535201"
+   ],
+   "postal_address": "236006, Россия, Калининградская область, ул. Кирпичная, 7-9",
+   "email": "info@reg39.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник - пятница: 9:00 - 16:30, перерыв: 12:00-12:30 суббота - воскресенье: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kgd-tfoms",
+   "region_id": "RU-KGD",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Калининградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kgd-tfoms-84012313555",
+    "ru-kgd-tfoms-84012313557",
+    "ru-kgd-tfoms-84012313560",
+    "ru-kgd-tfoms-84012313550",
+    "ru-kgd-tfoms-88002509122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kgn-minzdrav",
+   "region_id": "RU-KGN",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Курганской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kgn-minzdrav-83522250303"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kgn-rzn",
+   "region_id": "RU-KGN",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Курганской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kgn-rzn-83522466866"
+   ],
+   "postal_address": "640018, Россия, Курганская область, Курган, ул. Ленина, 5, оф.501",
+   "email": "info@reg45.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт. с 08-00 до 17-00, пт. с 8-00 до 15-45, перерыв с 12-00 до 12-45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kgn-tfoms",
+   "region_id": "RU-KGN",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Курганской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kgn-tfoms-88001002187"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kha-minzdrav",
+   "region_id": "RU-KHA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения по Хабаровскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kha-minzdrav-84212402201"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kha-rzn",
+   "region_id": "RU-KHA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Хабаровскому краю, Еврейской автономной области и Чукотскому автономному округу",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Хабаровскому краю и Еврейской автономной области",
+   "line_ids": [
+    "ru-kha-rzn-89242273951"
+   ],
+   "postal_address": "680000, Россия, Хабаровский край, Хабаровск, ул. П.Комарова, д. 6, офис 104",
+   "email": "info@reg27.roszdravnadzor.gov.ru",
+   "hours_text": "с 8-30 до 17-30",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kha-tfoms",
+   "region_id": "RU-KHA",
+   "agency": "tfoms",
+   "name": "Хабаровский краевой фонд обязательного медицинского страхования",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kha-tfoms-88001000877"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-khm-minzdrav",
+   "region_id": "RU-KHM",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Ханты-Мансийского автономного округа -Югры",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-khm-minzdrav-88001008603"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-khm-rzn",
+   "region_id": "RU-KHM",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Тюменской области, Ханты-Мансийскому автономному округу - Югре и Ямало-Ненецкому автономному округу",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-khm-rzn-83452393480",
+    "ru-khm-rzn-83452393284",
+    "ru-khm-rzn-83452393278",
+    "ru-khm-rzn-83452393281",
+    "ru-khm-rzn-83467351542",
+    "ru-khm-rzn-89526740881"
+   ],
+   "postal_address": "625000, Россия, Тюменская область, г. Тюмень, ячейка 133",
+   "email": "tyumen@reg72.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг с 09.00 до 18.00, пятница с 09.00 до 16.45, обед с 13.00 до 13.45 суббота,воскресенье-выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-khm-tfoms",
+   "region_id": "RU-KHM",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ханты-Мансийского автономного округа-Югры",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-khm-tfoms-88001008602"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kir-minzdrav",
+   "region_id": "RU-KIR",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Кировской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kir-minzdrav-88001004303"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kir-rzn",
+   "region_id": "RU-KIR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Кировской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kir-rzn-88332354210"
+   ],
+   "postal_address": "610004, Россия, Кировская область, г.Киров, ул.Пятницкая, д.2 (вход с ул.Казанской) , 5 этаж",
+   "email": "info@reg43.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник - четверг с 08:00 до 17:00, пятница с 08:00 до 15:45, обед с 12:00 до 12:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kir-tfoms",
+   "region_id": "RU-KIR",
+   "agency": "tfoms",
+   "name": "Государственное некоммерческое финансово-кредитное учреждение Кировский областной территориальный фонд обязательного медицинского страхования",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kir-tfoms-88332389179"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kk-minzdrav",
+   "region_id": "RU-KK",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Хакасия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kk-minzdrav-83902305811",
+    "ru-kk-minzdrav-83902295091"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kk-rzn",
+   "region_id": "RU-KK",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Хакасия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kk-rzn-89831900047"
+   ],
+   "postal_address": "655012, Россия, Республика Хакасия, г. Абакан, ул. Хакасская, д.21",
+   "email": "reg19@reg19.roszdravnadzor.gov.ru",
+   "hours_text": "с 8.30 до 17.30 час.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kk-tfoms",
+   "region_id": "RU-KK",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Хакасия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kk-tfoms-83902222775",
+    "ru-kk-tfoms-83902223938"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kl-minzdrav",
+   "region_id": "RU-KL",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Калмыкия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kl-minzdrav-88472240369"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kl-rzn",
+   "region_id": "RU-KL",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Калмыкия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kl-rzn-88472298131",
+    "ru-kl-rzn-89374698131"
+   ],
+   "postal_address": "358000, Россия, Республика Калмыкия, Элиста, ул. Ленина, д. 255",
+   "email": "info@reg8.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 18:00, пт: 9:00 - 16:45, обед: 13:00 - 13:45, сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kl-tfoms",
+   "region_id": "RU-KL",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Калмыкия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kl-tfoms-88003021085"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-klu-minzdrav",
+   "region_id": "RU-KLU",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Калужской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-klu-minzdrav-122",
+    "ru-klu-minzdrav-84842719002",
+    "ru-klu-minzdrav-84842719416",
+    "ru-klu-minzdrav-84842719003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-klu-rzn",
+   "region_id": "RU-KLU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Калужской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-klu-rzn-84842764001",
+    "ru-klu-rzn-84842764002"
+   ],
+   "postal_address": "248000, Россия, Калужская область, г. Калуга, г. Калуга, ул. Вилонова, д. 46",
+   "email": "info@reg40.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг: 9.00-18.00, пятница: 9.00-61.45, обеденный перерыв: 13.00-13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-klu-tfoms",
+   "region_id": "RU-KLU",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Калужской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-klu-tfoms-88004501181"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ko-minzdrav",
+   "region_id": "RU-KO",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Коми",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ko-minzdrav-88005500000"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ko-rzn",
+   "region_id": "RU-KO",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Коми",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ko-rzn-88212240896"
+   ],
+   "postal_address": "167000, Россия, Республика Коми, г. Сыктывкар, ул. Куратова д. 18",
+   "email": "info@reg11.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник-четверг с 8-45 до 17-05, пятница с 8-45 до 16-10",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ko-tfoms",
+   "region_id": "RU-KO",
+   "agency": "tfoms",
+   "name": "Государственное бюджетной учреждение Республики Коми \"Территориальный фонд обязательного медицинского страхования Республики Коми\"",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ko-tfoms-88007079825"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kos-minzdrav",
+   "region_id": "RU-KOS",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Костромской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kos-minzdrav-84942316858"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kos-rzn",
+   "region_id": "RU-KOS",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Костромской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kos-rzn-89607468403",
+    "ru-kos-rzn-84942399000"
+   ],
+   "postal_address": "156000, Россия, Костромская область, Кострома, проспект Мира, д. 1/2, помещение №2 (второй этаж)",
+   "email": "info@reg44.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 8:30 - 17:30, пт 8:30 до 16:30 обед: 13:00 - 13:45, суббота, воскресенье и праздничные дни - выходные дни.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kos-tfoms",
+   "region_id": "RU-KOS",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Костромской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kos-tfoms-88002344686"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kr-minzdrav",
+   "region_id": "RU-KR",
+   "agency": "minzdrav",
+   "name": "Министерство здраоохранения Республики Карелия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kr-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kr-rzn",
+   "region_id": "RU-KR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Карелия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kr-rzn-88142782923",
+    "ru-kr-rzn-89004573630"
+   ],
+   "postal_address": "185035, Россия, Республика Карелия, г. Петрозаводск, ул. Анохина, д.29-а",
+   "email": "rznkarel@reg10.roszdravnadzor.gov.ru",
+   "hours_text": "Пн.-Чт. с 9.00-17.00, Пт. с 9.00-16.00, перерыв с 13.00-13.35",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kr-tfoms",
+   "region_id": "RU-KR",
+   "agency": "tfoms",
+   "name": "Государственное учреждение \"Территориальный фонд обязательного медицинского страхования Республики Карелия\"",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kr-tfoms-88002508142"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-krs-minzdrav",
+   "region_id": "RU-KRS",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Курской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-krs-minzdrav-84712587886",
+    "ru-krs-minzdrav-84712587887"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-krs-rzn",
+   "region_id": "RU-KRS",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Курской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-krs-rzn-84712581252"
+   ],
+   "postal_address": "305029, Россия, г.Курск, ул.К.Маркса, дом 66-б",
+   "email": "info@reg46.roszdravnadzor.gov.ru",
+   "hours_text": "Пн.Чт. 8.00-17.00,Пт. 8.00-15.45,Сб.,Вс.-выходной",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-krs-tfoms",
+   "region_id": "RU-KRS",
+   "agency": "tfoms",
+   "name": "Территориальный Фонд обязательного медицинского страхования Курской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-krs-tfoms-84712533412",
+    "ru-krs-tfoms-84712535859"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kya-minzdrav",
+   "region_id": "RU-KYA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Красноярского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kya-minzdrav-122",
+    "ru-kya-minzdrav-83912220378"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kya-rzn",
+   "region_id": "RU-KYA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Красноярскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kya-rzn-83912214450",
+    "ru-kya-rzn-83912213103"
+   ],
+   "postal_address": "660021, Россия, Красноярский край, г. Красноярск, пр-т. Мира, д. 132",
+   "email": "info@reg24.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт 8.00-17.00, обед 12.00-12.45, пт 8.00-15.45, обед 12.00-12.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-kya-tfoms",
+   "region_id": "RU-KYA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Красноярского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-kya-tfoms-88007000003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-len-minzdrav",
+   "region_id": "RU-LEN",
+   "agency": "minzdrav",
+   "name": "Комитет по здравоохранению Ленинградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-len-minzdrav-88126796004"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-len-rzn",
+   "region_id": "RU-LEN",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по г. Санкт-Петербургу и Ленинградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-len-rzn-88123146789"
+   ],
+   "postal_address": "197342, Россия, г. Санкт-Петербург, ул. Кантемировская, д. 4, лит. А",
+   "email": "info@reg78.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 17:45, пт: 9:00 - 16:30 сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-len-tfoms",
+   "region_id": "RU-LEN",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ленинградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-len-tfoms-88001000013"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-lip-minzdrav",
+   "region_id": "RU-LIP",
+   "agency": "minzdrav",
+   "name": "Управление здравоохранения Липецкой области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-lip-minzdrav-88004504848",
+    "ru-lip-minzdrav-84742238080",
+    "ru-lip-minzdrav-89623500553",
+    "ru-lip-minzdrav-84742238082",
+    "ru-lip-minzdrav-84742238070",
+    "ru-lip-minzdrav-84742238065"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-lip-rzn",
+   "region_id": "RU-LIP",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Воронежской области и Липецкой области",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Липецкой области",
+   "line_ids": [
+    "ru-lip-rzn-84742740447",
+    "ru-lip-rzn-84742230735"
+   ],
+   "postal_address": "394018, Россия, Воронежская область, г. Воронеж, ул.9 Января, 36",
+   "email": "info@reg36.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 18:00, пт: 9:00 - 16:45, перерыв: 13.00-13.45, сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-lip-tfoms",
+   "region_id": "RU-LIP",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Липецкой области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-lip-tfoms-88002001165",
+    "ru-lip-tfoms-84742251888"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mag-minzdrav",
+   "region_id": "RU-MAG",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения и демографической политики Магаданской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mag-minzdrav-84132624043",
+    "ru-mag-minzdrav-84132624357",
+    "ru-mag-minzdrav-84132609234"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mag-rzn",
+   "region_id": "RU-MAG",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Магаданской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mag-rzn-84132643309",
+    "ru-mag-rzn-89148600750"
+   ],
+   "postal_address": "685000, Россия, Магаданская область, г. Магадан, ул. Пролетарская, д. 17",
+   "email": "info@reg49.roszdravnadzor.gov.ru",
+   "hours_text": "9.00 - 18.00 обед 12.30 - 14.00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mag-tfoms",
+   "region_id": "RU-MAG",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Магаданской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mag-tfoms-84132202196",
+    "ru-mag-tfoms-88002002550"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-me-minzdrav",
+   "region_id": "RU-ME",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Марий Эл",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-me-minzdrav-88362450585"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-me-rzn",
+   "region_id": "RU-ME",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Марий Эл",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-me-rzn-89170711470"
+   ],
+   "postal_address": "424000, Россия, Республика Марий Эл, г. Йошкар-Ола, пр. Ленина 24а, офис 501",
+   "email": "info@reg12.roszdravnadzor.gov.ru",
+   "hours_text": "пн. - чт.: 8.30 - 17.30, пт.: 8.30 - 16.15, обед с 12.30 до 13.15, сб. - вс. - выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-me-tfoms",
+   "region_id": "RU-ME",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования в Республике Марий Эл",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-me-tfoms-88007078381"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mo-minzdrav",
+   "region_id": "RU-MO",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Мордовия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mo-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mo-rzn",
+   "region_id": "RU-MO",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Мордовия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mo-rzn-88342232806"
+   ],
+   "postal_address": "430030, Россия, Республика Мордовия, г. Саранск, ул. Васенко, д.11, пом.2",
+   "email": "info@reg13.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 18:00, пт: 9:00 - 16:45, сб - вс выходные дни, перерыв: 13:00 - 13:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mo-tfoms",
+   "region_id": "RU-MO",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Мордовия",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mo-tfoms-88003020835"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mos-minzdrav",
+   "region_id": "RU-MOS",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Московской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mos-minzdrav-84986020303"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mos-tfoms",
+   "region_id": "RU-MOS",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Московской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mos-tfoms-88007070561"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mow-minzdrav",
+   "region_id": "RU-MOW",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения г. Москвы",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mow-minzdrav-84957777777"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mow-tfoms",
+   "region_id": "RU-MOW",
+   "agency": "tfoms",
+   "name": "Московский городской фонд обязательного медицинского страхования",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mow-tfoms-84959529321"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mur-minzdrav",
+   "region_id": "RU-MUR",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Мурманской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mur-minzdrav-88152567810"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mur-rzn",
+   "region_id": "RU-MUR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Мурманской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mur-rzn-88152244454"
+   ],
+   "postal_address": "183038, Россия, Мурманская область, г. Мурманск, ул. Зои Космодемьянской, д. 33",
+   "email": "info@reg51.roszdravnadzor.gov.ru",
+   "hours_text": "ПН-ЧТ: 8:30 - 16:20, обед с 12:30 - 13:00, ПТ: 8:30 - 15:40, обед с 12:30 - 13:00, СБ-ВС: выходной",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-mur-tfoms",
+   "region_id": "RU-MUR",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Мурманской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-mur-tfoms-88003011332"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-nen-minzdrav",
+   "region_id": "RU-NEN",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения, труда и социальной защиты населения Ненецкого автономного округа",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-nen-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-nen-rzn",
+   "region_id": "RU-NEN",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Архангельской области и Ненецкому автономному округу",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-nen-rzn-88003505969"
+   ],
+   "postal_address": "163000, Россия, Архангельская область, г. Архангельск, пл. В.И. Ленина, дом 4, офис 1801",
+   "email": "main@reg29.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт 9.00- 17.45. перерыв на обед 13-13.30, пт. с 9.00-16.15.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-nen-tfoms",
+   "region_id": "RU-NEN",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ненецкого автономного округа",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-nen-tfoms-88002001731"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ngr-minzdrav",
+   "region_id": "RU-NGR",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Новгородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ngr-minzdrav-88162732511",
+    "ru-ngr-minzdrav-89218437111"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ngr-rzn",
+   "region_id": "RU-NGR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Новгородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ngr-rzn-88162772173"
+   ],
+   "postal_address": "173001, Россия, Новгородская область, г. Великий Новгород, ул.Яковлева, д.13, офис 50",
+   "email": "info@reg53.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник - пятница: с 8:00 до 17:00 перерыв: с 13:00 до 14:00 суббота, воскресенье: выходной",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ngr-tfoms",
+   "region_id": "RU-NGR",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Новгородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ngr-tfoms-88162770770",
+    "ru-ngr-tfoms-88003021515"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-niz-minzdrav",
+   "region_id": "RU-NIZ",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Нижегородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-niz-minzdrav-122",
+    "ru-niz-minzdrav-88314131113"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-niz-rzn",
+   "region_id": "RU-NIZ",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Нижегородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-niz-rzn-88314118925",
+    "ru-niz-rzn-88314118931"
+   ],
+   "postal_address": "603950, Россия, Нижегородская область, Нижегородская область, г.Н-Новгород, Варварская 32, ГСП222",
+   "email": "info@reg52.roszdravnadzor.gov.ru",
+   "hours_text": "С понедельника по четверг с 09:00 до 18:00, пятница с 09:00 до 16:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-niz-tfoms",
+   "region_id": "RU-NIZ",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Нижегородской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-niz-tfoms-88003337193"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-nvs-minzdrav",
+   "region_id": "RU-NVS",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Новосибирской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-nvs-minzdrav-122",
+    "ru-nvs-minzdrav-83833732809",
+    "ru-nvs-minzdrav-83832386300",
+    "ru-nvs-minzdrav-83832386301",
+    "ru-nvs-minzdrav-83832386302"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-nvs-rzn",
+   "region_id": "RU-NVS",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Новосибирской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-nvs-rzn-83832100102"
+   ],
+   "postal_address": "630007, Россия, Новосибирская область, Новосибирская область, г.Новосибирск, а/я 139",
+   "email": "priemnaya@reg54.roszdravnadzor.gov.ru",
+   "hours_text": "с понедельника по четверг с 8:30 до 17:30, пятница с 8:30 до 16:15, обед с 12:30 до 13:15",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-nvs-tfoms",
+   "region_id": "RU-NVS",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Новосибирской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-nvs-tfoms-88002221515"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-oms-minzdrav",
+   "region_id": "RU-OMS",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Омской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-oms-minzdrav-83812211226"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-oms-rzn",
+   "region_id": "RU-OMS",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Омской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-oms-rzn-83812201104"
+   ],
+   "postal_address": "644024, Россия, Омская область, г. Омск, ул. Сенная, д. 22",
+   "email": "upravlenie@reg55.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт: 8.30 - 17.30 пт: 8.30 - 16.15 обед с 13.00 до 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-oms-tfoms",
+   "region_id": "RU-OMS",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Омской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-oms-tfoms-88002001195"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ore-minzdrav",
+   "region_id": "RU-ORE",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Оренбургской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ore-minzdrav-122",
+    "ru-ore-minzdrav-83532448938"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ore-rzn",
+   "region_id": "RU-ORE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Оренбургской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ore-rzn-83532775788",
+    "ru-ore-rzn-89619293308"
+   ],
+   "postal_address": "460000, Россия, Оренбургская область, г. Оренбург, г. Оренбург, ул. Гая, 14",
+   "email": "rzn56r@reg56.roszdravnadzor.gov.ru",
+   "hours_text": "Пнд.- с 8.45 до 17.30, Вт. - с 8.45 до 17.30, Ср. - с 8.45 до 17.30, Чтв. - с 8.45 до 17.30, Птн. - с 8.45 до 16.45, Сб., Вс. -выходные дни, Обед - с 13.00 до 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ore-tfoms",
+   "region_id": "RU-ORE",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Оренбургской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ore-tfoms-83532981502",
+    "ru-ore-tfoms-88001005603"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-orl-minzdrav",
+   "region_id": "RU-ORL",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Орловской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-orl-minzdrav-84862745545",
+    "ru-orl-minzdrav-84862435155"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-orl-rzn",
+   "region_id": "RU-ORL",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Орловской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-orl-rzn-84862426567"
+   ],
+   "postal_address": "302001, Россия, Орловская область, г. Орёл ул. Комсомольская д.33",
+   "email": "orel@reg57.roszdravnadzor.gov.ru",
+   "hours_text": "Пн-Чт: с 09.00 до 18.00, Пт: с 09.00 до 16.45, Обед с 13.00 до 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-orl-tfoms",
+   "region_id": "RU-ORL",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Орловской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-orl-tfoms-84862254656"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-per-minzdrav",
+   "region_id": "RU-PER",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Пермского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-per-minzdrav-122",
+    "ru-per-minzdrav-83422414444"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-per-rzn",
+   "region_id": "RU-PER",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Пермскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-per-rzn-122",
+    "ru-per-rzn-83422370157"
+   ],
+   "postal_address": "614068, Россия, Пермский край, Пермь, ул. Петропавловская, д. 111",
+   "email": "info@reg59.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт с 09:00 до 18:00, обед с 13:00 до 14:00, пт с 09:00 до 17:00, обед с 13:00 до 14:00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-per-tfoms",
+   "region_id": "RU-PER",
+   "agency": "tfoms",
+   "name": "Территориальный фонд ОМС Пермского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-per-tfoms-88007000561"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-pnz-minzdrav",
+   "region_id": "RU-PNZ",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Пензенской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-pnz-minzdrav-89875169882"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-pnz-rzn",
+   "region_id": "RU-PNZ",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Пензенской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-pnz-rzn-88412481721"
+   ],
+   "postal_address": "440011, Россия, Пензенская область, г. Пенза, ул. Проспект Победы, д. 13",
+   "email": "rzninfo@reg58.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-пятница с 8.30 до 17.00 Обед с 13.00 до 13.30 Суббота, воскресенье - выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-pnz-tfoms",
+   "region_id": "RU-PNZ",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Пензенской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-pnz-tfoms-88001008044"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-pri-minzdrav",
+   "region_id": "RU-PRI",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Приморского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-pri-minzdrav-84232605098"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-pri-rzn",
+   "region_id": "RU-PRI",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Приморскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-pri-rzn-84232224246",
+    "ru-pri-rzn-84232268243",
+    "ru-pri-rzn-84232268539"
+   ],
+   "postal_address": "690091, Россия, Приморский край, г. Владивосток, ул.Мордовцева 3 , 907",
+   "email": null,
+   "hours_text": "С понедельника по четверг с 9.00 до 18.00, пятница 9.00 до 16.45 , обеденный перерыв с 13.00 до 13.45, выходные дни: суббота, воскресенье.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-pri-tfoms",
+   "region_id": "RU-PRI",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Приморского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-pri-tfoms-88001001288"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-psk-minzdrav",
+   "region_id": "RU-PSK",
+   "agency": "minzdrav",
+   "name": "Комитет по здравоохранению Псковской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-psk-minzdrav-88004441041"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-psk-rzn",
+   "region_id": "RU-PSK",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Псковской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-psk-rzn-88004441041",
+    "ru-psk-rzn-88003504813",
+    "ru-psk-rzn-88112565264"
+   ],
+   "postal_address": "180007, Россия, Псковская область, г. Псков, улица Р. Люксембург , дом 12.",
+   "email": "info@reg60.roszdravnadzor.gov.ru",
+   "hours_text": "c 9.00 до 13.00, с 13.45 до 18.00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-psk-tfoms",
+   "region_id": "RU-PSK",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Псковской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-psk-tfoms-88005555503"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ros-minzdrav",
+   "region_id": "RU-ROS",
+   "agency": "minzdrav",
+   "name": "МИНИСТЕРСТВО ЗДРАВООХРАНЕНИЯ РОСТОВСКОЙ ОБЛАСТИ",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ros-minzdrav-88632632050",
+    "ru-ros-minzdrav-88632424109",
+    "ru-ros-minzdrav-89281203949",
+    "ru-ros-minzdrav-88632699064"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ros-rzn",
+   "region_id": "RU-ROS",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Ростовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ros-rzn-88632869816",
+    "ru-ros-rzn-89281604940"
+   ],
+   "postal_address": "344037, Россия, Ростовская область, г. Ростов-на-Дону, ул.Ченцова, дом 71в/63в",
+   "email": "info@reg61.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 18:00 пт: 9:00 - 16:45 сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ros-tfoms",
+   "region_id": "RU-ROS",
+   "agency": "tfoms",
+   "name": "ТЕРРИТОРИАЛЬНЫЙ ФОНД ОБЯЗАТЕЛЬНОГО МЕДИЦИНСКОГО СТРАХОВАНИЯ РОСТОВСКОЙ ОБЛАСТИ",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ros-tfoms-88001009878"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-rya-minzdrav",
+   "region_id": "RU-RYA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Рязанской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-rya-minzdrav-84912984222"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-rya-rzn",
+   "region_id": "RU-RYA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Рязанской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-rya-rzn-84912272550",
+    "ru-rya-rzn-89805078448"
+   ],
+   "postal_address": "390000, Россия, Рязанская область, Рязань, Соборная пл., д.13",
+   "email": "info@reg62.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 18:00, пт: 9:00 - 16:45, сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-rya-tfoms",
+   "region_id": "RU-RYA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Рязанской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-rya-tfoms-88007750779"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sa-minzdrav",
+   "region_id": "RU-SA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Саха (Якутия)",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sa-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sa-rzn",
+   "region_id": "RU-SA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Саха (Якутия)",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sa-rzn-89141093450"
+   ],
+   "postal_address": "677000, Россия, Республика Саха (Якутия), ул. Короленко, д.2",
+   "email": "info@reg14.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник - Четверг с 09.00 ч. до 18.00 ч. Пятница - с 09.00 ч. до 16.45 ч.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sa-tfoms",
+   "region_id": "RU-SA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Саха (Якутия)",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sa-tfoms-88001001403"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sak-minzdrav",
+   "region_id": "RU-SAK",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Сахалинской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sak-minzdrav-84242671300",
+    "ru-sak-minzdrav-88003006503"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sak-rzn",
+   "region_id": "RU-SAK",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Сахалинской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sak-rzn-84242424151"
+   ],
+   "postal_address": "693007, Россия, Сахалинская область, г. Южно-Сахалинск,ул.Дзержинского, д. 36 каб 305",
+   "email": "info@reg65.roszdravnadzor.gov.ru",
+   "hours_text": "Пн-Чт: 9:00-17:15 Пт: 9:00-17:00 Перерыв с 13:00 до 14:00 Сб-Вс выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sak-tfoms",
+   "region_id": "RU-SAK",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Сахалинской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sak-tfoms-88003013025"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sam-minzdrav",
+   "region_id": "RU-SAM",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Самарской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sam-minzdrav-88463077799",
+    "ru-sam-minzdrav-88463320274"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sam-rzn",
+   "region_id": "RU-SAM",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Самарской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sam-rzn-88463332087"
+   ],
+   "postal_address": "443041, Россия, Самарская область, г. Самара, г. Самара, ул. Арцыбушевская, д. 13",
+   "email": "samara@reg63.roszdravnadzor.gov.ru",
+   "hours_text": "9.00-18.00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sam-tfoms",
+   "region_id": "RU-SAM",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Самарской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sam-tfoms-88002002660",
+    "ru-sam-tfoms-88463391501",
+    "ru-sam-tfoms-88463391502",
+    "ru-sam-tfoms-88463391535",
+    "ru-sam-tfoms-88463391541"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sar-minzdrav",
+   "region_id": "RU-SAR",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Саратовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sar-minzdrav-88452670702",
+    "ru-sar-minzdrav-88452799312"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sar-rzn",
+   "region_id": "RU-SAR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Саратовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sar-rzn-89172084772"
+   ],
+   "postal_address": "410012, Россия, Саратовская область, г.Саратов, ул. Рабочая, д. 145/155",
+   "email": null,
+   "hours_text": "Пн-чт: 08:00-17:00, пт: 08:00-15:45, обед: 12:00-12:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sar-tfoms",
+   "region_id": "RU-SAR",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Саратовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sar-tfoms-88007751035"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-se-minzdrav",
+   "region_id": "RU-SE",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Северная Осетия- Алания",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-se-minzdrav-88672333305",
+    "ru-se-minzdrav-88672404962"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-se-rzn",
+   "region_id": "RU-SE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Северная Осетия-Алания",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-se-rzn-88672333843",
+    "ru-se-rzn-88672534216"
+   ],
+   "postal_address": "362040, Россия, Республика Северная Осетия-Алания, г. Владикавказ, ул.Толстого,17",
+   "email": "info@reg15.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник - Четверг с 09:00 до 18:00. Пятница с 09:00 до 16:45, Суббота - Воскресенье: выходные дни.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-se-tfoms",
+   "region_id": "RU-SE",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Северная Осетия-Алания",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-se-tfoms-88672257761",
+    "ru-se-tfoms-88003019915"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-smo-minzdrav",
+   "region_id": "RU-SMO",
+   "agency": "minzdrav",
+   "name": "Департамент Смоленской области по здравоохранению",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-smo-minzdrav-88007001404",
+    "ru-smo-minzdrav-84812427658",
+    "ru-smo-minzdrav-122",
+    "ru-smo-minzdrav-84812387257"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-smo-rzn",
+   "region_id": "RU-SMO",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Смоленской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-smo-rzn-84812302509"
+   ],
+   "postal_address": "214000, Россия, Смоленская область, город Смоленск, улица Большая Советская, дом 30/11",
+   "email": "info@reg67.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник -Четверг с 09.00 до 18.00 Пятница с 09.00 до 16.45 обед с 13.00 до 14.00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-smo-tfoms",
+   "region_id": "RU-SMO",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Смоленской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-smo-tfoms-88007071886"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-spe-minzdrav",
+   "region_id": "RU-SPE",
+   "agency": "minzdrav",
+   "name": "Комитет по Здравоохранению Санкт-Петербурга",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-spe-minzdrav-88126355564",
+    "ru-spe-minzdrav-88126355577",
+    "ru-spe-minzdrav-88125713406",
+    "ru-spe-minzdrav-88126355563",
+    "ru-spe-minzdrav-88125710906"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-spe-rzn",
+   "region_id": "RU-SPE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по г. Санкт-Петербургу и Ленинградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-spe-rzn-88123146789"
+   ],
+   "postal_address": "197342, Россия, г. Санкт-Петербург, ул. Кантемировская, д. 4, лит. А",
+   "email": "info@reg78.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 17:45, пт: 9:00 - 16:30 сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-spe-tfoms",
+   "region_id": "RU-SPE",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Санкт-Петербурга",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-spe-tfoms-88047009103"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sta-minzdrav",
+   "region_id": "RU-STA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Ставропольского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sta-minzdrav-88002002603"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sta-rzn",
+   "region_id": "RU-STA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Ставропольскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sta-rzn-88652296146",
+    "ru-sta-rzn-88001000029"
+   ],
+   "postal_address": "355012, Россия, Ставропольский край, г. Ставрополь, ул. Голенева,67 \"Б\"",
+   "email": "info@reg26.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник - пятница: с 9-00 ч. по 18-00 ч. Обед: с 13-00 ч. по 14-00 ч. суббота - воскресенье: выходные",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sta-tfoms",
+   "region_id": "RU-STA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ставропольского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sta-tfoms-88652941135"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sve-minzdrav",
+   "region_id": "RU-SVE",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Свердловской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sve-minzdrav-88001000153",
+    "ru-sve-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sve-rzn",
+   "region_id": "RU-SVE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Свердловской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sve-rzn-89193621745",
+    "ru-sve-rzn-89193621764"
+   ],
+   "postal_address": "620014, Россия, Свердловская область, Екатеринбург, Свердловская область, г.Екатеринбург, ул. Попова, д. 30",
+   "email": "info@reg66.roszdravnadzor.gov.ru",
+   "hours_text": "Пн.-Чт. с 8:00 до 17:00 Пт. с 8:00 до 15:45 Обед: 12:30 до 13:15 Сб. Вс.-выходной.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-sve-tfoms",
+   "region_id": "RU-SVE",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Свердловской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-sve-tfoms-88002340000"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ta-minzdrav",
+   "region_id": "RU-TA",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Татарстан (ГАУЗ Республиканская клиническая больница МЗ РТ, Республиканский центр медицины катастроф, оперативно - диспетчерский отдел)",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ta-minzdrav-88435580303"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ta-rzn",
+   "region_id": "RU-TA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Татарстан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ta-rzn-88432925437"
+   ],
+   "postal_address": "420021, Россия, Республика Татарстан, г. Казань, ул.Нариманова д.63",
+   "email": "info@reg16.roszdravnadzor.gov.ru",
+   "hours_text": "08.00-18.00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ta-tfoms",
+   "region_id": "RU-TA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Татарстан",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ta-tfoms-88432917700",
+    "ru-ta-tfoms-88432917741",
+    "ru-ta-tfoms-88432917731"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tam-minzdrav",
+   "region_id": "RU-TAM",
+   "agency": "minzdrav",
+   "name": "Управление здравоохранения Тамбовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tam-minzdrav-84752737329",
+    "ru-tam-minzdrav-84752454586",
+    "ru-tam-minzdrav-88002002421",
+    "ru-tam-minzdrav-84752454411"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tam-rzn",
+   "region_id": "RU-TAM",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Тамбовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tam-rzn-84752633214",
+    "ru-tam-rzn-89108571719"
+   ],
+   "postal_address": "39200, Россия, Тамбовская область, г.Тамбов, ул.Советская, д. 182",
+   "email": "info@reg68.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг с 8:30 до 17:30 Пятница с 8:30 до 16:15 Перерыв с 12:30 до 13:15 Выходные дни: суббота, воскресенье",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tam-tfoms",
+   "region_id": "RU-TAM",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Тамбовской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tam-tfoms-88003022126"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tom-minzdrav",
+   "region_id": "RU-TOM",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Томской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tom-minzdrav-122",
+    "ru-tom-minzdrav-83822516616",
+    "ru-tom-minzdrav-88003508850"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tom-rzn",
+   "region_id": "RU-TOM",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Томской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tom-rzn-89234038161"
+   ],
+   "postal_address": "634029, Россия, Томская область, ул. Белинского, д. 19",
+   "email": "info@reg70.roszdravnadzor.gov.ru",
+   "hours_text": "с 9-00 до 12-45 с 13-30 до 17-45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tom-tfoms",
+   "region_id": "RU-TOM",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Томской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tom-tfoms-83822418044"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tul-minzdrav",
+   "region_id": "RU-TUL",
+   "agency": "minzdrav",
+   "name": "министерство здравоохранения Тульской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tul-minzdrav-88004444003"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tul-rzn",
+   "region_id": "RU-TUL",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Тульской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tul-rzn-89398600106",
+    "ru-tul-rzn-84872770359"
+   ],
+   "postal_address": "300025, Россия, Тульская область, Тульская область , г.Тула, ул. 9 Мая, д.1, а/я 927",
+   "email": "info@reg71.roszdravnadzor.gov.ru",
+   "hours_text": "ПН-ЧТ 9:00 - 18:00 ПТ 9:00 - 16:45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tul-tfoms",
+   "region_id": "RU-TUL",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Тульской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tul-tfoms-88007004557"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tve-minzdrav",
+   "region_id": "RU-TVE",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Тверской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tve-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tve-rzn",
+   "region_id": "RU-TVE",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Тверской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tve-rzn-84822339638"
+   ],
+   "postal_address": "170100, Россия, Тверская область, г.Тверь, ул. Советская, д. 35, корп. 1",
+   "email": "rzntver@reg69.roszdravnadzor.gov.ru",
+   "hours_text": "ПН. - ЧТ. с 9.00- 18.00, ПТ. с 9.00 - 16.45, Обед с 13.00 - 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tve-tfoms",
+   "region_id": "RU-TVE",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Тверской облдасти",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tve-tfoms-88001008862"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ty-minzdrav",
+   "region_id": "RU-TY",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Республики Тыва",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ty-minzdrav-83942256262"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ty-rzn",
+   "region_id": "RU-TY",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Республике Тыва",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ty-rzn-83942250729"
+   ],
+   "postal_address": "667007, Россия, Республика Тыва, г. Кызыл, ул. Комсомольская, д.122А",
+   "email": "tuva@reg17.roszdravnadzor.gov.ru",
+   "hours_text": "с 09:00 до 18:00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ty-tfoms",
+   "region_id": "RU-TY",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Республики Тыва",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ty-tfoms-83942221502"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tyu-minzdrav",
+   "region_id": "RU-TYU",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Тюменской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tyu-minzdrav-83452684565",
+    "ru-tyu-minzdrav-88002503091"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tyu-rzn",
+   "region_id": "RU-TYU",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Тюменской области, Ханты-Мансийскому автономному округу - Югре и Ямало-Ненецкому автономному округу",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tyu-rzn-83452393480",
+    "ru-tyu-rzn-83452393284",
+    "ru-tyu-rzn-83452393278",
+    "ru-tyu-rzn-83452393281",
+    "ru-tyu-rzn-83467351542",
+    "ru-tyu-rzn-89526740881"
+   ],
+   "postal_address": "625000, Россия, Тюменская область, г. Тюмень, ячейка 133",
+   "email": "tyumen@reg72.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг с 09.00 до 18.00, пятница с 09.00 до 16.45, обед с 13.00 до 13.45 суббота,воскресенье-выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-tyu-tfoms",
+   "region_id": "RU-TYU",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Тюменской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-tyu-tfoms-88003020040"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ud-minzdrav",
+   "region_id": "RU-UD",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Удмуртской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ud-minzdrav-83412727389",
+    "ru-ud-minzdrav-88001002447"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ud-rzn",
+   "region_id": "RU-UD",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Удмуртской Республике",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ud-rzn-83412402747",
+    "ru-ud-rzn-83412402930"
+   ],
+   "postal_address": "426039, Россия, Удмуртская Республика, г. Ижевск, ул. Дзержинского, 3",
+   "email": null,
+   "hours_text": "пн - чт: 8:00 - 17:00, пт: 8:00 - 16:00, обед: 12.00-12.48 сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-ud-tfoms",
+   "region_id": "RU-UD",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Удмуртской Республики",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-ud-tfoms-88003013337"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-uly-minzdrav",
+   "region_id": "RU-ULY",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Ульяновской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-uly-minzdrav-88002007307"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-uly-rzn",
+   "region_id": "RU-ULY",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Ульяновской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-uly-rzn-88422214351",
+    "ru-uly-rzn-88422214358"
+   ],
+   "postal_address": "432063, Россия, Ульяновская область, г. Ульяновск, ул. Красноармейская, д. 38",
+   "email": "info@reg73.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник-четверг с 09.00 до 18.00, пятница с 09.00 до 16.45, перерыв с 13.00 до 13.45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-uly-tfoms",
+   "region_id": "RU-ULY",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ульяновской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-uly-tfoms-88001007309"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vgg-minzdrav",
+   "region_id": "RU-VGG",
+   "agency": "minzdrav",
+   "name": "Комитет здравоохранения Волгоградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vgg-minzdrav-88442951513",
+    "ru-vgg-minzdrav-88442951520",
+    "ru-vgg-minzdrav-88442333777",
+    "ru-vgg-minzdrav-88442362434",
+    "ru-vgg-minzdrav-88442598575"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vgg-rzn",
+   "region_id": "RU-VGG",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Волгоградской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vgg-rzn-88442334828"
+   ],
+   "postal_address": "400098, Россия, Волгоградская область, г. Волгоград, ул.Советская, д. 5 (9 этаж)",
+   "email": "info@reg34.roszdravnadzor.gov.ru",
+   "hours_text": "понедельник-четверг с 8-00 до 17-00, пятница с 8-00 до 16-00, перерыв на обед с 12-00 до 13-00",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vgg-tfoms",
+   "region_id": "RU-VGG",
+   "agency": "tfoms",
+   "name": "Государственное учреждение \"Территориальный фонд обязательного медицинского страхования Волгоградской области\"",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vgg-tfoms-88442532727",
+    "ru-vgg-tfoms-88442532734",
+    "ru-vgg-tfoms-88001001225"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vla-minzdrav",
+   "region_id": "RU-VLA",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Владимирской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vla-minzdrav-84922778529",
+    "ru-vla-minzdrav-122",
+    "ru-vla-minzdrav-89308393892"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vla-rzn",
+   "region_id": "RU-VLA",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Ивановской области и Владимирской области",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Владимирской области",
+   "line_ids": [
+    "ru-vla-rzn-84922537366"
+   ],
+   "postal_address": "153025, Россия, Ивановская область, Ивановская область, г.Иваново, ул. Советская, 49",
+   "email": "info@reg37.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 8:30 - 17:30, пт: 8:30 - 16:15, сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vla-tfoms",
+   "region_id": "RU-VLA",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Владимирской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vla-tfoms-84922404713"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vlg-minzdrav",
+   "region_id": "RU-VLG",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Вологодской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vlg-minzdrav-88172230076"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vlg-rzn",
+   "region_id": "RU-VLG",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Вологодской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vlg-rzn-88172239897"
+   ],
+   "postal_address": "160001, Россия, Вологодская область, Вологда, 160001, г. Вологда, Проспект Победы, 33, офис 308.",
+   "email": "info35@reg35.roszdravnadzor.gov.ru",
+   "hours_text": "Пн-Чт: 08:00 - 17:00 (Обед 12:30 - 13:20) Пт: 08:00 - 16:00 (Обед 12:30 - 13:20)",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vlg-tfoms",
+   "region_id": "RU-VLG",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Вологодской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vlg-tfoms-88007073224"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vor-minzdrav",
+   "region_id": "RU-VOR",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Воронежской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vor-minzdrav-84732126179"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vor-rzn",
+   "region_id": "RU-VOR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Воронежской области и Липецкой области",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Воронежской области",
+   "line_ids": [
+    "ru-vor-rzn-84732763927",
+    "ru-vor-rzn-89304049644"
+   ],
+   "postal_address": "394018, Россия, Воронежская область, г. Воронеж, ул.9 Января, 36",
+   "email": "info@reg36.roszdravnadzor.gov.ru",
+   "hours_text": "пн - чт: 9:00 - 18:00, пт: 9:00 - 16:45, перерыв: 13.00-13.45, сб - вс: выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-vor-tfoms",
+   "region_id": "RU-VOR",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Воронежской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-vor-tfoms-84732593808",
+    "ru-vor-tfoms-88007759539"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yan-minzdrav",
+   "region_id": "RU-YAN",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения Ямало-Ненецкого автономного округа",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yan-minzdrav-83492237640",
+    "ru-yan-minzdrav-83492237640-2",
+    "ru-yan-minzdrav-83492247706"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yan-rzn",
+   "region_id": "RU-YAN",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Тюменской области, Ханты-Мансийскому автономному округу - Югре и Ямало-Ненецкому автономному округу",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yan-rzn-83452393480",
+    "ru-yan-rzn-83452393284",
+    "ru-yan-rzn-83452393278",
+    "ru-yan-rzn-83452393281",
+    "ru-yan-rzn-83467351542",
+    "ru-yan-rzn-89526740881"
+   ],
+   "postal_address": "625000, Россия, Тюменская область, г. Тюмень, ячейка 133",
+   "email": "tyumen@reg72.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг с 09.00 до 18.00, пятница с 09.00 до 16.45, обед с 13.00 до 13.45 суббота,воскресенье-выходные дни",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yan-tfoms",
+   "region_id": "RU-YAN",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ямало-Ненецкого автономного округа",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yan-tfoms-88001008903"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yar-minzdrav",
+   "region_id": "RU-YAR",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения и фармации Ярославской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yar-minzdrav-84852400489",
+    "ru-yar-minzdrav-84852401136",
+    "ru-yar-minzdrav-84852401141",
+    "ru-yar-minzdrav-84852400477"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yar-rzn",
+   "region_id": "RU-YAR",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Ярославской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yar-rzn-84852457095",
+    "ru-yar-rzn-89622069101"
+   ],
+   "postal_address": "150049, Россия, г. Ярославль, ул. Свободы, д.93а",
+   "email": "info@reg76.roszdravnadzor.gov.ru",
+   "hours_text": "пн-чт с 9-00 до 18-00, пт с 9-00 до 16-45, сб-вс выходные, обед с 13-00 до 13-45",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yar-tfoms",
+   "region_id": "RU-YAR",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Ярославской области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yar-tfoms-88003507676"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yev-minzdrav",
+   "region_id": "RU-YEV",
+   "agency": "minzdrav",
+   "name": "Департамент здравоохранения правительства Еврейской автономной области",
+   "name_hotlines": null,
+   "line_ids": [],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yev-rzn",
+   "region_id": "RU-YEV",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Хабаровскому краю, Еврейской автономной области и Чукотскому автономному округу",
+   "name_hotlines": "Территориальный орган Росздравнадзора по Хабаровскому краю и Еврейской автономной области",
+   "line_ids": [
+    "ru-yev-rzn-89242273951"
+   ],
+   "postal_address": "680000, Россия, Хабаровский край, Хабаровск, ул. П.Комарова, д. 6, офис 104",
+   "email": "info@reg27.roszdravnadzor.gov.ru",
+   "hours_text": "с 8-30 до 17-30",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-yev-tfoms",
+   "region_id": "RU-YEV",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Еврейской автономной области",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-yev-tfoms-84262250450",
+    "ru-yev-tfoms-88005503370"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-zab-minzdrav",
+   "region_id": "RU-ZAB",
+   "agency": "minzdrav",
+   "name": "Министерство здравоохранения Забайкальского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-zab-minzdrav-122"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-zab-rzn",
+   "region_id": "RU-ZAB",
+   "agency": "rzn",
+   "name": "Территориальный орган Росздравнадзора по Забайкальскому краю",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-zab-rzn-83022217167"
+   ],
+   "postal_address": "672000, Россия, Забайкальский край, г. Чита, ул.Костюшко-Григоровича, д.4",
+   "email": "priemnay@reg75.roszdravnadzor.gov.ru",
+   "hours_text": "Понедельник-четверг с 08-00 часов до 17-15 часов (в пятницу до 16-00), перерыв на обед с 12.00 часов до 13.00 часов, выходные: суббота, воскресенье.",
+   "source_ref": "rzn-lta",
+   "source_version": "20261001",
+   "verified": true,
+   "verified_at": "2026-10-13"
+  },
+  {
+   "id": "ru-zab-tfoms",
+   "region_id": "RU-ZAB",
+   "agency": "tfoms",
+   "name": "Территориальный фонд обязательного медицинского страхования Забайкальского края",
+   "name_hotlines": null,
+   "line_ids": [
+    "ru-zab-tfoms-88001005226"
+   ],
+   "postal_address": null,
+   "email": null,
+   "hours_text": null,
+   "source_ref": "rzn-hotlines",
+   "source_version": null,
+   "verified": true,
+   "verified_at": "2026-10-13"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+addressees:
+  - id: rzn-central
+    node: rzn_central
+    label: Росздравнадзор
+    level: "3"
+    url: https://roszdravnadzor.gov.ru
+    how: link_only
+    note: Адрес для письма есть на сайте ведомства
+    source_ref: research-rzn-contacts
+    verified: "false"
+    verified_at: ""
+  - id: minzdrav-rf
+    node: minzdrav_rf
+    label: Минздрав России
+    level: "3"
+    url: https://minzdrav.gov.ru/reception
+    how: form
+    note: Форма обращения работает через вход на Госуслуги
+    source_ref: research-minzdrav-rf
+    verified: "false"
+    verified_at: ""
+  - id: genproc
+    node: prosecutor
+    label: Прокуратура
+    level: "2"
+    url: https://epp.genproc.gov.ru/web/gprf/internet-reception/personal-receptionrequest
+    how: form
+    note: Интернет-приёмная работает через вход на Госуслуги. Можно подать и на бумаге в прокуратуру района или региона
+    source_ref: research-genproc
+    verified: "false"
+    verified_at: ""

@@ -1,0 +1,40 @@
+id: ask
+tier: T0
+order: "1"
+title: Заявление
+name: Попросить ответ
+gives: Ответ на бумаге
+when_needed: Отказали на словах
+addressee_kinds: [mo_head]
+roles: [self]
+fields:
+  - group: applicant
+  - id: request
+    label: О чём вы просите
+    hint: Коротко
+    type: textarea
+    required: "true"
+    personal: "false"
+  - group: sign
+blocks:
+  - use: head
+  - id: request
+    text: "Прошу: {{request}}."
+  - id: term
+    norm_refs: ["345n-372n#p-16"]
+    text: Прошу ответить в установленный срок ({{norm:345n-372n#p-16}}).
+    fallback: Прошу ответить в установленный срок.
+  - id: date
+    place: foot
+    text: "{{date:signed_at}}"
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person]
+esia_summary: "Прошу: {{request}}."
+attachments_hint: []
+review_notes: []
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

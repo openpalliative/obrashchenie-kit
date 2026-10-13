@@ -1,0 +1,100 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://openpalliative.github.io/obrashchenie-kit/data/v1/entrypoints.schema.json",
+ "title": "Точки входа инструмента для хаба",
+ "description": "Читает хаб, словарь situations ведёт хаб",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "entrypoints"
+  },
+  "repo": {
+   "const": "obrashchenie-kit"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "title",
+     "summary",
+     "path",
+     "audience",
+     "situations",
+     "offline",
+     "printable",
+     "maturity",
+     "verified",
+     "verified_at"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "x-message-ru": "id латиницей в нижнем регистре через дефис"
+     },
+     "title": {
+      "type": "string",
+      "minLength": 1
+     },
+     "summary": {
+      "type": "string",
+      "minLength": 1
+     },
+     "path": {
+      "type": "string",
+      "pattern": "^([a-z0-9-]+/)*$"
+     },
+     "audience": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "family",
+        "org",
+        "lawyer",
+        "medic",
+        "developer"
+       ]
+      }
+     },
+     "situations": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "offline": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "printable": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "maturity": {
+      "enum": [
+       "demo",
+       "draft",
+       "beta",
+       "stable"
+      ]
+     },
+     "verified": {
+      "type": "boolean",
+      "x-message-ru": "значение true или false"
+     },
+     "verified_at": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "x-message-ru": "дата в виде ГГГГ-ММ-ДД или пусто"
+     }
+    }
+   }
+  }
+ }
+}

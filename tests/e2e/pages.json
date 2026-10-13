@@ -1,0 +1,75 @@
+[
+ {
+  "name": "home",
+  "path": "",
+  "nojs": true
+ },
+ {
+  "name": "scenario-oral-refusal",
+  "path": "scenarios/oral-refusal/",
+  "nojs": true,
+  "print_pages": 2
+ },
+ {
+  "name": "scenario-no-answer",
+  "path": "scenarios/no-answer/",
+  "nojs": true,
+  "print_pages": 2
+ },
+ {
+  "name": "scenario-vk-refused",
+  "path": "scenarios/vk-refused/",
+  "nojs": true,
+  "print_pages": 2
+ },
+ {
+  "name": "scenario-discharge",
+  "path": "scenarios/discharge/",
+  "nojs": true,
+  "print_pages": 2
+ },
+ {
+  "name": "scenario-forwarded",
+  "path": "scenarios/forwarded/",
+  "nojs": true,
+  "print_pages": 2
+ },
+ {
+  "name": "doc-written-answer",
+  "path": "docs/written-answer/",
+  "nojs": true,
+  "print_pages": 1
+ },
+ {
+  "name": "doc-deadline-complaint",
+  "path": "docs/deadline-complaint/",
+  "nojs": true,
+  "print_pages": 1
+ },
+ {
+  "name": "answer",
+  "path": "answer/",
+  "nojs": true
+ },
+ {
+  "name": "call",
+  "path": "call/",
+  "nojs": true,
+  "print_pages": 1
+ },
+ {
+  "name": "turning-18",
+  "path": "turning-18/",
+  "nojs": true
+ },
+ {
+  "name": "data",
+  "path": "data/",
+  "nojs": true
+ },
+ {
+  "name": "case",
+  "path": "case/",
+  "nojs": true
+ }
+]

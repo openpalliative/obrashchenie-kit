@@ -1,0 +1,8 @@
+nodes:
+  - {id: mo_head, label: Главный врач, level: "1", branch: mo, addressee_source: user}
+  - {id: rzn_to, label: Росздравнадзор региона, level: "2", branch: oversight, addressee_source: "pal-directory:rzn"}
+  - {id: prosecutor, label: Прокуратура, level: "2", branch: prosecutor, addressee_source: "federal:genproc"}
+edges:
+  - {id: ask-1, from_condition: oral_refusal, respondent_level: "1", to: mo_head, doc: ask, kind: request, rule_id: 59fz-answer, norm_refs: [], label: Попросить ответ, hint: "", verified: "false", verified_at: "", source_ref: ok-pack}
+  - {id: complain-1, from_condition: deadline_passed, respondent_level: "1", to: rzn_to, doc: complain, kind: complaint, rule_id: test-answer, norm_refs: [], label: Жалоба выше, hint: "", verified: "false", verified_at: "", source_ref: ok-pack}
+  - {id: prok-2, from_condition: deadline_passed, respondent_level: "2", to: prosecutor, doc: complain, kind: complaint, rule_id: test-answer, norm_refs: [], label: В прокуратуру, hint: "", verified: "false", verified_at: "", source_ref: ok-pack}

@@ -1,0 +1,49 @@
+items:
+  - id: birthday-18
+    order: "1"
+    kind: fact
+    label: День 18-летия
+    rule_id: ""
+    margin_wd: "0"
+    norm_refs: ["208n-243n#p-23"]
+    text: От этой даты считаются сроки ниже
+    source_ref: pravo-208n-243n
+    verified: "true"
+    verified_at: "2026-10-11"
+  - id: p23-extract
+    order: "2"
+    kind: obligation_mo
+    label: Выписку направляют во взрослую поликлинику и во взрослую паллиативную службу
+    rule_id: 208n-p23-transition
+    margin_wd: "5"
+    norm_refs: ["208n-243n#p-23"]
+    text: Не позже этого дня выписка из медицинских документов ребёнка должна уйти во взрослую поликлинику и во взрослую службу паллиативной помощи. Кто её направляет, в пункте не сказано. Спросите в организации, которая наблюдает ребёнка, и попросите заранее
+    source_ref: pravo-208n-243n
+    verified: "true"
+    verified_at: "2026-10-12"
+  - id: representation-orientir
+    order: "3"
+    kind: family_orientir
+    label: Опекун или представитель
+    rule_id: ""
+    offset: "6"
+    unit: months
+    margin_wd: "0"
+    norm_refs: []
+    text: Если нужен опекун или представитель, семьи советуют начинать за 6 месяцев и раньше. Это ориентир, а не срок из закона
+    source_ref: family-orientir
+    verified: "false"
+    verified_at: ""
+  - id: mse-orientir
+    order: "4"
+    kind: family_orientir
+    label: Направление на медико-социальную экспертизу
+    rule_id: ""
+    offset: "3"
+    unit: months
+    margin_wd: "0"
+    norm_refs: []
+    text: Направление на медико-социальную экспертизу до 18 лет семьи советуют просить за 2-3 месяца. Это ориентир, а не срок из закона
+    source_ref: family-orientir
+    verified: "false"
+    verified_at: ""

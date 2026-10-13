@@ -1,0 +1,14 @@
+* @knQzx
+
+# пакет шаблонов: тексты документов, адресаты, каналы подачи и вехи видят семьи
+# когда в проекте появится юрист в РФ, добавить его вторым владельцем в строки ниже
+/data/pack/ @knQzx
+/data/pack/documents/ @knQzx
+/data/pack/graph.yaml @knQzx
+/data/pack/channels.yaml @knQzx
+/data/pack/addressees-federal.yaml @knQzx
+/data/pack/turning18.yaml @knQzx
+/data/scenarios.yaml @knQzx
+
+/.github/ @knQzx
+/deps.yaml @knQzx

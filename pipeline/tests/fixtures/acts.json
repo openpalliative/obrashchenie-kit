@@ -1,0 +1,6 @@
+{"format": "openpalliative-dataset/1", "dataset": "acts", "repo": "pal-norms", "items": [
+ {"id": "good-act", "kind": "ministry_order", "authority": "Министерство здравоохранения Российской Федерации", "number": "100н", "doc_date": "2025-01-10", "title": "Пример", "status": "in_force", "verified": true, "verified_at": "2026-10-11", "valid_until": null},
+ {"id": "law", "kind": "federal_law", "authority": "Президент Российской Федерации", "number": "1-ФЗ", "doc_date": "2006-05-02", "title": "Пример закона", "status": "in_force", "verified": false, "verified_at": null, "valid_until": null},
+ {"id": "345n-372n", "kind": "joint_order", "authority": "Министерство здравоохранения Российской Федерации", "number": "345н/372н", "doc_date": "2019-05-31", "title": "Прежнее положение", "status": "repealed", "verified": true, "verified_at": "2026-10-11", "valid_until": null},
+ {"id": "expired-act", "kind": "ministry_order", "authority": "Министерство здравоохранения Российской Федерации", "number": "200н", "doc_date": "2015-01-10", "title": "Пример с истёкшим сроком", "status": "in_force", "verified": true, "verified_at": "2026-10-11", "valid_until": "2021-01-01"}
+]}

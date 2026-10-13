@@ -1,0 +1,41 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% block title %}{{ site.title }}{% endblock %}
+{% block description %}{{ site.tagline }}{% endblock %}
+{% block head %}{{ ok.css(["scen"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-home">
+  <h1>{{ site.title }}</h1>
+  <p class="op-lead">{{ site.tagline }}</p>
+  <section class="ok-continue" data-continue hidden aria-labelledby="ok-continue-title">
+    <h2 class="op-visually-hidden" id="ok-continue-title">Ваше дело</h2>
+    <a class="op-btn op-btn--primary op-btn--large" href="{{ url('case/') }}" data-continue-link>{{ icon("folder-open") }}<span>Продолжить моё дело</span></a>
+    <p class="ok-continue__line" data-continue-line></p>
+  </section>
+  <section class="ok-home__what" aria-labelledby="ok-what">
+    <h2 id="ok-what">Что произошло?</h2>
+    {{ ok.scenario_rows(site.kit.scenarios["items"]) }}
+  </section>
+  <section class="ok-home__more" aria-labelledby="ok-more">
+    <h2 id="ok-more">Ещё</h2>
+    <ul class="ok-links">
+      <li><a href="{{ url('turning-18/') }}">{{ icon("calendar-clock") }}<span>Ребёнку скоро 18: какие даты не пропустить</span></a></li>
+      <li><a href="{{ url('call/') }}">{{ icon("phone-call") }}<span>Отказали по телефону или при визите: записать разговор</span></a></li>
+      <li><a href="{{ url('answer/') }}">{{ icon("mail") }}<span>Что пришло в ответ и что можно сделать</span></a></li>
+      <li><a href="{{ hub('privacy/') }}">{{ icon("lock") }}<span>Как мы храним ваши данные</span></a></li>
+      <li><a href="{{ url('data/') }}">{{ icon("book-open") }}<span>Пакет шаблонов и откуда данные</span></a></li>
+    </ul>
+  </section>
+  <aside class="ok-promise" aria-label="Как это работает">
+    <ul>
+      <li>{{ icon("lock") }}<span>Всё, что вы вводите, остаётся на этом устройстве. Мы ничего не получаем</span></li>
+      <li>{{ icon("wifi-off") }}<span>После первого открытия работает без интернета</span></li>
+      <li>{{ icon("pencil") }}<span>Документ составляете вы. Мы даём образец и считаем сроки</span></li>
+    </ul>
+  </aside>
+  {{ op.data_date(site.pack.get("released_at") or site.kit.pack.data_date, verified=true, label="Пакет шаблонов от") }}
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/home.js') }}"></script>
+{% endblock %}

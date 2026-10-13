@@ -1,0 +1,73 @@
+id: vk-extract
+tier: T0
+order: "2"
+title: Заявление
+name: Запросить выписку из протокола врачебной комиссии
+gives: На руках будет решение комиссии на бумаге. С ним понятно, что именно решили, и его можно приложить к следующему обращению
+when_needed: Врачебная комиссия прошла, но решение вам не выдали, или решение сообщили только на словах
+addressee_kinds: [mo_head]
+roles: [self, proxy, guardian, parent]
+norm_refs: ["180n#p-16"]
+fields:
+  - group: addressee
+  - group: applicant
+  - group: representation
+  - id: vk_subject
+    label: По какому вопросу была комиссия
+    hint: Например, о паллиативной помощи, о медицинском изделии для дома, о лекарствах
+    type: text
+    required: "true"
+    personal: "false"
+    max_len: "200"
+  - id: vk_date
+    label: Когда была комиссия
+    hint: Если не знаете точно, оставьте пустым
+    type: date
+    required: "false"
+    personal: "false"
+  - id: want_conclusion
+    label: Нужна ли копия заключения
+    hint: Если по итогам комиссии оформили заключение, его копию можно попросить в том же заявлении
+    type: select
+    required: "true"
+    personal: "false"
+    options:
+      - value: "yes"
+        label: Да, попросить и копию заключения
+      - value: "no"
+        label: Нет, только выписку
+  - group: answer
+  - group: attach
+  - group: sign
+blocks:
+  - use: head
+  - use: role
+  - id: request
+    text: "Прошу выдать мне выписку из протокола заседания врачебной комиссии по вопросу: {{vk_subject}}."
+  - id: vk-date
+    when: vk_date
+    text: Заседание комиссии проходило {{date:vk_date}}.
+  - id: conclusion
+    when: want_conclusion=yes
+    text: Если по итогам заседания оформлено заключение, прошу выдать и его копию.
+  - id: term
+    norm_refs: ["180n#p-16"]
+    text: Выписку прошу выдать в установленный срок ({{norm:180n#p-16}}).
+    fallback: Выписку прошу выдать в установленный срок.
+  - use: answer
+  - use: foot
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person, paper-mail, ezp, esia-pos]
+esia_summary: "Прошу выдать выписку из протокола заседания врачебной комиссии по вопросу: {{vk_subject}}. Заявление во вложении."
+attachments_hint:
+  - копия доверенности, если обращаетесь по доверенности
+  - копия письменного согласия человека на передачу вам сведений о его здоровье, если вы не его законный представитель
+  - копия решения органа опеки, если вы опекун
+review_notes:
+  - Кто может получить выписку, сказано в пункте 16 порядка о врачебной комиссии. Проверить юристу в РФ, нужна ли доверенному лицу копия согласия на разглашение врачебной тайны
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

@@ -1,0 +1,74 @@
+{
+ "format": "openpalliative-backup/1",
+ "repo": "obrashchenie-kit",
+ "exported_at": "2026-10-12T10:00:00.000Z",
+ "entries": [
+  {
+   "key": "case:k3f9a2m8q1",
+   "value": {
+    "id": "k3f9a2m8q1",
+    "schema": 1,
+    "created_at": "2026-10-12",
+    "closed_at": null,
+    "scenario": "oral-refusal",
+    "role": "proxy",
+    "region_id": "RU-KGD",
+    "respondent_level": 1,
+    "device": null,
+    "nut": null,
+    "pack_version": "2026.10.11",
+    "addressees": {
+     "mo_head": {
+      "name": "Главному врачу городской поликлиники (пример)",
+      "address": ""
+     }
+    },
+    "docs": {
+     "written-answer": {
+      "fields": {
+       "request": "Прислать врача на дом",
+       "refused_at": "2026-10-10"
+      },
+      "built_at": "2026-10-12"
+     }
+    },
+    "events": [
+     {
+      "seq": 1,
+      "at": "2026-10-10",
+      "type": "oral_refusal",
+      "channel": "visit",
+      "note": "",
+      "edited_at": null
+     },
+     {
+      "seq": 2,
+      "at": "2026-10-12",
+      "type": "filed",
+      "doc": "written-answer",
+      "to": "mo_head",
+      "channel": "paper-in-person",
+      "reg_number": "",
+      "edited_at": null
+     }
+    ]
+   }
+  },
+  {
+   "key": "profile",
+   "value": {
+    "role": "x\"]",
+    "applicant_name": "Иванова Мария Петровна (пример)",
+    "applicant_phone": [
+     "8 900 000-00-00"
+    ],
+    "evil": "<img src=x onerror=alert(1)>",
+    "request": "не личное поле",
+    "__proto__": {
+     "polluted": true
+    },
+    "proxy_date": "вчера"
+   }
+  }
+ ]
+}

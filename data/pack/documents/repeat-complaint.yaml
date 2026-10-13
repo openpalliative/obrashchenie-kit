@@ -1,0 +1,109 @@
+id: repeat-complaint
+tier: T0
+order: "5"
+title: Жалоба
+name: Повторная жалоба, если ответили не по существу или переслали тому, на кого вы жалуетесь
+gives: Жалоба уходит выше, а в тексте есть просьба не пересылать её тому, на чьи действия вы жалуетесь
+when_needed: На жалобу ответили отпиской или её переслали в организацию, на которую вы жаловались
+addressee_kinds: [rzn_to, minzdrav_region, rzn_central, minzdrav_rf, prosecutor]
+roles: [self, proxy, guardian, parent]
+norm_refs: ["59-fz#p-8-6"]
+fields:
+  - group: addressee
+    hints:
+      addressee_name: Должность и название ведомства, куда вы жалуетесь. Например, руководителю территориального органа Росздравнадзора по вашему региону, министру здравоохранения вашего региона или прокурору
+  - group: applicant
+  - group: representation
+  - id: prev_filed_at
+    label: Когда вы подали первую жалобу
+    hint: Дата на вашем экземпляре или квитанции
+    type: date
+    required: "true"
+    personal: "false"
+  - id: prev_filed_to
+    label: Куда вы подали первую жалобу
+    hint: Название органа или организации
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "240"
+  - id: respondent
+    label: На чьи действия вы жалуетесь
+    hint: Организация или должность. Например, поликлиника или минздрав региона
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "240"
+  - id: complaint_subject
+    label: Суть жалобы
+    hint: Что произошло и о чём вы просите. Коротко
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "800"
+  - id: reply_kind
+    label: Что произошло с первой жалобой
+    hint: Выберите одно
+    type: select
+    required: "true"
+    personal: "false"
+    options:
+      - value: not_on_merits
+        label: Ответили не по существу
+      - value: forwarded_to_respondent
+        label: Переслали тому, на кого я жалуюсь
+  - id: reply_at
+    label: Дата ответа или уведомления о пересылке
+    hint: Если есть
+    type: date
+    required: "false"
+    personal: "false"
+  - id: reply_from
+    label: Кто ответил или куда переслали
+    hint: Название органа или организации
+    type: textarea
+    required: "true"
+    personal: "false"
+    max_len: "240"
+  - group: answer
+  - group: attach
+  - group: sign
+blocks:
+  - use: head
+  - use: role
+  - id: facts
+    text: "{{date:prev_filed_at}} я подал(а) жалобу. Кому: {{prev_filed_to}}. Я обжалую действия (бездействие): {{respondent}}."
+  - id: subject
+    text: "Суть жалобы: {{complaint_subject}}."
+  - id: reply-date
+    when: reply_at
+    text: Ответ или уведомление датированы {{date:reply_at}}.
+  - id: not-on-merits
+    when: reply_kind=not_on_merits
+    text: "Ответ прислал(а): {{reply_from}}. В ответе нет ответа по существу поставленных мной вопросов."
+  - id: forwarded
+    when: reply_kind=forwarded_to_respondent
+    text: "Мою жалобу направили на рассмотрение: {{reply_from}}, то есть тому, на чьи действия я жалуюсь."
+  - id: do-not-forward
+    norm_refs: ["59-fz#p-8-6"]
+    text: Прошу не направлять эту жалобу на рассмотрение в орган или должностному лицу, чьи решения или действия (бездействие) я обжалую ({{norm:59-fz#p-8-6}}).
+    fallback: Прошу не направлять эту жалобу на рассмотрение в орган или должностному лицу, чьи решения или действия (бездействие) я обжалую.
+  - id: ask
+    text: Прошу рассмотреть жалобу по существу и дать мне письменный ответ.
+  - use: answer
+  - use: foot
+copies: "2"
+receipt_block: "true"
+channels: [paper-in-person, paper-mail, ezp, esia-pos, esia-minzdrav-rf]
+esia_summary: "Повторная жалоба. Первая жалоба от {{date:prev_filed_at}} не рассмотрена по существу или переслана тому, на кого я жалуюсь. Прошу не направлять эту жалобу в орган, чьи действия я обжалую. Жалоба во вложении."
+attachments_hint:
+  - копия первой жалобы с отметкой о приёме или квитанция
+  - копия ответа или уведомления о пересылке
+  - копия доверенности, если обращаетесь по доверенности
+review_notes:
+  - Просьба не пересылать жалобу написана просьбой, а не обвинением, так решено в проекте. Проверить юристу в РФ
+reviewed_by: []
+reviewed_at: ""
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

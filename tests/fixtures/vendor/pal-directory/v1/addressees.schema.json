@@ -1,0 +1,25 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "pal-directory addressees, минимальная схема тестового снимка",
+ "type": "object",
+ "properties": {
+  "dataset": {
+   "const": "addressees"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "region_id",
+     "agency",
+     "name",
+     "line_ids",
+     "verified",
+     "verified_at"
+    ]
+   }
+  }
+ }
+}

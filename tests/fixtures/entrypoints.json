@@ -1,0 +1,185 @@
+{
+ "format": "openpalliative-dataset/1",
+ "dataset": "entrypoints",
+ "repo": "obrashchenie-kit",
+ "schema_version": "1.0.0",
+ "version": "2026.10.11",
+ "generated_at": "2026-10-11T12:00:00Z",
+ "data_date": "2026-10-11",
+ "stale_after_days": 90,
+ "license": "CC-BY-SA-4.0",
+ "source": [
+  {
+   "id": "ok-pack",
+   "title": "Пакет T0 проекта openpalliative (демо, без проверки юристом в РФ)"
+  }
+ ],
+ "content_sha256": "d2bde2caaaff7ac30c2a25cb7b47c0ddca2b7bdc844188b534e4068489f13a2d",
+ "counts": {
+  "items": 9,
+  "unverified": 9,
+  "excluded": 0
+ },
+ "items": [
+  {
+   "id": "oral-refusal",
+   "title": "Отказали на словах",
+   "summary": "Как попросить ответ на бумаге и не пропустить срок",
+   "path": "scenarios/oral-refusal/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "refused",
+    "device",
+    "dying"
+   ],
+   "offline": true,
+   "printable": false,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "vk-refused",
+   "title": "Не созывают врачебную комиссию или отказали в заключении",
+   "summary": "Попросить комиссию письменно и получить её решение на руки",
+   "path": "scenarios/vk-refused/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "conclusion"
+   ],
+   "offline": true,
+   "printable": false,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "discharge",
+   "title": "Выписывают домой",
+   "summary": "Какие документы запросить до выхода из больницы",
+   "path": "scenarios/discharge/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "discharge"
+   ],
+   "offline": true,
+   "printable": false,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "forwarded",
+   "title": "Жалобу переслали тому, на кого вы жалуетесь",
+   "summary": "Повторная жалоба выше с просьбой не пересылать её",
+   "path": "scenarios/forwarded/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "refused"
+   ],
+   "offline": true,
+   "printable": false,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "no-answer",
+   "title": "Не ответили в срок",
+   "summary": "Посчитать срок ответа и пожаловаться, если он прошёл",
+   "path": "scenarios/no-answer/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "refused"
+   ],
+   "offline": true,
+   "printable": false,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "case",
+   "title": "Моё дело",
+   "summary": "Документы, сроки и следующий шаг. Хранится только на вашем устройстве",
+   "path": "case/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "refused",
+    "discharge",
+    "conclusion"
+   ],
+   "offline": true,
+   "printable": true,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "answer",
+   "title": "Что пришло в ответ",
+   "summary": "Выберите, что вам ответили, и посмотрите варианты следующего шага",
+   "path": "answer/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "refused"
+   ],
+   "offline": true,
+   "printable": false,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "call",
+   "title": "Отказали по телефону или при визите",
+   "summary": "Лист, чтобы записать разговор, пока вы его помните",
+   "path": "call/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "refused",
+    "night-pain",
+    "emergency-sheet"
+   ],
+   "offline": true,
+   "printable": true,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  },
+  {
+   "id": "turning-18",
+   "title": "Ребёнку скоро 18",
+   "summary": "До какой даты выписка ребёнка должна уйти во взрослую поликлинику",
+   "path": "turning-18/",
+   "audience": [
+    "family"
+   ],
+   "situations": [
+    "turning-18",
+    "emergency-sheet"
+   ],
+   "offline": true,
+   "printable": true,
+   "maturity": "demo",
+   "verified": false,
+   "verified_at": null
+  }
+ ]
+}

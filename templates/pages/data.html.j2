@@ -1,0 +1,80 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% set P = site.pack %}
+{% set draft = "none" %}
+{% block title %}Пакет шаблонов и данные{% endblock %}
+{% block description %}Версия и статус пакета документов, откуда данные и что ещё не проверено{% endblock %}
+{% block head %}{{ ok.css([]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-data">
+  {{ op.crumbs([("openpalliative", hub("")), (site.title, url("")), ("Пакет шаблонов и данные", "")]) }}
+  <h1>Пакет шаблонов и данные</h1>
+  <p class="op-lead">Для юристов, НКО и разработчиков: что лежит в пакете, откуда данные и что ещё не проверено</p>
+
+  <section aria-labelledby="pack-title">
+    <h2 id="pack-title">Пакет документов</h2>
+    {% if P.get("status") == "demo" %}{{ op.status("info", "Демо. " ~ (P.get("notice") or "Пример. Не используйте без проверки юристом в РФ")) }}{% endif %}
+    <dl class="op-dl ok-dl">
+      <dt>Версия</dt><dd>{{ P.get("version") }}</dd>
+      <dt>Статус</dt><dd>{{ "Демо" if P.get("status") == "demo" else "Проверен" }}</dd>
+      <dt>Уровни</dt><dd>{{ (P.get("tiers_enabled") or []) | join(", ") }}. Это процедурные документы: попросить ответ, выписку, копии, пожаловаться на срок</dd>
+      <dt>Проверили юристы</dt><dd>{% if P.get("reviewers") %}{% for r in P.reviewers %}{{ r.alias }} ({{ r.role }}){% if not loop.last %}, {% endif %}{% endfor %}{% else %}пока никто. Нужен юрист в РФ{% endif %}</dd>
+      <dt>Выпущен</dt><dd>{{ P.get("released_at") | ru_date }}</dd>
+      <dt>Лицензия текстов</dt><dd>CC BY-SA 4.0. Код под MIT</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="docs-title">
+    <h2 id="docs-title">Документы</h2>
+    <div class="op-table-wrap" tabindex="0" role="region" aria-label="Таблица документов">
+      <table class="op-table">
+        <thead><tr><th scope="col">Документ</th><th scope="col">Кому</th><th scope="col">Нормы</th><th scope="col">Проверка</th></tr></thead>
+        <tbody>
+        {% for d in site.docs.values() %}
+        <tr>
+          <td><a href="{{ url('docs/' ~ d.id ~ '/') }}">{{ d.name }}</a></td>
+          <td>{% for k in d.addressee_kinds %}{{ site.kind_labels.get(k, k) }}{% if not loop.last %}; {% endif %}{% endfor %}</td>
+          <td>{% set refs = [] %}{% for b in d.blocks %}{% for n in b.get("norm_refs", []) %}{% if n not in refs %}{% set _ = refs.append(n) %}{% endif %}{% endfor %}{% endfor %}{% for n in refs %}{{ norm(n.split("#")[0]) }}{% for b in d.blocks if n in b.get("norm_refs", []) and b.get("norm_state") == "fallback" %}{% if loop.first %}<br>В документ норма не включена, там общая формулировка{% endif %}{% endfor %}{% if not loop.last %}<br>{% endif %}{% else %}без ссылки на норму{% endfor %}</td>
+          <td>{% if d.verified %}проверен{% else %}{{ ok.unv() }}{% endif %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="snap-title">
+    <h2 id="snap-title">Данные соседних разделов</h2>
+    <p>Сроки, нормы и календарь берём из раздела <a href="{{ xurl('pal-norms', '') }}">«Нормы и сроки»</a>, ведомства и телефоны из раздела <a href="{{ xurl('pal-directory', '') }}">«Куда звонить»</a>. Этот инструмент сам никуда не ходит: при сборке он берёт последний опубликованный снимок</p>
+    <div class="op-table-wrap" tabindex="0" role="region" aria-label="Таблица снимков">
+      <table class="op-table">
+        <thead><tr><th scope="col">Снимок</th><th scope="col">Данные от</th><th scope="col">Записей</th><th scope="col">Откуда</th></tr></thead>
+        <tbody>
+        {% for repo, envs in site.vend.items() %}{% for name, env in envs.items() %}
+        <tr>
+          <td>{{ repo }} / {{ name }}</td>
+          <td>{{ env.data_date | ru_date }}</td>
+          <td>{{ env["items"] | length }}</td>
+          <td>{% if site.vendor_origin.get(repo ~ "/" ~ name) == "fixtures" %}{{ ok.unv() }} пример для разработки, настоящий снимок ещё не подключён{% else %}опубликованный снимок{% endif %}</td>
+        </tr>
+        {% endfor %}{% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="unv-title">
+    <h2 id="unv-title">Что не проверено</h2>
+    <p>Всё из этого списка видно на сайте с пометкой «Не проверено». В документы не попадает ни одна непроверенная норма и ни один непроверенный срок</p>
+    {% set kinds = {"acts": "Норма", "deadline-rules": "Правило срока", "channels": "Способ подачи", "addressees-federal": "Федеральный адресат", "turning18": "Перед 18-летием", "scenarios": "Сценарий"} %}
+    <ul class="ok-unv">
+      {% for u in P.get("unverified") or [] %}<li>{% if kinds.get(u.dataset) %}{{ kinds[u.dataset] }}: {% endif %}{{ u.label }}. <span class="ok-unv__why">Почему: {{ u.why }}</span></li>{% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="dev-title">
+    <h2 id="dev-title">Для разработчиков</h2>
+    <p>Все наборы лежат в <a href="{{ url('data/v1/index.json') }}">data/v1/</a> в формате JSON со схемами рядом. Формат файла дел описан в <a href="{{ url('schema/case-backup.schema.json') }}">схеме</a>. Код и данные открыты, <a href="{{ site.github }}">исходный код</a></p>
+  </section>
+</div>
+{% endblock %}

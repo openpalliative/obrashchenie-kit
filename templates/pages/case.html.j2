@@ -1,0 +1,283 @@
+{% extends "op/base.html.j2" %}
+{% import "partials/ok.html.j2" as ok with context %}
+{% set noindex = true %}
+{% set draft = "none" %}
+{% block title %}Моё дело{% endblock %}
+{% block description %}Документы, срок ответа и следующий шаг. Хранится только на этом устройстве{% endblock %}
+{% block body_class %} ok-casebody{% endblock %}
+{% block head %}{{ ok.css(["case"]) }}{% endblock %}
+{% block main %}
+<div class="op-wrap op-page ok-casepage">
+  <h1 data-h1 tabindex="-1">Моё дело</h1>
+
+  <div data-nojs>
+    {{ op.status("info", "Для дела нужен JavaScript. Сценарии и пустые бланки работают и без него") }}
+    {{ ok.scenario_rows(site.kit.scenarios["items"]) }}
+  </div>
+
+  <div data-js hidden>
+    <div data-notices></div>
+    <div class="ok-damaged" data-damaged hidden></div>
+
+    <section data-view="empty" hidden aria-labelledby="ok-empty-title">
+      <h2 id="ok-empty-title" class="op-visually-hidden">Нет дел</h2>
+      <p class="op-lead">Здесь будет ваше дело: документы, сроки и что делать дальше. Начните с того, что произошло</p>
+      {{ ok.scenario_rows(site.kit.scenarios["items"], "#new=1&s=") }}
+    </section>
+
+    <section data-view="limit" hidden aria-labelledby="ok-limit-title">
+      <h2 id="ok-limit-title">Дел уже три</h2>
+      <p>На одном устройстве помещается не больше трёх дел. Закройте или удалите одно, чтобы начать новое. Перед удалением можно сохранить копию файлом</p>
+      <button class="op-btn op-btn--secondary" type="button" data-show-cases>{{ icon("folder-open") }}<span>Открыть мои дела</span></button>
+    </section>
+
+    <form data-view="wizard" class="ok-wizard" hidden novalidate>
+      <p class="ok-wizard__intro" data-wizard-intro>Ответьте на несколько вопросов, и мы соберём документ. Это займёт 5-10 минут. Ничего не отправляется в интернет. Можно прерваться и продолжить на этом же устройстве</p>
+      <p class="op-steps__count ok-wizard__count" data-wizard-count aria-live="polite">Шаг 1 из 4</p>
+
+      <fieldset class="ok-q" data-q="1">
+        <legend class="ok-q__title">Что произошло?</legend>
+        {% for s in site.kit.scenarios["items"] %}
+        <label class="op-choice__item"><input type="radio" name="scenario" value="{{ s.id }}"><span>{{ s.title }}<span class="op-choice__hint">{{ s.hint }}</span></span></label>
+        {% endfor %}
+      </fieldset>
+
+      <fieldset class="ok-q" data-q="2" hidden>
+        <legend class="ok-q__title">Кто будет подавать документы?</legend>
+        <label class="op-choice__item"><input type="radio" name="role" value="self"><span>Я сам пациент<span class="op-choice__hint">Понадобятся ваши фамилия, имя, отчество и адрес</span></span></label>
+        <label class="op-choice__item"><input type="radio" name="role" value="proxy"><span>По доверенности<span class="op-choice__hint">Понадобятся дата доверенности и кто её удостоверил</span></span></label>
+        <label class="op-choice__item"><input type="radio" name="role" value="guardian"><span>Опекун<span class="op-choice__hint">Понадобятся дата и номер решения органа опеки</span></span></label>
+        <label class="op-choice__item"><input type="radio" name="role" value="parent"><span>Родитель ребёнка<span class="op-choice__hint">Понадобится свидетельство о рождении ребёнка</span></span></label>
+      </fieldset>
+
+      <fieldset class="ok-q" data-q="3" hidden>
+        <legend class="ok-q__title">В каком регионе?</legend>
+        <p class="op-field__hint" id="ok-region-hint">Покажем ведомства и телефоны региона. Регион запомнится для всех инструментов на этом устройстве</p>
+        <label class="op-field__label" for="ok-region">Регион</label>
+        <select class="op-input" id="ok-region" name="region" aria-describedby="ok-region-hint">
+          <option value="">Выберите регион</option>
+          {% for r in site.regions %}<option value="{{ r.id }}">{{ r.name }}</option>{% endfor %}
+          <option value="none">Моего региона нет в списке</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="ok-q" data-q="4" hidden>
+        <legend class="ok-q__title" data-q4-title>Когда это было?</legend>
+        <div data-for="oral-refusal vk-refused discharge">
+          {{ ok.date3("ok-when", "Дата", "Если было несколько раз, укажите последний") }}
+          <fieldset class="op-choice">
+            <legend class="op-field__label">Как вам сказали</legend>
+            <label class="op-choice__item"><input type="radio" name="channel" value="visit" checked><span>На словах при встрече</span></label>
+            <label class="op-choice__item"><input type="radio" name="channel" value="phone"><span>По телефону</span></label>
+            <label class="op-choice__item"><input type="radio" name="channel" value="written"><span>Письменно</span></label>
+          </fieldset>
+        </div>
+        <div data-for="no-answer">
+          {{ ok.date3("ok-filed", "Когда вы подали обращение", "Дата на вашем экземпляре с отметкой или на квитанции") }}
+          <fieldset class="op-choice">
+            <legend class="op-field__label">Куда вы его подали</legend>
+            <label class="op-choice__item"><input type="radio" name="level" value="1" checked><span>В больницу или поликлинику</span></label>
+            <label class="op-choice__item"><input type="radio" name="level" value="2"><span>В минздрав региона или Росздравнадзор в регионе</span></label>
+            <label class="op-choice__item"><input type="radio" name="level" value="3"><span>В федеральное ведомство</span></label>
+          </fieldset>
+          <div class="op-field">
+            <label class="op-field__label" for="ok-reg">Номер регистрации <span class="op-field__optional">(можно не заполнять)</span></label>
+            <p class="op-field__hint" id="ok-reg-hint">Его ставят на вашем экземпляре или присылают письмом</p>
+            <input class="op-input" id="ok-reg" name="reg_number" maxlength="40" autocomplete="off" aria-describedby="ok-reg-hint">
+          </div>
+        </div>
+        <div data-for="forwarded">
+          {{ ok.date3("ok-fwd", "Когда пришло письмо о пересылке", "Дата на письме или в уведомлении") }}
+          <fieldset class="op-choice">
+            <legend class="op-field__label">На кого вы жаловались</legend>
+            <label class="op-choice__item"><input type="radio" name="flevel" value="1" checked><span>На больницу или поликлинику</span></label>
+            <label class="op-choice__item"><input type="radio" name="flevel" value="2"><span>На минздрав региона</span></label>
+          </fieldset>
+        </div>
+      </fieldset>
+
+      <div class="ok-errsum" data-wizard-error hidden tabindex="-1"></div>
+      <div class="op-actions ok-wizard__nav">
+        <button class="op-btn op-btn--secondary" type="button" data-back-step>{{ icon("arrow-left") }}<span>Назад</span></button>
+        <button class="op-btn op-btn--primary op-btn--large" type="submit" data-next-step>{{ icon("arrow-right") }}<span>Дальше</span></button>
+      </div>
+    </form>
+
+    <section data-view="case" hidden aria-labelledby="ok-case-title">
+      <h2 class="op-visually-hidden" id="ok-case-title">Дело</h2>
+      <div data-draft-slot></div>
+      <div class="ok-caseline">
+        <p class="ok-caseline__text" data-caseline></p>
+        <div class="ok-switch" data-switch hidden>
+          <label class="op-field__label" for="ok-switch">Другое дело на этом устройстве</label>
+          <select class="op-input" id="ok-switch" data-switch-select></select>
+        </div>
+      </div>
+
+      <div class="ok-due" data-due></div>
+      <div data-primary></div>
+
+      <div class="op-actions ok-second">
+        <a class="op-btn op-btn--secondary" href="{{ url('answer/') }}" data-answer-link>{{ icon("mail") }}<span>Что пришло в ответ</span></a>
+        <button class="op-btn op-btn--secondary" type="button" data-add-event>{{ icon("plus") }}<span>Добавить событие</span></button>
+        <button class="op-btn op-btn--secondary" type="button" data-case-ics hidden>{{ icon("calendar-clock") }}<span>Добавить в календарь</span></button>
+      </div>
+      <div class="ok-persist" data-persist hidden></div>
+
+      <section class="ok-options" data-options hidden aria-labelledby="ok-opt-title">
+        <h2 id="ok-opt-title">Варианты. Решаете вы</h2>
+        <p class="ok-muted" data-options-meaning></p>
+        <ul class="ok-optlist" data-optlist></ul>
+      </section>
+
+      <section aria-labelledby="ok-steps-title">
+        <h2 id="ok-steps-title">Шаги</h2>
+        <ol class="ok-ladder" data-ladder></ol>
+      </section>
+
+      <section aria-labelledby="ok-journal-title">
+        <h2 id="ok-journal-title">Журнал</h2>
+        <p class="ok-muted">Что и когда происходило. Даты можно исправить</p>
+        <ol class="ok-journal" data-journal></ol>
+      </section>
+
+      <section aria-labelledby="ok-addr-title">
+        <h2 id="ok-addr-title">Куда обращаться</h2>
+        <div data-addressees></div>
+      </section>
+
+      <section class="ok-casedocs" data-casedocs-wrap hidden aria-labelledby="ok-cdocs-title">
+        <h2 id="ok-cdocs-title">Документы в этом деле</h2>
+        <ul class="ok-links" data-casedocs></ul>
+      </section>
+
+      <section class="ok-tlwrap" aria-labelledby="ok-tl-title">
+        <h2 id="ok-tl-title">Хронология на бумаге</h2>
+        <p class="ok-muted">Все события, документы и срок на одном листе A4. Чтобы сохранить PDF, нажмите «Распечатать хронологию» и в окне печати выберите «Сохранить как PDF»</p>
+        <div class="op-actions ok-print-timeline">
+          <button class="op-btn op-btn--secondary" type="button" data-print-timeline>{{ icon("printer") }}<span>Распечатать хронологию</span></button>
+        </div>
+      </section>
+
+      <section class="ok-tlwrap" aria-labelledby="ok-end-title">
+        <h2 id="ok-end-title">Закрыть или удалить</h2>
+        <p class="ok-muted">Закрытое дело остаётся на устройстве вместе с журналом, его можно открыть снова</p>
+        <div class="op-actions ok-print-timeline">
+          <button class="op-btn op-btn--secondary" type="button" data-close-case>{{ icon("circle-check") }}<span>Закрыть дело</span></button>
+          <button class="op-btn op-btn--danger" type="button" data-delete-case>{{ icon("trash-2") }}<span>Удалить это дело</span></button>
+        </div>
+      </section>
+    </section>
+
+    <section class="ok-file" aria-labelledby="ok-file-title">
+      <h2 id="ok-file-title">Файл дела</h2>
+      <p>Браузер может удалить данные сайта. Сохраните файл дела на телефон или компьютер, а потом откройте его здесь же или на другом устройстве</p>
+      <p class="ok-warn">{{ icon("triangle-alert") }}<span>Файл не зашифрован. В нём могут быть ваши данные и данные паспорта. Храните его как документы и не пересылайте в общие чаты</span></p>
+      <div class="op-actions">
+        <button class="op-btn op-btn--secondary" type="button" data-export>{{ icon("download") }}<span>Сохранить файлом</span></button>
+        <button class="op-btn op-btn--secondary" type="button" data-import>{{ icon("upload") }}<span>Открыть файл</span></button>
+        <button class="op-btn op-btn--danger" type="button" data-wipe>{{ icon("trash-2") }}<span>Удалить всё с этого устройства</span></button>
+      </div>
+      <p class="ok-live" data-file-live role="status" aria-live="polite"></p>
+    </section>
+  </div>
+  {{ ok.back() }}
+  <section class="ok-tl" data-timeline hidden aria-hidden="true">
+    <h2 class="ok-tl__title">Хронология обращения</h2>
+    <p class="ok-tl__meta" data-tl-printed></p>
+    <p class="ok-tl__case" data-tl-case></p>
+    <p data-tl-who></p>
+    <table class="ok-tl__table">
+      <thead><tr><th>Дата</th><th>Событие</th><th>Куда</th><th>Номер регистрации</th><th>Заметка</th></tr></thead>
+      <tbody data-tl-rows></tbody>
+    </table>
+    <h3>Документы</h3>
+    <ul data-tl-docs></ul>
+    <h3>Срок ответа</h3>
+    <div data-tl-due></div>
+    <p class="ok-tl__draft">Черновик. Хронология составлена по вашим записям на этом устройстве. Сроки посчитаны автоматически, юристом не проверены</p>
+  </section>
+</div>
+
+<dialog class="op-dialog ok-dialog" data-event-dialog aria-labelledby="ok-ev-title">
+  <form method="dialog" novalidate>
+    <h2 class="op-dialog__title" id="ok-ev-title" data-ev-title>Добавить событие</h2>
+    <div class="op-field">
+      <label class="op-field__label" for="ok-ev-type">Что произошло</label>
+      <select class="op-input" id="ok-ev-type" name="type">
+        <option value="filed">Подали документ</option>
+        <option value="registered">Обращение зарегистрировали</option>
+        <option value="reply">Пришёл ответ</option>
+        <option value="forwarded">Обращение переслали</option>
+        <option value="extended">Срок ответа продлили</option>
+        <option value="docs_requested">Попросили дополнительные документы</option>
+        <option value="oral_refusal">Снова отказали на словах</option>
+        <option value="call">Звонили или ходили</option>
+        <option value="note">Заметка</option>
+      </select>
+    </div>
+    {{ ok.date3("ok-ev-at", "Когда") }}
+    <div data-ev-for="filed">
+      <div class="op-field">
+        <label class="op-field__label" for="ok-ev-doc">Какой документ</label>
+        <select class="op-input" id="ok-ev-doc" name="doc">
+          {% for d in site.docs.values() %}<option value="{{ d.id }}">{{ d.name }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="op-field">
+        <label class="op-field__label" for="ok-ev-to">Куда</label>
+        <select class="op-input" id="ok-ev-to" name="to">
+          {% for k, v in site.kind_labels.items() if k != "none" %}<option value="{{ k }}">{{ v }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="op-field">
+        <label class="op-field__label" for="ok-ev-channel">Способ подачи</label>
+        <select class="op-input" id="ok-ev-channel" name="channel">
+          {% for c in site.kit.channels["items"] %}<option value="{{ c.id }}">{{ c.label }}</option>{% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="op-field" data-ev-for="filed registered">
+      <label class="op-field__label" for="ok-ev-reg">Номер регистрации <span class="op-field__optional">(можно не заполнять)</span></label>
+      <input class="op-input" id="ok-ev-reg" name="reg_number" maxlength="40" autocomplete="off">
+    </div>
+    <fieldset class="op-choice" data-ev-for="forwarded">
+      <legend class="op-field__label">Кому переслали</legend>
+      <label class="op-choice__item"><input type="radio" name="to_respondent" value="1"><span>Тому, на кого вы жаловались</span></label>
+      <label class="op-choice__item"><input type="radio" name="to_respondent" value="0" checked><span>В другой орган</span></label>
+    </fieldset>
+    <div data-ev-for="extended">{{ ok.date3("ok-ev-due", "Новая дата ответа из письма", none, false, none) }}</div>
+    <div class="op-field" data-ev-for="note call oral_refusal docs_requested reply forwarded extended filed registered">
+      <label class="op-field__label" for="ok-ev-note">Заметка <span class="op-field__optional">(можно не заполнять)</span></label>
+      <p class="op-field__hint" id="ok-ev-note-hint">Не пишите диагнозы и лишние личные данные. До 500 знаков</p>
+      <textarea class="op-input op-input--area" id="ok-ev-note" name="note" rows="3" maxlength="500" aria-describedby="ok-ev-note-hint"></textarea>
+    </div>
+    <div class="op-dialog__actions">
+      <button class="op-btn op-btn--primary" value="save" type="submit">{{ icon("circle-check") }}<span>Сохранить</span></button>
+      <button class="op-btn op-btn--secondary" value="cancel" type="submit" formnovalidate>Отмена</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="op-dialog ok-dialog" data-confirm aria-labelledby="ok-confirm-title">
+  <form method="dialog">
+    <h2 class="op-dialog__title" id="ok-confirm-title" data-confirm-title></h2>
+    <p data-confirm-text></p>
+    <div class="op-dialog__actions">
+      <button class="op-btn op-btn--danger" value="yes" type="submit" data-confirm-yes>{{ icon("trash-2") }}<span>Да</span></button>
+      <button class="op-btn op-btn--secondary" value="no" type="submit" autofocus data-confirm-no><span>Отмена</span></button>
+    </div>
+  </form>
+</dialog>
+
+<template id="ok-draft-tpl">{{ op.draft("legal") }}</template>
+<template id="ok-ladder-item"><li class="ok-ladder__item"><span class="ok-ladder__mark"></span><div class="ok-ladder__body"><p class="ok-ladder__title"></p><p class="ok-ladder__date"></p></div></li></template>
+<template id="ok-journal-item"><li class="ok-journal__item"><p class="ok-journal__head"><time class="ok-journal__date"></time> <span class="ok-journal__what"></span></p><p class="ok-journal__note"></p><p class="ok-journal__edited"></p><p class="ok-journal__actions"><button type="button" class="op-btn op-btn--secondary" data-edit>{{ icon("pencil") }}<span>Исправить</span></button><button type="button" class="op-btn op-btn--danger" data-del>{{ icon("trash-2") }}<span>Удалить</span></button></p></li></template>
+<template id="ok-addr-input"><div><label class="op-field__label">Адрес впишите сами</label><p class="op-field__hint">Адрес есть на сайте ведомства</p><input class="op-input" autocomplete="off" maxlength="200"></div></template>
+<template id="ok-option-item"><li class="ok-opt"><p class="ok-opt__label"></p><p class="ok-opt__to"></p><a class="op-btn op-btn--secondary ok-opt__btn"><span>Собрать документ</span></a></li></template>
+{{ ok.icon_templates(["check", "circle-check", "arrow-right", "file-text", "download", "trash-2"]) }}
+{% endblock %}
+{% block scripts %}
+<script type="module" src="{{ url('assets/js/back.js') }}"></script>
+<script type="module" src="{{ url('assets/js/case-page.js') }}"></script>
+{% endblock %}

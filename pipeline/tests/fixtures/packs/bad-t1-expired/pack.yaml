@@ -1,0 +1,14 @@
+id: t0-test
+version: "2026.10.11"
+status: demo
+tiers_enabled: [T0, T1]
+reviewers:
+  - {alias: юрист-1, role: юрист, since: "2024-01-01"}
+reviewed_at: ""
+released_at: "2026-10-11"
+expires_after_days: "365"
+first_public_at: ""
+notice: Пример для тестов
+verified: "false"
+verified_at: ""
+source_ref: ok-pack

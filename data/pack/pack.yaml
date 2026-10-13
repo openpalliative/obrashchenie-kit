@@ -1,0 +1,17 @@
+id: t0-demo
+version: "2026.10.11"
+status: demo
+tiers_enabled: [T0]
+reviewers: []
+reviewed_at: ""
+released_at: "2026-10-11"
+expires_after_days: "365"
+first_public_at: "2026-10-13"
+notice: Пример. Не используйте без проверки юристом в РФ
+verified: "false"
+verified_at: ""
+source_ref: ok-pack
+rule_notes:
+  - rule_id: 59fz-answer
+    to: [mo_head, mo_vk]
+    text: Срок по закону об обращениях граждан для государственных и муниципальных организаций. Если клиника частная, срок может быть другим
