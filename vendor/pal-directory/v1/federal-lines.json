@@ -4,8 +4,8 @@
  "repo": "pal-directory",
  "schema_version": "1.1.0",
  "version": "2026.10.11",
- "generated_at": "2026-10-13T06:32:03Z",
- "data_date": "2026-10-13",
+ "generated_at": "2026-10-19T09:57:22Z",
+ "data_date": "2026-10-19",
  "stale_after_days": 90,
  "license": "rzn-source-terms",
  "source": [
@@ -13,7 +13,7 @@
    "id": "rzn-page",
    "title": "Росздравнадзор, страница «Горячие линии», блок «Контакты»",
    "url": "https://roszdravnadzor.gov.ru/pages/main/call/to/tel",
-   "retrieved_at": "2026-10-13",
+   "retrieved_at": "2026-10-19",
    "license": "на условиях источника, с указанием источника: Росздравнадзор"
   },
   {
@@ -23,7 +23,7 @@
    "retrieved_at": "2026-10-12"
   }
  ],
- "content_sha256": "aa449ff9d35ab752a5df22bfcaf73ba4cf351e579199137cba6d3dc309cbfeb8",
+ "content_sha256": "56e7fbfe06a456ebe35635f94844ec33f093b8d910732c588d3833360532bce7",
  "counts": {
   "items": 1,
   "unverified": 1,

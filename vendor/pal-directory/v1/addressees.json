@@ -4,8 +4,8 @@
  "repo": "pal-directory",
  "schema_version": "1.1.0",
  "version": "2026.10.11",
- "generated_at": "2026-10-13T06:32:03Z",
- "data_date": "2026-10-13",
+ "generated_at": "2026-10-19T09:57:22Z",
+ "data_date": "2026-10-19",
  "stale_after_days": 90,
  "license": "rzn-source-terms",
  "source": [
@@ -14,19 +14,19 @@
    "title": "Росздравнадзор. Номера телефонов «Горячих линий» в субъектах Российской Федерации",
    "url": "https://roszdravnadzor.gov.ru/i/upload/files/Главная%20страница/горячая%20линия/горячая%20линия-03.03.2026.xlsx",
    "license": "на условиях источника, с указанием источника: Росздравнадзор",
-   "retrieved_at": "2026-10-13",
+   "retrieved_at": "2026-10-19",
    "sha256": "0594711b33cfc449e5842c608a9b056b39f6cbaf9427209271132815cf9e3e90"
   },
   {
    "id": "rzn-lta",
    "title": "Росздравнадзор, открытые данные «Перечень территориальных органов Росздравнадзора» (набор 7710537160-lta, версия 20261001)",
    "url": "https://roszdravnadzor.gov.ru/opendata/7710537160-lta/data-20261001-structure-20180925.csv",
-   "retrieved_at": "2026-10-13",
+   "retrieved_at": "2026-10-19",
    "sha256": "509308ccabdda00ef3368528c5ea7052c9819b1a5da295372107893e70aeef21",
    "license": "на условиях источника, с указанием источника: Росздравнадзор"
   }
  ],
- "content_sha256": "1e5ded6c8ea5baf282a0421e4b185ce88f7e47ac46153c0f6393d6923dea1424",
+ "content_sha256": "ac3df7bd5e42f723235c2893d757210a0ae9049810ee93098cb3244bfbc7c7c0",
  "counts": {
   "items": 247,
   "unverified": 0,
@@ -48,7 +48,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ad-rzn",
@@ -65,7 +65,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ad-tfoms",
@@ -82,7 +82,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-al-minzdrav",
@@ -99,7 +99,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-al-rzn",
@@ -116,7 +116,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-al-tfoms",
@@ -133,7 +133,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-alt-minzdrav",
@@ -151,7 +151,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-alt-rzn",
@@ -168,7 +168,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-alt-tfoms",
@@ -187,7 +187,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-amu-minzdrav",
@@ -204,7 +204,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-amu-rzn",
@@ -221,7 +221,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-amu-tfoms",
@@ -238,7 +238,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ark-minzdrav",
@@ -255,7 +255,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ark-rzn",
@@ -272,7 +272,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ark-tfoms",
@@ -289,7 +289,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ast-minzdrav",
@@ -308,7 +308,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ast-rzn",
@@ -326,7 +326,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ast-tfoms",
@@ -345,7 +345,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ba-minzdrav",
@@ -366,7 +366,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ba-rzn",
@@ -383,7 +383,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ba-tfoms",
@@ -401,7 +401,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bel-minzdrav",
@@ -421,7 +421,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bel-rzn",
@@ -438,7 +438,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bel-tfoms",
@@ -455,7 +455,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bry-minzdrav",
@@ -472,7 +472,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bry-rzn",
@@ -489,7 +489,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bry-tfoms",
@@ -506,7 +506,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bu-minzdrav",
@@ -523,7 +523,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bu-rzn",
@@ -540,7 +540,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-bu-tfoms",
@@ -557,7 +557,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ce-minzdrav",
@@ -572,7 +572,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ce-rzn",
@@ -589,7 +589,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ce-tfoms",
@@ -606,7 +606,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-che-minzdrav",
@@ -624,7 +624,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-che-rzn",
@@ -641,7 +641,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-che-tfoms",
@@ -658,7 +658,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-chu-minzdrav",
@@ -675,7 +675,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-chu-rzn",
@@ -693,7 +693,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-chu-tfoms",
@@ -710,7 +710,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-cu-minzdrav",
@@ -727,7 +727,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-cu-rzn",
@@ -744,7 +744,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-cu-tfoms",
@@ -761,7 +761,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-da-minzdrav",
@@ -780,7 +780,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-da-rzn",
@@ -797,7 +797,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-da-tfoms",
@@ -814,7 +814,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-in-minzdrav",
@@ -831,7 +831,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-in-rzn",
@@ -849,7 +849,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-in-tfoms",
@@ -866,7 +866,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-irk-minzdrav",
@@ -887,7 +887,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-irk-rzn",
@@ -905,7 +905,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-irk-tfoms",
@@ -923,7 +923,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-iva-minzdrav",
@@ -940,7 +940,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-iva-rzn",
@@ -957,7 +957,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-iva-tfoms",
@@ -974,7 +974,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kam-minzdrav",
@@ -992,7 +992,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kam-rzn",
@@ -1011,7 +1011,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kam-tfoms",
@@ -1029,7 +1029,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kb-minzdrav",
@@ -1050,7 +1050,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kb-rzn",
@@ -1067,7 +1067,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kb-tfoms",
@@ -1084,7 +1084,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kc-minzdrav",
@@ -1101,7 +1101,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kc-rzn",
@@ -1118,7 +1118,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kc-tfoms",
@@ -1135,7 +1135,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kda-minzdrav",
@@ -1152,7 +1152,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kda-rzn",
@@ -1169,7 +1169,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kda-tfoms",
@@ -1186,7 +1186,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kem-minzdrav",
@@ -1203,7 +1203,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kem-rzn",
@@ -1220,7 +1220,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kem-tfoms",
@@ -1237,7 +1237,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kgd-minzdrav",
@@ -1254,7 +1254,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kgd-rzn",
@@ -1272,7 +1272,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kgd-tfoms",
@@ -1293,7 +1293,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kgn-minzdrav",
@@ -1310,7 +1310,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kgn-rzn",
@@ -1327,7 +1327,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kgn-tfoms",
@@ -1344,7 +1344,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kha-minzdrav",
@@ -1361,7 +1361,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kha-rzn",
@@ -1378,7 +1378,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kha-tfoms",
@@ -1395,7 +1395,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-khm-minzdrav",
@@ -1412,7 +1412,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-khm-rzn",
@@ -1434,7 +1434,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-khm-tfoms",
@@ -1451,7 +1451,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kir-minzdrav",
@@ -1468,7 +1468,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kir-rzn",
@@ -1485,7 +1485,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kir-tfoms",
@@ -1502,7 +1502,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kk-minzdrav",
@@ -1520,7 +1520,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kk-rzn",
@@ -1537,7 +1537,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kk-tfoms",
@@ -1555,7 +1555,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kl-minzdrav",
@@ -1572,7 +1572,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kl-rzn",
@@ -1590,7 +1590,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kl-tfoms",
@@ -1607,7 +1607,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-klu-minzdrav",
@@ -1627,7 +1627,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-klu-rzn",
@@ -1645,7 +1645,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-klu-tfoms",
@@ -1662,7 +1662,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ko-minzdrav",
@@ -1679,7 +1679,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ko-rzn",
@@ -1696,7 +1696,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ko-tfoms",
@@ -1713,7 +1713,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kos-minzdrav",
@@ -1730,7 +1730,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kos-rzn",
@@ -1748,7 +1748,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kos-tfoms",
@@ -1765,7 +1765,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kr-minzdrav",
@@ -1782,7 +1782,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kr-rzn",
@@ -1800,7 +1800,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kr-tfoms",
@@ -1817,7 +1817,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-krs-minzdrav",
@@ -1835,7 +1835,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-krs-rzn",
@@ -1852,7 +1852,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-krs-tfoms",
@@ -1870,7 +1870,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kya-minzdrav",
@@ -1888,7 +1888,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kya-rzn",
@@ -1906,7 +1906,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-kya-tfoms",
@@ -1923,7 +1923,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-len-minzdrav",
@@ -1940,7 +1940,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-len-rzn",
@@ -1957,7 +1957,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-len-tfoms",
@@ -1974,7 +1974,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-lip-minzdrav",
@@ -1996,7 +1996,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-lip-rzn",
@@ -2014,7 +2014,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-lip-tfoms",
@@ -2032,7 +2032,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mag-minzdrav",
@@ -2051,7 +2051,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mag-rzn",
@@ -2069,7 +2069,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mag-tfoms",
@@ -2087,7 +2087,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-me-minzdrav",
@@ -2104,7 +2104,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-me-rzn",
@@ -2121,7 +2121,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-me-tfoms",
@@ -2138,7 +2138,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mo-minzdrav",
@@ -2155,7 +2155,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mo-rzn",
@@ -2172,7 +2172,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mo-tfoms",
@@ -2189,7 +2189,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mos-minzdrav",
@@ -2206,7 +2206,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mos-tfoms",
@@ -2223,7 +2223,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mow-minzdrav",
@@ -2240,7 +2240,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mow-tfoms",
@@ -2257,7 +2257,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mur-minzdrav",
@@ -2274,7 +2274,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mur-rzn",
@@ -2291,7 +2291,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-mur-tfoms",
@@ -2308,7 +2308,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-nen-minzdrav",
@@ -2325,7 +2325,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-nen-rzn",
@@ -2342,7 +2342,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-nen-tfoms",
@@ -2359,7 +2359,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ngr-minzdrav",
@@ -2377,7 +2377,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ngr-rzn",
@@ -2394,7 +2394,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ngr-tfoms",
@@ -2412,7 +2412,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-niz-minzdrav",
@@ -2430,7 +2430,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-niz-rzn",
@@ -2448,7 +2448,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-niz-tfoms",
@@ -2465,7 +2465,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-nvs-minzdrav",
@@ -2486,7 +2486,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-nvs-rzn",
@@ -2503,7 +2503,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-nvs-tfoms",
@@ -2520,7 +2520,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-oms-minzdrav",
@@ -2537,7 +2537,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-oms-rzn",
@@ -2554,7 +2554,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-oms-tfoms",
@@ -2571,7 +2571,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ore-minzdrav",
@@ -2589,7 +2589,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ore-rzn",
@@ -2607,7 +2607,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ore-tfoms",
@@ -2625,7 +2625,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-orl-minzdrav",
@@ -2643,7 +2643,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-orl-rzn",
@@ -2660,7 +2660,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-orl-tfoms",
@@ -2677,7 +2677,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-per-minzdrav",
@@ -2695,7 +2695,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-per-rzn",
@@ -2713,7 +2713,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-per-tfoms",
@@ -2730,7 +2730,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-pnz-minzdrav",
@@ -2747,7 +2747,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-pnz-rzn",
@@ -2764,7 +2764,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-pnz-tfoms",
@@ -2781,7 +2781,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-pri-minzdrav",
@@ -2798,7 +2798,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-pri-rzn",
@@ -2817,7 +2817,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-pri-tfoms",
@@ -2834,7 +2834,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-psk-minzdrav",
@@ -2851,7 +2851,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-psk-rzn",
@@ -2870,7 +2870,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-psk-tfoms",
@@ -2887,7 +2887,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ros-minzdrav",
@@ -2907,7 +2907,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ros-rzn",
@@ -2925,7 +2925,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ros-tfoms",
@@ -2942,7 +2942,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-rya-minzdrav",
@@ -2959,7 +2959,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-rya-rzn",
@@ -2977,7 +2977,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-rya-tfoms",
@@ -2994,7 +2994,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sa-minzdrav",
@@ -3011,7 +3011,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sa-rzn",
@@ -3028,7 +3028,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sa-tfoms",
@@ -3045,7 +3045,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sak-minzdrav",
@@ -3063,7 +3063,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sak-rzn",
@@ -3080,7 +3080,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sak-tfoms",
@@ -3097,7 +3097,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sam-minzdrav",
@@ -3115,7 +3115,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sam-rzn",
@@ -3132,7 +3132,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sam-tfoms",
@@ -3153,7 +3153,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sar-minzdrav",
@@ -3171,7 +3171,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sar-rzn",
@@ -3188,7 +3188,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sar-tfoms",
@@ -3205,7 +3205,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-se-minzdrav",
@@ -3223,7 +3223,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-se-rzn",
@@ -3241,7 +3241,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-se-tfoms",
@@ -3259,7 +3259,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-smo-minzdrav",
@@ -3279,7 +3279,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-smo-rzn",
@@ -3296,7 +3296,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-smo-tfoms",
@@ -3313,7 +3313,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-spe-minzdrav",
@@ -3334,7 +3334,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-spe-rzn",
@@ -3351,7 +3351,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-spe-tfoms",
@@ -3368,7 +3368,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sta-minzdrav",
@@ -3385,7 +3385,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sta-rzn",
@@ -3403,7 +3403,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sta-tfoms",
@@ -3420,7 +3420,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sve-minzdrav",
@@ -3438,7 +3438,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sve-rzn",
@@ -3456,7 +3456,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-sve-tfoms",
@@ -3473,7 +3473,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ta-minzdrav",
@@ -3490,7 +3490,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ta-rzn",
@@ -3507,7 +3507,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ta-tfoms",
@@ -3526,7 +3526,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tam-minzdrav",
@@ -3546,7 +3546,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tam-rzn",
@@ -3564,7 +3564,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tam-tfoms",
@@ -3581,7 +3581,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tom-minzdrav",
@@ -3600,7 +3600,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tom-rzn",
@@ -3617,7 +3617,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tom-tfoms",
@@ -3634,7 +3634,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tul-minzdrav",
@@ -3651,7 +3651,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tul-rzn",
@@ -3669,7 +3669,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tul-tfoms",
@@ -3686,7 +3686,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tve-minzdrav",
@@ -3703,7 +3703,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tve-rzn",
@@ -3720,7 +3720,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tve-tfoms",
@@ -3737,7 +3737,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ty-minzdrav",
@@ -3754,7 +3754,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ty-rzn",
@@ -3771,7 +3771,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ty-tfoms",
@@ -3788,7 +3788,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tyu-minzdrav",
@@ -3806,7 +3806,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tyu-rzn",
@@ -3828,7 +3828,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-tyu-tfoms",
@@ -3845,7 +3845,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ud-minzdrav",
@@ -3863,7 +3863,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ud-rzn",
@@ -3881,7 +3881,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-ud-tfoms",
@@ -3898,7 +3898,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-uly-minzdrav",
@@ -3915,7 +3915,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-uly-rzn",
@@ -3933,7 +3933,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-uly-tfoms",
@@ -3950,7 +3950,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vgg-minzdrav",
@@ -3971,7 +3971,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vgg-rzn",
@@ -3988,7 +3988,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vgg-tfoms",
@@ -4007,7 +4007,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vla-minzdrav",
@@ -4026,7 +4026,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vla-rzn",
@@ -4043,7 +4043,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vla-tfoms",
@@ -4060,7 +4060,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vlg-minzdrav",
@@ -4077,7 +4077,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vlg-rzn",
@@ -4094,7 +4094,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vlg-tfoms",
@@ -4111,7 +4111,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vor-minzdrav",
@@ -4128,7 +4128,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vor-rzn",
@@ -4146,7 +4146,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-vor-tfoms",
@@ -4164,7 +4164,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yan-minzdrav",
@@ -4183,7 +4183,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yan-rzn",
@@ -4205,7 +4205,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yan-tfoms",
@@ -4222,7 +4222,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yar-minzdrav",
@@ -4242,7 +4242,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yar-rzn",
@@ -4260,7 +4260,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yar-tfoms",
@@ -4277,7 +4277,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yev-minzdrav",
@@ -4292,7 +4292,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yev-rzn",
@@ -4309,7 +4309,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-yev-tfoms",
@@ -4327,7 +4327,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-zab-minzdrav",
@@ -4344,7 +4344,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-zab-rzn",
@@ -4361,7 +4361,7 @@
    "source_ref": "rzn-lta",
    "source_version": "20261001",
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   },
   {
    "id": "ru-zab-tfoms",
@@ -4378,7 +4378,7 @@
    "source_ref": "rzn-hotlines",
    "source_version": null,
    "verified": true,
-   "verified_at": "2026-10-13"
+   "verified_at": "2026-10-19"
   }
  ]
 }
